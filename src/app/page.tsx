@@ -57,7 +57,7 @@ export default function HomePage() {
       </section>
 
       <section className="section-wrap pb-16">
-        <p className="gold-kicker">Depoimentos (editáveis)</p>
+        <p className="gold-kicker">Depoimentos</p>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           {testimonials.map((t) => (
             <blockquote key={t.author} className="rounded-xl border border-white/10 p-6">
