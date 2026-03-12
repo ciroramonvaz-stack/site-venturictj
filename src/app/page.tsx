@@ -12,19 +12,19 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-white/10">
         <Image src={heroImages[0]} alt="Paisagem rural" fill className="object-cover opacity-35" priority />
         <div className="section-wrap relative py-24 md:py-32">
-          <p className="gold-kicker">Consultoria premium para o agronegócio</p>
+          <p className="gold-kicker">Imóvel rural travado? A Venturi destrава.</p>
           <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-tight text-white md:text-6xl">
-            Decisões jurídicas e técnicas para proteger o valor do seu imóvel rural.
+            Sua fazenda tem um problema que impede venda, financiamento ou regularização?
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-slate-300">
-            Atuação integrada em UCs, ICMBio, IAT-PR, INCRA/SIGEF e defesa administrativa com foco em clareza, segurança e estratégia.
+            A Venturi identifica o que está bloqueando seu imóvel rural — documentação, sobreposição ambiental, embargo ou cadeia dominial — e entrega um plano claro para resolver. Com diagnóstico técnico, sem enrolação.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href={company.whatsappLink} className="rounded bg-venturi-gold px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-black">
               Falar no WhatsApp
             </a>
             <Link href="/contato/" className="rounded border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em]">
-              Agendar diagnóstico
+              Diagnóstico inicial gratuito
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           {testimonials.map((t) => (
             <blockquote key={t.author} className="rounded-xl border border-white/10 p-6">
-              <p className="text-slate-300">“{t.text}”</p>
+              <p className="text-slate-300">"{t.text}"</p>
               <cite className="mt-3 block text-sm text-venturi-gold">{t.author}</cite>
             </blockquote>
           ))}
