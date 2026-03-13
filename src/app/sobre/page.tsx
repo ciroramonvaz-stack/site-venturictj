@@ -33,7 +33,7 @@ const socios = [
     nome: 'José Alaertes Silveira',
     oab: 'Advogado · OAB/PR 60.934',
     cargo: 'Advogado | Direito Privado & Tributário',
-    foto: '/team/Foto José_Alaertes.jpeg',
+    foto: '/team/Foto José Alaertes.jpeg',
     bio: 'Sócio-administrador da Andrade e Silveira Sociedade de Advogados (Ponta Grossa/PR). Trajetória consolidada no Direito Privado com foco em Direito do Consumidor, Empresarial, Civil e Tributário. Mais de 110 processos no TJPR e outros tribunais. Comprometido com excelência, ética e soluções estratégicas para empresas e pessoas físicas.',
     areas: ['Direito Civil', 'Tributário', 'Contencioso Empresarial'],
   },
