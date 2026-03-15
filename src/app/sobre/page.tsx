@@ -72,7 +72,7 @@ export default function SobrePage() {
                   src={s.foto}
                   alt={`Foto de ${s.nome}`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
