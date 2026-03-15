@@ -61,7 +61,7 @@ export default function SobrePage() {
 
       <section className="section-wrap pb-20">
         <h2 className="text-2xl font-semibold text-white mb-10">Sócios &amp; Consultores</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
           {socios.map((s) => (
             <div
               key={s.nome}
