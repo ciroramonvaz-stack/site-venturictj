@@ -12,26 +12,26 @@ export default function MetodologiaPage() {
     {
       name: 'SIGEF/INCRA',
       description:
-        'Sistema de Gestão Fundiária e base de cadastro nacional de propriedades rurais',
+        'Sistema de Gestão Fundiária e verificamos certificação, limites e pendências registrais',
     },
     {
       name: 'SICAR',
       description:
-        'Sistema de Cadastro Ambiental Rural - informações de restrições ambientais',
+        'Sistema de Cadastro Ambiental Rural - cruzamos restrições ambientais com os limites do seu imóvel',
     },
     {
       name: 'ICMBio/MMA',
       description:
-        'Banco de dados de Unidades de Conservação federais e restrições ambientais',
+        'Mapeamento de UCs federais — identificamos sobreposições e direitos adquiridos',
     },
     {
       name: 'IAT-PR',
       description:
-        'Instituto de Águas do Paraná - restrições ambientais e APPs estaduais',
+        'Restrições ambientais estaduais — APPs, Áreas Úmidas e Zonas de Amortecimento',
     },
     {
       name: 'Cartórios de Registro',
-      description: 'Pesquisa de documentação e histórico registral de imóveis',
+      description: 'Pesquisa de cadeia dominial, ônus reais e histórico registral completo',
     },
   ];
 
@@ -48,7 +48,7 @@ export default function MetodologiaPage() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-              Processo comprovado em 5 etapas para diagnosticar, analisar e resolver os desafios do seu imóvel rural com segurança técnica e jurídica.
+              Processo em 5 etapas testado em mais de 150 imóveis para diagnosticar, destravar e regularizar propriedades rurais — com prazo definido e relatório de acompanhamento semanal.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function MetodologiaPage() {
             <div className="mb-16">
               <div className="gold-kicker mb-4">PROCESSO EM 5 ETAPAS</div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold">
-                O Caminho Comprovado para a Solução
+                Do Diagnóstico à Solução — Sem Surpresas
               </h2>
             </div>
 
@@ -183,7 +183,7 @@ export default function MetodologiaPage() {
               Ferramentas e Bases de Dados
             </h2>
             <p className="text-white/70 max-w-2xl">
-              Consultamos as principais bases de dados oficiais para fornecer análise completa e atualizada.
+              Cruzamos dados de 5+ bases oficiais para construir o diagnóstico mais completo do mercado — nenhuma informação fica de fora.
             </p>
           </div>
 
