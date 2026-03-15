@@ -46,20 +46,20 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 mb-8 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-venturi-gold pulse-gold" />
                 <span className="text-xs uppercase tracking-[0.2em] text-white/70">
-                  Im&oacute;vel rural travado? A Venturi destrava.
+                  Im&oacute;vel embargada, sobreposta com UC ou com CAR irregular? A Venturi destrava.
                 </span>
               </div>
 
               {/* Headline */}
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-8">
                 Destravar{' '}
-                <span className="gradient-text">propriedades rurais</span>{' '}
+                <span className="gradient-text">propriedades embargadas</span>{' '}
                 &eacute; nossa especialidade
               </h1>
 
               {/* Subtitle */}
               <p className="text-lg md:text-xl text-white/60 mb-12 max-w-xl leading-relaxed">
-                Consultoria estrat&eacute;gica para resolver os desafios mais complexos do seu im&oacute;vel rural. Regulariza&ccedil;&atilde;o, zoneamento, viabilidade agron&ocirc;mica e muito mais.
+                Consultoria estrat&eacute;gica para resolver os desafios mais complexos do seu im&oacute;vel rural. Regulariza&ccedil;&atilde;o, zoneamento, licenciamento e expertise jur&iacute;dica integrada &mdash; sem precisar de cinco escrit&oacute;rios diferentes.
               </p>
 
               {/* CTAs */}
@@ -71,13 +71,13 @@ export default function HomePage() {
                   className="btn-glow inline-flex items-center justify-center gap-3 px-8 py-4 bg-venturi-gold text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 text-sm tracking-wide"
                 >
                   <span className="w-2 h-2 rounded-full bg-green-700" />
-                  Fale no WhatsApp
+                  WhatsApp: An&aacute;lise Gratuita
                 </a>
                 <Link
                   href="/contato"
                   className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 hover:border-white/30 transition-all duration-300 text-sm tracking-wide"
                 >
-                  Solicitar Diagn&oacute;stico &rarr;
+                  Iniciar Diagn&oacute;stico Gratuito &rarr;
                 </Link>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function HomePage() {
                 <div className="gold-kicker mb-4">Nossas Solu&ccedil;&otilde;es</div>
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                   <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight">
-                    Especialistas em cada <span className="gradient-text">dimens&atilde;o</span> do seu im&oacute;vel
+                    Cobrimos cada frente que determina o <span className="gradient-text">valor</span> do seu im&oacute;vel
                   </h2>
                   <Link
                     href="/solucoes"
@@ -160,7 +160,7 @@ export default function HomePage() {
               <div className="reveal mb-16 md:mb-20 text-center">
                 <div className="gold-kicker mb-4">Nossos Produtos</div>
                 <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Servi&ccedil;os de <span className="gradient-text">alto impacto</span>
+                  Servi&ccedil;es com <span className="gradient-text">Escopo, Prazo e Valor Definido</span>
                 </h2>
                 <p className="text-white/50 max-w-2xl mx-auto text-lg">
                   Cada produto &eacute; uma solu&ccedil;&atilde;o completa, com escopo definido e resultados mensur&aacute;veis.
@@ -342,7 +342,7 @@ export default function HomePage() {
                       D&uacute;vidas frequentes
                     </h2>
                     <p className="text-white/50 leading-relaxed mb-8">
-                      Respostas para as perguntas mais comuns sobre nossos servi&ccedil;os e metodologia.
+                      Respostas para as d&uacute;vidas que impedem propriet&aacute;rios rurais de avan&ccedil;ar &mdash; e as respostas que destrancam oportunidades.
                     </p>
                     <Link
                       href="/faq"
