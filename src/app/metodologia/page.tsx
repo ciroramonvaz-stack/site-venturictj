@@ -12,12 +12,12 @@ export default function MetodologiaPage() {
     {
       name: 'SIGEF/INCRA',
       description:
-        'Sistema de Gestão Fundiária e verificamos certificação, limites e pendências registrais',
+        'Sistema de Gestão Fundiária — verificação de certificação, limites georreferenciados, sobreposições e pendências registrais junto ao INCRA',
     },
     {
       name: 'SICAR',
       description:
-        'Sistema de Cadastro Ambiental Rural - cruzamos restrições ambientais com os limites do seu imóvel',
+        'Cadastro Ambiental Rural - cruzamos restrições ambientais com os limites do seu imóvel',
     },
     {
       name: 'ICMBio/MMA',
@@ -27,11 +27,11 @@ export default function MetodologiaPage() {
     {
       name: 'IAT-PR',
       description:
-        'Restrições ambientais estaduais — APPs, Áreas Úmidas e Zonas de Amortecimento',
+        'Restrições ambientais estaduais do Paraná e demais estados — APPs, Áreas Úmidas, Zonas de Amortecimento e servidões administrativas',
     },
     {
       name: 'Cartórios de Registro',
-      description: 'Pesquisa de cadeia dominial, ônus reais e histórico registral completo',
+      description: 'Pesquisa de cadeia dominial completa, ônus reais, averbações, retificações e histórico registral desde a origem do título',
     },
   ];
 
@@ -48,7 +48,7 @@ export default function MetodologiaPage() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-              Processo em 5 etapas testado em mais de 150 imóveis para diagnosticar, destravar e regularizar propriedades rurais — com prazo definido e relatório de acompanhamento semanal.
+              Processo proprietário em 5 etapas, validado em mais de 150 imóveis rurais em todo o Brasil. Do diagnóstico fundiário-ambiental à entrega da solução — com cronograma definido, relatórios semanais e rastreabilidade completa de cada ação.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function MetodologiaPage() {
                 O que você recebe em cada diagnóstico
               </h2>
               <p className="text-white/70 max-w-2xl">
-                Documentação profissional, organizados e prontos para apresentação em órgãos públicos ou instituições financeiras.
+                Documentação técnica de padrão pericial, organizada e pronta para protocolo em órgãos ambientais, cartórios, INCRA e instituições financeiras.
               </p>
             </div>
 
@@ -183,7 +183,7 @@ export default function MetodologiaPage() {
               Ferramentas e Bases de Dados
             </h2>
             <p className="text-white/70 max-w-2xl">
-              Cruzamos dados de 5+ bases oficiais para construir o diagnóstico mais completo do mercado — nenhuma informação fica de fora.
+              Cruzamos dados de 8+ bases oficiais e registros públicos para construir o diagnóstico fundiário-ambiental mais completo do mercado — nenhuma pendência, sobreposição ou restrição passa despercebida.
             </p>
           </div>
 
