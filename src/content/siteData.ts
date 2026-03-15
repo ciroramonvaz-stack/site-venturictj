@@ -47,35 +47,35 @@ export const solutions = [
     title: 'Sobreposição com Unidades de Conservação',
     slug: 'uc-restricoes',
     icon: '🏛️',
-    longDescription: 'Análise especializada de imóveis que se sobrepõem ou fazem limite com UC federais e estaduais. Avaliamos restrições legais, direitos adquiridos e alternativas para regularização. Consultoria para negociação com órgãos ambientais e documentação técnico-jurídica necessária.',
+    longDescription: 'Análise especializada de imóveis sobrepostos ou limítrofes a Unidades de Conservação federais e estaduais. Levantamento de restrições legais, mapeamento de direitos adquiridos e construção de estratégia para regularização fundiária. Atuação em negociação com ICMBio, IAT, IBAMA e demais órgãos gestores, incluindo elaboração de dossiê técnico-jurídico completo para destravar o patrimônio.',
   },
   {
     id: 'icmbio',
-    title: 'Embargos e Autos de Infração (ICMBio)',
+    title: 'Embargos e Autos de Infração Ambiental',
     slug: 'icmbio',
     icon: '📋',
-    longDescription: 'Defesa administrativa contra autos de infração lavrados pelo ICMBio. Análise de legalidade do embargo, documentação histórica da propriedade e argumentação técnica para reversão. Experiência comprovada em apresentação de recursos e negociação com autarquia.',
+    longDescription: 'Defesa administrativa contra autos de infração lavrados por ICMBio, IBAMA, IAT (PR) e demais órgãos ambientais estaduais e federais. Análise de legalidade do embargo, documentação histórica da propriedade, argumentação técnico-jurídica e apresentação de recursos administrativos. Atuação comprovada na reversão de embargos e negociação direta com autarquias ambientais em todo o Brasil.',
   },
   {
     id: 'iat-pr',
     title: 'Análise de Restrições Ambientais (IAT-PR)',
     slug: 'iat-pr',
     icon: '🌊',
-    longDescription: 'Diagnóstico completo de restrições ambientais estaduais no Paraná e demais estados: APPs, Áreas Úmidas, Zonas de Amortecimento. Mapeamento de limitações legais com base em legislação ambiental estadual e federal. Orientação para compatibilização de uso.',
+    longDescription: 'Diagnóstico completo de restrições ambientais em âmbito estadual e federal: APPs, Reserva Legal, Áreas Úmidas, Zonas de Amortecimento e servidões administrativas. Cruzamento de dados geoespaciais com legislação vigente para identificar limitações e oportunidades de uso. Elaboração de parecer técnico com estratégias de compatibilização produtiva dentro do marco regulatório.',
   },
   {
     id: 'fundiario-sigef',
     title: 'Regularização Fundiária e SIGEF',
     slug: 'fundiario-sigef',
     icon: '📐',
-    longDescription: 'Assessoria completa para certificação INCRA/SIGEF de propriedades rurais. Análise de documentação, verificação de conformidade registral e preparação de dossiê técnico. Coordenação com profissionais habilitados para georreferenciamento e inscrição no SIGEF.',
+    longDescription: 'Assessoria completa para certificação INCRA/SIGEF de propriedades rurais de qualquer porte. Análise minuciosa de cadeia dominial, verificação de conformidade registral e resolução de inconsistências cartoriais. Preparação de dossiê técnico robusto e coordenação com profissionais habilitados para georreferenciamento, retificação de área e inscrição definitiva no SIGEF.',
   },
   {
     id: 'defesa-administrativa',
     title: 'Defesa Administrativa e Contestações',
     slug: 'defesa-administrativa',
     icon: '⚖️',
-    longDescription: 'Preparação e apresentação de recursos administrativos contra autuações fundiárias, ambientais e tributárias. Análise jurídica de fundamentação legal da infração, documentação de contraposição técnica e estratégia de negociação com órgãos responsáveis.',
+    longDescription: 'Elaboração e protocolo de recursos administrativos contra autuações fundiárias, ambientais e tributárias em todas as esferas. Análise jurídica aprofundada da fundamentação legal, construção de contraposição técnica com prova documental e pericial, e estratégia de negociação direta com órgãos autuantes. Histórico consistente de reversões e reduções de penalidades.',
   },
 ];
 
@@ -155,7 +155,7 @@ export const testimonials = [
   },
   {
     author: 'Cliente (R.L.)',
-    text: 'Fazenda travada há 3 anos por embargo do ICMBio. A Venturi reverteu o embargo em 60 dias com defesa administrativa impecável. Equipe extremamente competente.',
+    text: 'Fazenda travada há 3 anos por embargo de órgão ambiental federal. A Venturi reverteu o embargo em 60 dias com defesa administrativa impecável. Equipe extremamente competente.',
   },
 ];
 
@@ -189,8 +189,8 @@ export const faq = [
     answer: 'Entre 10 e 15 dias úteis após o envio da documentação preliminar. O prazo pode variar caso seja necessário solicitar documentos adicionais ao cliente ou aos órgãos públicos.',
   },
   {
-    question: 'Meu imóvel foi embargado pelo ICMBio. Vocês ajudam?',
-    answer: 'Sim. Analisamos o auto de infração, verificamos a legalidade do embargo, pesquisamos direitos adquiridos do imóvel e elaboramos defesa administrativa com argumentação técnico-jurídica para reversão ou negociação do embargo.',
+    question: 'Meu imóvel foi embargado por órgão ambiental (ICMBio, IBAMA, IAT etc.). Vocês ajudam?',
+    answer: 'Sim. Atuamos contra embargos de qualquer órgão ambiental — ICMBio, IBAMA, IAT (PR), IMA, IEMA e demais autarquias estaduais. Analisamos o auto de infração, verificamos a legalidade do embargo, pesquisamos direitos adquiridos do imóvel e elaboramos defesa administrativa com argumentação técnico-jurídica robusta para reversão ou negociação do embargo.',
   },
   {
     question: 'Preciso de georreferenciamento. Vocês fazem?',
