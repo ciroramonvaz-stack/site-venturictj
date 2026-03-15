@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${montserrat.variable}`}>
-      <body className="font-[var(--font-montserrat)]">
+      <body className="font-[var(--font-montserrat)] noise-bg">
         <Header />
         <main>{children}</main>
         <Footer />
