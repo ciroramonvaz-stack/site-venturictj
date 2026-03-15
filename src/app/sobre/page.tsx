@@ -15,7 +15,7 @@ const team = [
     initials: 'CR',
     photo: '/ciro.jpg.jpeg',
     specialties: ['Regularização Fundiária', 'Licenciamento Ambiental', 'Tributação Rural', 'Créditos de Carbono'],
-    bio: 'Bacharel em Direito com década de atuação estratégica na Polícia Militar do Paraná (PMPR), onde construiu expertise em gestão institucional, compliance e articulação com órgãos públicos — competências que hoje aceleram a resolução de processos ambientais e fundiários. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa MBA em Atualizações Tributárias e MBA em Créditos de Carbono. Lidera a Venturi conectando leitura regulatória e prova territorial para destravar patrimônios rurais com segurança jurídica.',
+    bio: 'Bacharel em Direito com mais de uma década de atuação estratégica na Polícia Militar do Paraná (PMPR), onde desenvolveu expertise de alto nível em gestão institucional, compliance, inteligência operacional e articulação direta com órgãos públicos das esferas estadual e federal — competências que hoje aceleram a resolução de processos ambientais e fundiários complexos. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa simultaneamente MBA em Atualizações Tributárias e MBA em Créditos de Carbono e Sustentabilidade. Idealizador e líder da Venturi, conecta leitura regulatória aprofundada, prova territorial e visão de mercado para destravar patrimônios rurais travados por embargos, sobreposições e pendências fundiárias — sempre com segurança jurídica e resultado mensurável.',
   },
   {
     name: 'Eduardo Gabriel F. de Andrade',
