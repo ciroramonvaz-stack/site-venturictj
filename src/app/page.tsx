@@ -161,7 +161,7 @@ export default function HomePage() {
               <div className="reveal mb-16 md:mb-20 text-center">
                 <div className="gold-kicker mb-4">Nossos Produtos</div>
                 <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Servi&ccedil;es com <span className="gradient-text">Escopo, Prazo e Valor Definido</span>
+                  Servi&ccedil;os com <span className="gradient-text">Escopo, Prazo e Valor Definido</span>
                 </h2>
                 <p className="text-white/50 max-w-2xl mx-auto text-lg">
                   Cada produto &eacute; uma solu&ccedil;&atilde;o completa, com escopo definido e resultados mensur&aacute;veis.
