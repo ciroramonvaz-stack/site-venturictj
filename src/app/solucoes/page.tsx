@@ -1,14 +1,9 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { getPageMetadata } from '@/lib/seo';
 import { siteData } from '@/content/siteData';
 import SchedulingCTA from '@/components/SchedulingCTA';
 
-export const metadata: Metadata = getPageMetadata({
-  title: 'Soluções | VENTURI',
-  description: 'Consultoria especializada para cada desafio do seu imóvel rural. Soluções em regularização fundiária, análise ambiental e conformidade registral.',
-  ogImage: '/og-image-solucoes.jpg',
-});
+export const metadata = getPageMetadata('Soluções | VENTURI');
 
 export default function SolucoesPage() {
   const { company, solutions, products } = siteData;
