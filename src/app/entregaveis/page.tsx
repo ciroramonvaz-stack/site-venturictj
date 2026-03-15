@@ -9,9 +9,9 @@ export default function EntregaveisPage() {
   return (
     <>
       <PageHero
-        kicker="Resultados"
-        title="Documentos técnico-jurídicos que destravem operações e sustentem decisões de alto impacto"
-        description="Relatórios aceitos por bancos, órgãos ambientais e cartórios — cada documento é produzido para resistir ao escrutínio mais rigoroso."
+        kicker="Entregáveis Premium"
+        title="Documentação técnico-jurídica de padrão pericial que destrava patrimônios e sustenta decisões de alto impacto"
+        description="Cada relatório e parecer é produzido com rigor técnico de nível pericial — aceitos por bancos, órgãos ambientais (ICMBio, IBAMA, IAT), cartórios de registro e tribunais. Documentação que resiste ao escrutínio mais exigente e transforma complexidade regulatória em segurança patrimonial."
       />
       <section className="section-wrap py-14">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
