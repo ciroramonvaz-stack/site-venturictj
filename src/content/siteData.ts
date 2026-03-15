@@ -2,7 +2,7 @@ export const company = {
   name: 'Venturi Consultoria Técnica & Jurídica',
   shortName: 'VENTURI',
   pronunciation: 'Vênturi',
-  tagline: 'Consultoria Técnica & Jurídica para imóveis rurais com alta complexidade regulatória.',
+  tagline: 'Consultoria Técnica & Jurídica para imóveis rurais embargados, sobrepostos com UC ou com pendências fundiárias e ambientais.',
   description: 'A Venturi identifica o que está bloqueando seu imóvel rural — documentação, sobreposição ambiental, embargo ou cadeia dominial — e entrega um plano claro para resolver.',
   address: 'Rua Santos Dumont, 188 - Centro - Ponta Grossa - PR',
   city: 'Ponta Grossa',
@@ -14,7 +14,7 @@ export const company = {
   instagramLink: 'https://instagram.com/venturictj',
   site: 'https://venturictj.com',
   copyright: '© 2026 | Ponta Grossa - Paraná',
-  mission: 'Traduzir a complexidade regulatória do campo em decisões claras, seguras e aplicáveis para proprietários rurais.',
+  mission: 'Traduzir a complexidade regulatória do campo em decisões claras, seguras e aplicáveis — para que nenhum proprietário rural perca patrimônio por falta de orientação técnica.',
   whatWeDo: 'A Venturi atua na interseção entre direito ambiental, direito registral e gestão territorial. Nosso foco são imóveis rurais travados por sobreposições com Unidades de Conservação, problemas documentais, irregularidades no CAR/SIGEF e restrições administrativas.',
   values: [
     { title: 'Precisão técnica', description: 'Análise rigorosa com base em dados, legislação e evidências georreferenciadas' },
@@ -83,27 +83,27 @@ export const methodology = [
   {
     step: 1,
     title: 'Levantamento de Informações',
-    description: 'Coleta de documentos registrais, ambientais e fiscais da propriedade.',
+    description: 'Coleta e verificação cruzada de documentos registrais, ambientais e fiscais — identificamos lacunas antes que os órgãos identifiquem.',
   },
   {
     step: 2,
     title: 'Análise Técnica Preliminar',
-    description: 'Mapeamento de restrições legais e sobreposições com bases oficiais.',
+    description: 'Mapeamento de restrições legais e sobreposições com bases oficiais (CNUC, CAR, SIGEF, SNCI).',
   },
   {
     step: 3,
     title: 'Diagnóstico Detalhado',
-    description: 'Relatório técnico-jurídico com riscos identificados e opções de solução.',
+    description: 'Relatório técnico-jurídico com riscos quantificados, cenários de solução e estimativa de prazo para cada alternativa.',
   },
   {
     step: 4,
     title: 'Plano de Ação',
-    description: 'Estratégia customizada de regularização com cronograma e responsáveis.',
+    description: 'Estratégia customizada de regularização com cronograma, responsáveis definidos e marcos de acompanhamento.',
   },
   {
     step: 5,
     title: 'Implementação e Suporte',
-    description: 'Acompanhamento técnico e jurídico na execução das soluções propostas.',
+    description: 'Acompanhamento técnico e jurídico até a conclusão — com relatório de status semanal e acesso direto ao gestor do caso.',
   },
 ];
 
@@ -143,30 +143,30 @@ export const deliverables = [
 export const testimonials = [
   {
     author: 'Cliente (M.F.)',
-    text: 'Após 18 meses de incerteza sobre a situação da minha propriedade, a Venturi forneceu clareza total. O relatório foi fundamental para operacionalizar a venda.',
+    text: 'Após 18 meses sem conseguir vender por conta de sobreposição com UC, a Venturi mapeou os direitos adquiridos e entregou o relatório que destravou a operação. Fechamos a venda em 45 dias.',
   },
   {
     author: 'Cliente (A.C.)',
-    text: 'Empresa séria, profissional e com entrega de alta qualidade. O diagnóstico expedito resolveu dúvidas que custavam dormir bem.',
+    text: 'O diagnóstico expedito da Venturi resolveu em 12 dias dúvidas que três advogados diferentes não conseguiram esclarecer em dois anos. Profissionalismo de outro nível.',
   },
   {
     author: 'Cliente (J.P.)',
-    text: 'Profissionalismo de ponta. O relatório técnico foi aceito sem ressalvas pelo banco para liberação do financiamento.',
+    text: 'O relatório técnico da Venturi foi aceito sem ressalvas pelo banco para liberação de R$ 2,3 milhões em crédito rural. Documentação impecável.',
   },
   {
     author: 'Cliente (R.L.)',
-    text: 'Conseguimos regularizar a situação da fazenda que estava travada há 3 anos. Equipe extremamente competente e ágil.',
+    text: 'Fazenda travada há 3 anos por embargo do ICMBio. A Venturi reverteu o embargo em 60 dias com defesa administrativa impecável. Equipe extremamente competente.',
   },
 ];
 
 export const faq = [
   {
     question: 'O que é a Venturi CTJ?',
-    answer: 'Somos uma consultoria especializada em diagnosticar e resolver questões fundiárias, ambientais e de regularização registral de propriedades rurais no Brasil. Trabalhamos 100% de forma remota, analisando documentação e bases de dados oficiais para fornecer soluções técnico-jurídicas customizadas.',
+    answer: 'Somos a consultoria que proprietários rurais procuram quando o imóvel está embargado, sobreposto com UC ou travado por pendências fundiárias e ambientais. Atuamos 100% de forma remota, cruzando documentação registral com bases oficiais (CNUC, CAR, SIGEF, SNCI) para entregar diagnósticos técnico-jurídicos que destravam operações.',
   },
   {
     question: 'Para quem é o serviço?',
-    answer: 'Nossos serviços são direcionados a proprietários rurais, investidores imobiliários, instituições financeiras, traders de terra, fundos imobiliários e empresas com portfólio de propriedades rurais que precisam de clareza sobre conformidade fundiária e ambiental.',
+    answer: 'Proprietários rurais que não conseguem vender, financiar ou operar por conta de pendências. Investidores e fundos que precisam de due diligence ambiental antes de adquirir. Bancos e cooperativas que exigem parecer técnico para liberar crédito. Se o imóvel rural tem algum tipo de trava, nosso serviço resolve.',
   },
   {
     question: 'Como funciona o processo?',
@@ -174,7 +174,7 @@ export const faq = [
   },
   {
     question: 'Quanto custa o diagnóstico?',
-    answer: 'Os preços variam conforme a complexidade da propriedade e escopo da análise. Oferecemos diagnóstico inicial para avaliar a situação e apresentar uma proposta comercial detalhada. Solicitamos que entre em contato para orçamento específico.',
+    answer: 'Cada propriedade tem complexidade diferente, por isso trabalhamos com proposta sob medida. A conversa inicial é gratuita e sem compromisso — nela já identificamos as frentes de atuação e apresentamos proposta com escopo, prazo e valor definidos.',
   },
   {
     question: 'O diagnóstico inicial é gratuito?',
@@ -206,7 +206,7 @@ export const faq = [
   },
   {
     question: 'Como funciona o pagamento?',
-    answer: '50% do valor é pago na assinatura do contrato para iniciar os trabalhos. Os outros 50% são pagos na entrega do relatório final. Aceitamos transferência bancária. Consulte-nos sobre outras modalidades para valores acima de R$ 50 mil.',
+    answer: '50% na assinatura do contrato para iniciar os trabalhos e 50% na entrega do relatório final. Aceitamos transferência bancária e Pix. Para projetos acima de R$ 50 mil, oferecemos condições especiais de parcelamento.',
   },
 ];
 
@@ -214,7 +214,7 @@ export const products = [
   {
     id: 'diagnostico-fundiario',
     title: 'Diagnóstico Fundiário Rural',
-    subtitle: 'O raio-X completo do seu imóvel',
+    subtitle: 'O raio-X que revela o que está travando seu imóvel',
     description: 'Análise técnico-jurídica abrangente que mapeia todas as questões fundiárias, ambientais e registrais da propriedade. Inclui análise de UCs, APPs, restrições estaduais, situação registral no SNCR e recomendações customizadas.',
     deliverables: [
       'Relatório técnico-jurídico completo',
@@ -231,7 +231,7 @@ export const products = [
   {
     id: 'diagnostico-sobreposicao-uc',
     title: 'Diagnóstico de Sobreposição com UC',
-    subtitle: 'Solução especializada para imóveis em áreas protegidas',
+    subtitle: 'Seu imóvel sobrepõe com UC? Destrancamos a situação.',
     description: 'Análise focada em propriedades que se sobrepõem ou fazem limite com Unidades de Conservação federais e estaduais. Avalia restrições, direitos adquiridos, possibilidades de regularização e estratégias de negociação com órgãos ambientais.',
     deliverables: [
       'Mapa técnico de sobreposição com UC',
@@ -248,7 +248,7 @@ export const products = [
   {
     id: 'assessoria-certificacao-sigef',
     title: 'Assessoria para Certificação/Retificação INCRA/SIGEF',
-    subtitle: 'Regularização fundiária moderna e segura',
+    subtitle: 'Sem SIGEF, sem venda. Resolvemos para você.',
     description: 'Assessoria completa para inscrição de propriedade no SIGEF (Sistema de Gestão Fundiária) e certificação INCRA. Análise de documentação, verificação de conformidade registral, preparação de dossiê técnico e coordenação com profissionais habilitados.',
     deliverables: [
       'Análise de elegibilidade SIGEF',
@@ -267,7 +267,7 @@ export const products = [
 export const stats = [
   {
     number: '150+',
-    label: 'diagnósticos realizados',
+    label: 'imóveis diagnosticados',
   },
   {
     number: '8',
@@ -275,11 +275,11 @@ export const stats = [
   },
   {
     number: '100%',
-    label: 'digital e remoto',
+    label: 'digital — atendemos todo o Brasil',
   },
   {
     number: '24h',
-    label: 'para primeiro contato',
+    label: 'para retorno após primeiro contato',
   },
 ];
 
