@@ -1,15 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { getPageMetadata } from '@/lib/seo';
 import { siteData } from '@/content/siteData';
 import SchedulingCTA from '@/components/SchedulingCTA';
 
-export const metadata: Metadata = getPageMetadata({
-  title: 'Venturi CTJ | Consultoria em Terras Rurais',
-  description: 'Imóvel rural travado? A Venturi destrava. Consultoria especializada para destravar propriedades rurais no Brasil.',
-  ogImage: '/og-image-home.jpg',
-});
+export const metadata = getPageMetadata('Home | VENTURI');
 
 export default function HomePage() {
   const {
