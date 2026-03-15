@@ -135,7 +135,7 @@ Enviado via formulário de contato
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-              Diagnóstico inicial gratuito. Sem compromisso. Resposta em até 24 horas.
+              Análise preliminar gratuita e sem compromisso. Descubra em 24 horas o que está travando seu imóvel — e como resolver.
             </p>
           </div>
         </div>
@@ -149,10 +149,10 @@ Enviado via formulário de contato
             <div className="lg:col-span-2">
               <div className="rounded-lg bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-8 md:p-12">
                 <h2 className="font-serif text-3xl font-bold mb-2">
-                  Sobre seu imóvel
+                  Conte-nos sobre seu imóvel
                 </h2>
                 <p className="text-white/70 mb-8">
-                  Preencha os dados abaixo para que nossa equipe possa avaliar sua situação.
+                  Preencha os dados abaixo e nossa equipe fará uma avaliação preliminar gratuita em até 24 horas.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -391,7 +391,7 @@ Enviado via formulário de contato
                   1.
                 </span>
                 <span>
-                  Você preenche o formulário ou entra em contato via WhatsApp
+                  Você preenche o formulário acima ou envia uma mensagem via WhatsApp
                 </span>
               </li>
               <li className="flex gap-4">
@@ -399,7 +399,7 @@ Enviado via formulário de contato
                   2.
                 </span>
                 <span>
-                  Nossa equipe avalia a situação preliminarmente (24h)
+                  Nossa equipe cruza as informações com bases públicas e avalia o cenário em até 24h
                 </span>
               </li>
               <li className="flex gap-4">
@@ -407,7 +407,7 @@ Enviado via formulário de contato
                   3.
                 </span>
                 <span>
-                  Agendamos uma conversa inicial gratuita para discutir sua situação
+                  Agendamos uma conversa gratuita de 30 minutos para apresentar o diagnóstico preliminar
                 </span>
               </li>
               <li className="flex gap-4">
@@ -415,7 +415,7 @@ Enviado via formulário de contato
                   4.
                 </span>
                 <span>
-                  Apresentamos proposta customizada com escopo, prazo e valor
+                  Você recebe proposta sob medida com escopo detalhado, prazo definido e valor fixo — sem surpresas
                 </span>
               </li>
             </ol>
