@@ -15,7 +15,7 @@ const team = [
     initials: 'CR',
     photo: '/ciro.jpg.jpeg',
     specialties: ['Regularização Fundiária', 'Licenciamento Ambiental', 'Tributação Rural', 'Créditos de Carbono'],
-    bio: 'Bacharel em Direito com década de atuação estratégica na Polícia Militar do Paraná (PMPR), onde desenvolveu competências em gestão institucional, compliance e interlocução com órgãos públicos — capacidades que hoje são o diferencial da assessoria junto a entes ambientais e fundiários. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa MBA em Atualizações Tributárias e MBA em Créditos de Carbono. Lidera a Venturi com visão integrada entre leitura regulatória e prova territorial, entregando soluções patrimoniais seguras e sustentáveis para o setor rural paranaense.',
+    bio: 'Bacharel em Direito com década de atuação estratégica na Polícia Militar do Paraná (PMPR), onde construiu expertise em gestão institucional, compliance e articulação com órgãos públicos — competências que hoje aceleram a resolução de processos ambientais e fundiários. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa MBA em Atualizações Tributárias e MBA em Créditos de Carbono. Lidera a Venturi conectando leitura regulatória e prova territorial para destravar patrimônios rurais com segurança jurídica.',
   },
   {
     name: 'Eduardo Gabriel F. de Andrade',
@@ -24,7 +24,7 @@ const team = [
     initials: 'EA',
     photo: '/eduardo.jpg.jpeg',
     specialties: ['Direito Empresarial', 'Direito Civil', 'Direito Penal', 'Propriedade Intelectual'],
-    bio: 'Advogado com atuação consagrada no Direito Privado e experiência em mais de 780 processos judiciais perante o TJPR e tribunais superiores. Especialista em Direito do Consumidor, Direito Empresarial, Direito Civil, Direito de Trânsito, Direito Penal e Propriedade Intelectual, oferece assessoria personalizada com foco em estratégia, agilidade e resultados. Seu histórico de excelência no contencioso cível e criminal é garantia de defesa técnica rigorosa para empresas e pessoas físicas.',
+    bio: 'Advogado com atuação consolidada no Direito Privado e mais de 780 processos conduzidos perante o TJPR e tribunais superiores. Especialista em Direito Empresarial, Civil, Penal e Propriedade Intelectual, entrega assessoria com foco em estratégia e resultado mensurável. Referência em contencioso cível e criminal, assegura defesa técnica rigorosa para produtores rurais e empresas do agro.',
   },
   {
     name: 'Geliandra Lopes A. Pereira',
@@ -33,7 +33,7 @@ const team = [
     initials: 'GA',
     photo: '/geliandra.jpg.jpeg',
     specialties: ['Direito Ambiental', 'Agronegócio', 'EIA/RIMA', 'Compliance Ambiental'],
-    bio: 'Advogada ambiental e do agronegócio com mais de 10 anos de experiência em contencioso administrativo, compliance ambiental, estudos de impacto ambiental (EIA/RIMA) e assessoria estratégica. Presidente da Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa, MBA em Avaliação de Impacto Ambiental pela UNICURITIBA, palestrante e consultora reconhecida em sustentabilidade e gestão pública. Sua liderança em mediação e conciliação ambiental é referência no setor.',
+    bio: 'Advogada ambiental e do agronegócio com mais de 10 anos em contencioso administrativo, compliance ambiental e estudos de impacto (EIA/RIMA). Presidente da Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa, MBA em Avaliação de Impacto Ambiental pela UNICURITIBA. Referência em mediação ambiental, transforma embargos e autuações em acordos viáveis para o produtor rural.',
   },
   {
     name: 'José Alaertes Silveira',
@@ -42,7 +42,7 @@ const team = [
     initials: 'JS',
     photo: '/jose.jpg.jpeg',
     specialties: ['Direito do Consumidor', 'Direito Empresarial', 'Direito Civil', 'Precatórios'],
-    bio: 'Advogado com trajetória sólida e consolidada no Direito Privado, com participação em mais de 110 processos judiciais perante o TJPR e outros tribunais. Especialista em Direito do Consumidor, Direito Empresarial, Direito Civil e atuação estratégica em precatórios, combina experiência de décadas com visão pragmática para entregar soluções jurídicas eficientes. Sua assessoria é marcada pelo comprometimento com ética, precisão técnica e defesa intransigente dos interesses de seus clientes.',
+    bio: 'Advogado com trajetória consolidada no Direito Privado e mais de 110 processos conduzidos perante o TJPR e tribunais superiores. Especialista em Direito Empresarial, Civil, do Consumidor e atuação estratégica em precatórios, combina décadas de experiência com visão pragmática. Sua assessoria é marcada pela ética, precisão técnica e defesa intransigente dos interesses patrimoniais de seus clientes.',
   },
 ];
 
@@ -62,12 +62,12 @@ export default function SobrePage() {
             <div className="max-w-3xl reveal">
               <div className="gold-kicker mb-6">Sobre a Venturi</div>
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] mb-8">
-                Excelência que{' '}
-                <span className="gradient-text">transforma</span>{' '}
-                o agro brasileiro
+                Excel&ecirc;ncia que{' '}
+                <span className="gradient-text">destrava</span>{' '}
+                patrim&ocirc;nios rurais
               </h1>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl">
-                Somos uma consultoria técnica e jurídica fundada na convicção de que propriedades rurais merecem o mesmo nível de assessoria estratégica que grandes corporações. Combinamos rigor técnico, visão regulatória e expertise jurídica para destravar o potencial de cada imóvel.
+                Consultoria técnica e jurídica especializada em propriedades rurais embargadas, sobrepostas com UC ou com pendências fundiárias, ambientais e tributárias. Reunimos todas as frentes num único escritório — para que você não precise de cinco.
               </p>
             </div>
           </div>
@@ -80,22 +80,22 @@ export default function SobrePage() {
               <div className="reveal">
                 <div className="gold-kicker mb-4">Nossa Missão</div>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Proteger patrimônios rurais com inteligência e <span className="gradient-text">precisão</span>
+                  Destravar propriedades rurais com inteligência técnica e <span className="gradient-text">segurança jurídica</span>
                 </h2>
                 <p className="text-white/50 leading-relaxed mb-6">
-                  A Venturi nasceu da necessidade real de proprietários rurais que enfrentam desafios fundiários, ambientais e tributários sem acesso a consultoria de alto nível. Com sede em Ponta Grossa/PR e atendimento em todo o Brasil, integramos as dimensões técnica, jurídica e regulatória para proteger seu patrimônio.
+                  A Venturi nasceu da frustração real de proprietários que perdiam prazos, pagavam multas evitáveis e viam seu patrimônio desvalorizar por falta de assessoria integrada. Com sede em Ponta Grossa/PR e atuação em todo o Brasil, reunimos as frentes técnica, jurídica e regulatória num único escritório — para que você não precise de cinco.
                 </p>
                 <p className="text-white/50 leading-relaxed">
-                  Cada caso é tratado com a seriedade de quem entende que por trás de cada hectare há história, investimento e futuro. Nossa abordagem combina diagnóstico profundo, estratégia personalizada e execução precisa.
+                  Cada caso é tratado com a seriedade de quem sabe que por trás de cada hectare há gerações de trabalho, capital investido e planos de sucessão. Nossa abordagem combina diagnóstico profundo, estratégia sob medida e execução com prazo definido.
                 </p>
               </div>
 
               <div className="reveal-left space-y-6">
                 {[
-                  { title: 'Rigor Técnico', desc: 'Análise documental e territorial com precisão cirurgíca. Cada parecer é fundamentado em legislação vigente e jurisprudência consolidada.' },
-                  { title: 'Ética Inegociável', desc: 'Transparência total em cada etapa. Nosso compromisso é com a verdade dos fatos e a defesa legítima dos seus interesses.' },
-                  { title: 'Visão Estratégica', desc: 'Não resolvemos apenas o problema imediato. Antecipamos cenários, prevenimos riscos e construímos segurança patrimonial de longo prazo.' },
-                  { title: 'Atendimento Premium', desc: 'Cada cliente recebe dedicação exclusiva, com comunicação clara, prazos cumpridos e acesso direto aos responsáveis.' },
+                  { title: 'Rigor Técnico', desc: 'Análise documental e territorial com precisão cirúrgica. Cada parecer é fundamentado em legislação vigente, jurisprudência consolidada e validação cruzada de bases públicas.' },
+                  { title: 'Ética Inegociável', desc: 'Transparência total em cada etapa — você acompanha cada movimentação em tempo real. Nosso compromisso é com a verdade dos fatos e a defesa legítima dos seus interesses.' },
+                  { title: 'Visão Estratégica', desc: 'Não resolvemos apenas o embargo atual. Antecipamos cenários regulatórios, prevenimos autos de infração futuros e construímos segurança patrimonial que atravessa gerações.' },
+                  { title: 'Atendimento Premium', desc: 'Cada cliente tem gestor dedicado, comunicação semanal com status atualizado, prazos definidos em contrato e acesso direto aos sócios responsáveis.' },
                 ].map((value, i) => (
                   <div key={i} className="premium-card rounded-xl p-6 group">
                     <h3 className="font-semibold text-base mb-2 group-hover:text-venturi-gold transition-colors duration-300">
