@@ -19,12 +19,12 @@ export default function SolucoesPage() {
 
             {/* Headline */}
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Consultoria especializada para cada desafio do seu imóvel rural
+              Seu imóvel está travado? Temos a solução técnica e jurídica para cada frente.
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-              Cobrimos todas as dimensões da conformidade fundiária, ambiental e registral. Cada solução é customizada para sua situação.
+              Sobreposição com UC, embargo do ICMBio, pendência no CAR/SIGEF ou restrição do IAT — cobrimos cada frente com diagnóstico e plano de ação sob medida.
             </p>
           </div>
         </div>
