@@ -10,6 +10,7 @@ const socios = [
     oab: 'Bacharel em Direito · 40º Exame da OAB aprovado',
     cargo: 'Consultor Fundiário & Tributário Rural',
     foto: '/team/Foto Ciro.jpeg',
+    pos: 'object-top',
     bio: 'Bacharel em Direito com 10 anos de carreira na Polícia Militar do Paraná, onde desenvolveu rigor técnico, gestão e interlocução institucional com órgãos públicos. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio (EBPÓS). Atua com abordagem integrada entre leitura regulatória e prova territorial — regularização fundiária, licenciamento ambiental, tributação rural e créditos de carbono. Sócio-fundador da Venturi.',
     areas: ['Regularização Fundiária', 'Tributação Rural', 'Licenciamento Ambiental', 'Créditos de Carbono'],
   },
@@ -18,6 +19,7 @@ const socios = [
     oab: 'Advogado · OAB/PR 58.941',
     cargo: 'Advogado | Direito Privado & Tributário',
     foto: '/team/Foto Eduardo.jpeg',
+    pos: 'object-top',
     bio: 'Sócio-administrador da Andrade e Silveira Sociedade de Advogados (Ponta Grossa/PR). Especialista em Direito do Consumidor, Empresarial, Civil, Tributário e Propriedade Intelectual. Mais de 780 processos no TJPR e outros tribunais. Atua com foco em soluções estratégicas e personalizadas para empresas e pessoas físicas.',
     areas: ['Direito Empresarial', 'Tributário', 'Contencioso Cível'],
   },
@@ -26,6 +28,7 @@ const socios = [
     oab: 'Advogada · OAB/PR 115.178',
     cargo: 'Advogada Ambiental & do Agronegócio',
     foto: '/team/Foto Geliandra.jpeg',
+    pos: 'object-top',
     bio: 'Especialista em Direito Ambiental, Agronegócio, Direito Administrativo e Sustentabilidade. Mais de 10 anos em contencioso administrativo, compliance ambiental, EIA/RIMA e mediação. Presidente da Comissão de Direito Ambiental da OAB/PR – Subseção Ponta Grossa. MBA em Avaliação de Impacto Ambiental (UNICURITIBA). Palestrante e consultora em sustentabilidade e gestão pública.',
     areas: ['Direito Ambiental', 'Agronegócio', 'Compliance Ambiental', 'EIA/RIMA'],
   },
@@ -33,7 +36,8 @@ const socios = [
     nome: 'José Alaertes Silveira',
     oab: 'Advogado · OAB/PR 60.934',
     cargo: 'Advogado | Direito Privado & Tributário',
-    foto: foto: '/team/Foto Jose Alaertes.jpeg', fotoPos: 'object-center',
+    foto: '/team/Foto Jose Alaertes.jpeg',
+    pos: 'object-[15%]',
     bio: 'Sócio-administrador da Andrade e Silveira Sociedade de Advogados (Ponta Grossa/PR). Trajetória consolidada no Direito Privado com foco em Direito do Consumidor, Empresarial, Civil e Tributário. Mais de 110 processos no TJPR e outros tribunais. Comprometido com excelência, ética e soluções estratégicas para empresas e pessoas físicas.',
     areas: ['Direito Civil', 'Tributário', 'Contencioso Empresarial'],
   },
@@ -72,7 +76,7 @@ export default function SobrePage() {
                   src={s.foto}
                   alt={`Foto de ${s.nome}`}
                   fill
-                  className={`object-cover ${s.fotoPos ?? 'object-top'}`}
+                  className={`object-cover ${s.pos}`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
