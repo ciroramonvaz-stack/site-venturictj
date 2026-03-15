@@ -6,15 +6,15 @@ export const metadata = getPageMetadata('UC & Imóvel | VENTURI');
 const cards = [
   {
     title: 'Imóvel dentro da UC',
-    text: 'Exige análise detalhada do regime da categoria da UC, zoneamento e atos normativos específicos. A Venturi identifica restrições de uso, direitos adquiridos e caminhos para regularização.'
+    text: 'Exige análise aprofundada do regime da categoria da UC (Proteção Integral ou Uso Sustentável), plano de manejo, zoneamento e atos normativos específicos. A Venturi mapeia cada restrição, identifica direitos adquiridos anteriores à criação da UC e constrói o caminho jurídico para regularização ou indenização.'
   },
   {
     title: 'Imóvel no entorno da UC',
-    text: 'A análise do entorno depende de critérios técnicos e da atividade pretendida. Avaliamos condicionantes administrativas e licenciamentos necessários para operar sem risco.'
+    text: 'A análise do entorno exige cruzamento de critérios técnicos, faixa de influência e atividade pretendida. Avaliamos todas as condicionantes administrativas, licenciamentos exigidos e restrições de supressão vegetal para garantir operação segura e em conformidade.'
   },
   {
     title: 'Zona de amortecimento (ZA)',
-    text: 'Quando instituída, a ZA impõe exigências adicionais para licenciamento, manejo e expansão. Mapeamos as restrições aplicáveis e orientamos a estratégia de conformidade.'
+    text: 'Quando instituída por ato normativo, a ZA impõe exigências adicionais para licenciamento, manejo florestal, edificação e expansão produtiva. Mapeamos todas as restrições aplicáveis, verificamos a legalidade das imposições e orientamos a estratégia de conformidade ou contestação administrativa.'
   }
 ];
 
@@ -22,9 +22,9 @@ export default function UcImovelPage() {
   return (
     <>
       <PageHero
-        kicker="Guia prático"
-        title="UC & Imóvel Rural: entenda o que trava e como destravar"
-        description="Seu imóvel está dentro, no entorno ou na zona de amortecimento de uma UC? Entenda os impactos reais sobre uso, venda e financiamento — e as alternativas jurídicas disponíveis."
+        kicker="Consultoria Especializada"
+        title="UC & Imóvel Rural: diagnóstico completo para destravar seu patrimônio"
+        description="Seu imóvel está dentro, no entorno ou na zona de amortecimento de uma Unidade de Conservação? Mapeamos cada restrição legal, identificamos direitos adquiridos e construímos a estratégia técnico-jurídica para destravar uso, venda, financiamento e regularização — com atuação perante ICMBio, IBAMA, IAT e demais órgãos gestores."
       />
       <section className="section-wrap py-14">
         <div className="grid gap-5 md:grid-cols-3">
