@@ -46,6 +46,7 @@ export default function SolucoesPage() {
             <div className="space-y-8">
               {solutions.map((solution, index) => (
                 <div
+                  id={solution.id}
                   key={solution.id}
                   className="group rounded-lg bg-gradient-to-br from-white/10 to-white/5 border border-white/20 p-8 md:p-12 hover:border-venturi-gold/50 hover:from-white/15 hover:to-white/10 transition-all duration-300"
                 >
