@@ -36,7 +36,7 @@ export default function FAQPage() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-              As respostas para as dúvidas mais comuns sobre nossa metodologia, serviços e processo de trabalho.
+              As dúvidas que impedem proprietários rurais de avançar — e as respostas que destrancam oportunidades.
             </p>
           </div>
         </div>
