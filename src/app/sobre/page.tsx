@@ -8,7 +8,7 @@ export const metadata = getPageMetadata('Sobre | VENTURI');
 
 const team = [
   {
-    name: 'Ciro Ramon Vaz',
+    name: 'Ciro Ramon Silveira Barreto Vaz',
     role: 'S\u00f3cio-Administrador',
     credential: 'Bacharel em Direito',
     initials: 'CR',
