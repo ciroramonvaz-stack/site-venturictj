@@ -1,14 +1,9 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { getPageMetadata } from '@/lib/seo';
 import { siteData } from '@/content/siteData';
 import SchedulingCTA from '@/components/SchedulingCTA';
 
-export const metadata: Metadata = getPageMetadata({
-  title: 'Sobre | VENTURI',
-  description: 'Conheça a Venturi CTJ. Especialistas em consultoria técnica jurídica para propriedades rurais no Brasil.',
-  ogImage: '/og-image-sobre.jpg',
-});
+export const metadata = getPageMetadata('Sobre | VENTURI');
 
 export default function SobrePage() {
   const { company, stats } = siteData;
