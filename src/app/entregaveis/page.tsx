@@ -10,8 +10,8 @@ export default function EntregaveisPage() {
     <>
       <PageHero
         kicker="Resultados"
-        title="Entregáveis técnicos para orientar decisões de alto impacto"
-        description="Cada entrega é pensada para sustentar protocolos, negociações e defesas com fundamento técnico-jurídico."
+        title="Documentos técnico-jurídicos que destravem operações e sustentem decisões de alto impacto"
+        description="Relatórios aceitos por bancos, órgãos ambientais e cartórios — cada documento é produzido para resistir ao escrutínio mais rigoroso."
       />
       <section className="section-wrap py-14">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
