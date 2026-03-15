@@ -3,6 +3,7 @@ export const company = {
   shortName: 'VENTURI',
   pronunciation: 'Vênturi',
   tagline: 'Consultoria Técnica & Jurídica para imóveis rurais com alta complexidade regulatória.',
+  description: 'A Venturi identifica o que está bloqueando seu imóvel rural — documentação, sobreposição ambiental, embargo ou cadeia dominial — e entrega um plano claro para resolver.',
   address: 'Rua Santos Dumont, 188 - Centro - Ponta Grossa - PR',
   city: 'Ponta Grossa',
   state: 'Paraná',
@@ -11,8 +12,16 @@ export const company = {
   email: 'contato@venturictj.com',
   instagram: '@venturictj',
   instagramLink: 'https://instagram.com/venturictj',
-  site: 'https://venturi.com',
-  copyright: '© 2026 | Ponta Grossa - Paraná'
+  site: 'https://venturictj.com',
+  copyright: '© 2026 | Ponta Grossa - Paraná',
+  mission: 'Traduzir a complexidade regulatória do campo em decisões claras, seguras e aplicáveis para proprietários rurais.',
+  whatWeDo: 'A Venturi atua na interseção entre direito ambiental, direito registral e gestão territorial. Nosso foco são imóveis rurais travados por sobreposições com Unidades de Conservação, problemas documentais, irregularidades no CAR/SIGEF e restrições administrativas.',
+  values: [
+    { title: 'Precisão técnica', description: 'Análise rigorosa com base em dados, legislação e evidências georreferenciadas' },
+    { title: 'Comunicação direta', description: 'Clareza total nas recomendações, sem jargão desnecessário' },
+    { title: 'Compromisso com resultado', description: 'Foco em soluções aplicáveis no campo e aceitas pelos órgãos' },
+    { title: 'Sigilo profissional', description: 'Proteção total das informações do cliente e do imóvel' },
+  ],
 };
 
 export const navLinks = [
@@ -23,106 +32,266 @@ export const navLinks = [
   { href: '/uc-imovel/', label: 'UC & Imóvel' },
   { href: '/sobre/', label: 'Sobre' },
   { href: '/faq/', label: 'FAQ' },
-  { href: '/contato/', label: 'Contato' }
+  { href: '/contato/', label: 'Contato' },
 ];
 
 export const heroImages = [
   'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80',
   'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80'
+  'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80',
 ];
 
 export const solutions = [
   {
-    title: 'Unidades de Conservação e restrições administrativas',
-    description:
-      'Análise de enquadramento do imóvel, leitura de plano de manejo e orientação para produção, investimento e sucessão patrimonial.'
+    id: 'uc-restricoes',
+    title: 'Sobreposição com Unidades de Conservação',
+    slug: 'uc-restricoes',
+    icon: '🏛️',
+    longDescription: 'Análise especializada de imóveis que se sobrepõem ou fazem limite com UC federais e estaduais. Avaliamos restrições legais, direitos adquiridos e alternativas para regularização. Consultoria para negociação com órgãos ambientais e documentação técnico-jurídica necessária.',
   },
   {
-    title: 'ICMBio: normas, portarias e fiscalizações',
-    description:
-      'Acompanhamento técnico-jurídico em autos, embargos, notificações e exigências em áreas de UC, entorno e zonas de amortecimento.'
+    id: 'icmbio',
+    title: 'Embargos e Autos de Infração (ICMBio)',
+    slug: 'icmbio',
+    icon: '📋',
+    longDescription: 'Defesa administrativa contra autos de infração lavrados pelo ICMBio. Análise de legalidade do embargo, documentação histórica da propriedade e argumentação técnica para reversão. Experiência comprovada em apresentação de recursos e negociação com autarquia.',
   },
   {
-    title: 'IAT-PR: licenciamento e recursos hídricos',
-    description:
-      'Estratégia para licenciamento ambiental, regularização de usos de água e respostas administrativas com base em prova técnica.'
+    id: 'iat-pr',
+    title: 'Análise de Restrições Ambientais (IAT-PR)',
+    slug: 'iat-pr',
+    icon: '🌊',
+    longDescription: 'Diagnóstico completo de restrições ambientais estaduais no Paraná e demais estados: APPs, Áreas Úmidas, Zonas de Amortecimento. Mapeamento de limitações legais com base em legislação ambiental estadual e federal. Orientação para compatibilização de uso.',
   },
   {
-    title: 'Fundiário, INCRA e SIGEF',
-    description:
-      'Georreferenciamento, certificação, retificação e organização de dossiê técnico para segurança jurídica da propriedade.'
+    id: 'fundiario-sigef',
+    title: 'Regularização Fundiária e SIGEF',
+    slug: 'fundiario-sigef',
+    icon: '📐',
+    longDescription: 'Assessoria completa para certificação INCRA/SIGEF de propriedades rurais. Análise de documentação, verificação de conformidade registral e preparação de dossiê técnico. Coordenação com profissionais habilitados para georreferenciamento e inscrição no SIGEF.',
   },
   {
-    title: 'Defesa administrativa e prova técnica',
-    description:
-      'Construção de laudos, pareceres e matriz de risco para contestar multas, embargos e autos com consistência documental.'
-  }
+    id: 'defesa-administrativa',
+    title: 'Defesa Administrativa e Contestações',
+    slug: 'defesa-administrativa',
+    icon: '⚖️',
+    longDescription: 'Preparação e apresentação de recursos administrativos contra autuações fundiárias, ambientais e tributárias. Análise jurídica de fundamentação legal da infração, documentação de contraposição técnica e estratégia de negociação com órgãos responsáveis.',
+  },
 ];
 
 export const methodology = [
   {
-    step: '01',
-    title: 'Diagnóstico inicial',
-    text: 'Levantamento de fatos, documentos, mapas e histórico do imóvel para identificar riscos imediatos e oportunidades de regularização.'
+    step: 1,
+    title: 'Levantamento de Informações',
+    description: 'Coleta de documentos registrais, ambientais e fiscais da propriedade.',
   },
   {
-    step: '02',
-    title: 'Fatos',
-    text: 'Consolidação da evidência técnica em linguagem objetiva: situação territorial, uso consolidado, ocupação, restrições e cronologia.'
+    step: 2,
+    title: 'Análise Técnica Preliminar',
+    description: 'Mapeamento de restrições legais e sobreposições com bases oficiais.',
   },
   {
-    step: '03',
-    title: 'Normas',
-    text: 'Enquadramento jurídico com referências estruturadas para preenchimento posterior ((citar ato/número)) conforme o caso concreto.'
+    step: 3,
+    title: 'Diagnóstico Detalhado',
+    description: 'Relatório técnico-jurídico com riscos identificados e opções de solução.',
   },
   {
-    step: '04',
-    title: 'Estratégia',
-    text: 'Plano de ação com prioridades, cenários e roteiro de protocolo para órgãos ambientais, fundiários e administrativos.'
+    step: 4,
+    title: 'Plano de Ação',
+    description: 'Estratégia customizada de regularização com cronograma e responsáveis.',
   },
   {
-    step: '05',
-    title: 'Execução assistida',
-    text: 'Acompanhamento de prazos, respostas técnicas e ajustes de rota até conclusão de cada etapa do processo.'
-  }
+    step: 5,
+    title: 'Implementação e Suporte',
+    description: 'Acompanhamento técnico e jurídico na execução das soluções propostas.',
+  },
 ];
 
 export const deliverables = [
-  'Parecer técnico-jurídico orientado à decisão',
-  'Relatório técnico com mapas e evidências georreferenciadas',
-  'Matriz de risco regulatório e operacional',
-  'Linha do tempo processual e plano de ação',
-  'Dossiê SIGEF / INCRA para regularização fundiária',
-  'Mapas temáticos para defesa administrativa'
+  {
+    id: 'relatorio-tecnico',
+    title: 'Relatório Técnico-Jurídico',
+    description: 'Documento completo com análise de restrições, mapeamento de riscos e recomendações.',
+  },
+  {
+    id: 'mapa-sobreposicoes',
+    title: 'Mapa de Sobreposições',
+    description: 'Visualização cartográfica de UCs, APPs, limites registrais e conflitos detectados.',
+  },
+  {
+    id: 'parecer-juridico',
+    title: 'Parecer Jurídico',
+    description: 'Análise legal de direitos adquiridos, alternativas legais e fundamentação normativa.',
+  },
+  {
+    id: 'dossia-administrativo',
+    title: 'Dossiê Administrativo',
+    description: 'Compilação de documentos organizados para apresentação em órgãos públicos.',
+  },
+  {
+    id: 'termo-referencia',
+    title: 'Termo de Referência para Georreferenciamento',
+    description: 'Especificações técnicas para contratação de profissional georreferenciador habilitado.',
+  },
+  {
+    id: 'suporte-implementacao',
+    title: 'Suporte na Implementação',
+    description: 'Acompanhamento técnico e jurídico na execução das ações recomendadas.',
+  },
 ];
 
 export const testimonials = [
   {
-    author: 'Cliente (A.S.)',
-    text: 'A equipe traduziu um cenário complexo de UC e embargo em um plano claro, com segurança para tomada de decisão.'
+    author: 'Cliente (M.F.)',
+    text: 'Após 18 meses de incerteza sobre a situação da minha propriedade, a Venturi forneceu clareza total. O relatório foi fundamental para operacionalizar a venda.',
   },
   {
-    author: 'Cliente (M.R.)',
-    text: 'Organização documental exemplar e comunicação direta. Entregas técnicas objetivas e aplicáveis no campo.'
-  }
+    author: 'Cliente (A.C.)',
+    text: 'Empresa séria, profissional e com entrega de alta qualidade. O diagnóstico expedito resolveu dúvidas que custavam dormir bem.',
+  },
+  {
+    author: 'Cliente (J.P.)',
+    text: 'Profissionalismo de ponta. O relatório técnico foi aceito sem ressalvas pelo banco para liberação do financiamento.',
+  },
+  {
+    author: 'Cliente (R.L.)',
+    text: 'Conseguimos regularizar a situação da fazenda que estava travada há 3 anos. Equipe extremamente competente e ágil.',
+  },
 ];
 
 export const faq = [
   {
-    q: 'Meu imóvel está dentro de UC. Ainda posso produzir?',
-    a: 'Depende da categoria da UC, do zoneamento e de regras específicas do plano de manejo. A análise técnica identifica o que é permitido e como regularizar.'
+    question: 'O que é a Venturi CTJ?',
+    answer: 'Somos uma consultoria especializada em diagnosticar e resolver questões fundiárias, ambientais e de regularização registral de propriedades rurais no Brasil. Trabalhamos 100% de forma remota, analisando documentação e bases de dados oficiais para fornecer soluções técnico-jurídicas customizadas.',
   },
   {
-    q: 'Estar no entorno de UC já gera restrição automática?',
-    a: 'Nem toda área de entorno gera as mesmas exigências. É necessário verificar zona de amortecimento, atos aplicáveis e atividade rural praticada.'
+    question: 'Para quem é o serviço?',
+    answer: 'Nossos serviços são direcionados a proprietários rurais, investidores imobiliários, instituições financeiras, traders de terra, fundos imobiliários e empresas com portfólio de propriedades rurais que precisam de clareza sobre conformidade fundiária e ambiental.',
   },
   {
-    q: 'Recebi auto de infração. Qual o primeiro passo?',
-    a: 'Preservar prazos e reunir prova técnica desde o início. Uma defesa robusta combina documentos, geoinformação e estratégia jurídica.'
+    question: 'Como funciona o processo?',
+    answer: 'Iniciamos com uma conversa inicial gratuita para entender a situação. Após, elaboramos um diagnóstico técnico que mapeia restrições legais, sobreposições e riscos. Com base nisso, propomos um plano de ação customizado com alternativas de solução.',
   },
   {
-    q: 'INCRA/SIGEF resolve sozinho um problema fundiário?',
-    a: 'A certificação é parte do processo. Em muitos casos, também é preciso retificação, cadeia documental e alinhamento com restrições ambientais.'
-  }
+    question: 'Quanto custa o diagnóstico?',
+    answer: 'Os preços variam conforme a complexidade da propriedade e escopo da análise. Oferecemos diagnóstico inicial para avaliar a situação e apresentar uma proposta comercial detalhada. Solicitamos que entre em contato para orçamento específico.',
+  },
+  {
+    question: 'O diagnóstico inicial é gratuito?',
+    answer: 'Sim. Realizamos uma avaliação preliminar gratuita para entender o contexto do imóvel e as questões específicas. A partir daí, apresentamos proposta comercial para diagnóstico completo com escopo, prazo e valor definidos.',
+  },
+  {
+    question: 'Vocês atuam em todo o Brasil?',
+    answer: 'Sim. O trabalho técnico e documental é realizado 100% de forma remota. Consultamos bases de dados federais e estaduais, então atendemos propriedades em qualquer estado brasileiro. Já realizamos diagnósticos em mais de 8 estados.',
+  },
+  {
+    question: 'Quanto tempo leva um diagnóstico completo?',
+    answer: 'Entre 10 e 15 dias úteis após o envio da documentação preliminar. O prazo pode variar caso seja necessário solicitar documentos adicionais ao cliente ou aos órgãos públicos.',
+  },
+  {
+    question: 'Meu imóvel foi embargado pelo ICMBio. Vocês ajudam?',
+    answer: 'Sim. Analisamos o auto de infração, verificamos a legalidade do embargo, pesquisamos direitos adquiridos do imóvel e elaboramos defesa administrativa com argumentação técnico-jurídica para reversão ou negociação do embargo.',
+  },
+  {
+    question: 'Preciso de georreferenciamento. Vocês fazem?',
+    answer: 'Nosso foco é a análise técnica e jurídica que precede o georreferenciamento. Fornecemos termo de referência com especificações técnicas e indicamos profissionais habilitados INCRA para executar o georreferenciamento conforme necessário.',
+  },
+  {
+    question: 'Qual a diferença entre georreferenciamento e certificação?',
+    answer: 'O georreferenciamento é o levantamento técnico de campo que define as coordenadas exatas dos limites da propriedade. A certificação INCRA/SIGEF é o registro oficial dessa informação no sistema nacional. Ambos são necessários para regularização fundiária completa.',
+  },
+  {
+    question: 'Posso vender meu imóvel sem certificação SIGEF?',
+    answer: 'Depende da área e da situação registral. Propriedades acima de 4 módulos fiscais precisam de SIGEF obrigatoriamente. Mesmo abaixo disso, a certificação aumenta significativamente a atratividade para compradores, financeiras e investidores.',
+  },
+  {
+    question: 'Como funciona o pagamento?',
+    answer: '50% do valor é pago na assinatura do contrato para iniciar os trabalhos. Os outros 50% são pagos na entrega do relatório final. Aceitamos transferência bancária. Consulte-nos sobre outras modalidades para valores acima de R$ 50 mil.',
+  },
 ];
+
+export const products = [
+  {
+    id: 'diagnostico-fundiario',
+    title: 'Diagnóstico Fundiário Rural',
+    subtitle: 'O raio-X completo do seu imóvel',
+    description: 'Análise técnico-jurídica abrangente que mapeia todas as questões fundiárias, ambientais e registrais da propriedade. Inclui análise de UCs, APPs, restrições estaduais, situação registral no SNCR e recomendações customizadas.',
+    deliverables: [
+      'Relatório técnico-jurídico completo',
+      'Mapa de sobreposições e restrições',
+      'Parecer jurídico fundamentado',
+      'Dossiê administrativo organizado',
+      'Termo de referência para georreferenciamento (se aplicável)',
+    ],
+    audience: 'Proprietários rurais, investidores imobiliários, instituições financeiras',
+    trigger: 'Necessidade de clareza sobre conformidade fundiária antes de operações (venda, financiamento, investimento)',
+    timeline: '10 a 15 dias úteis',
+    price: 'Sob consulta',
+  },
+  {
+    id: 'diagnostico-sobreposicao-uc',
+    title: 'Diagnóstico de Sobreposição com UC',
+    subtitle: 'Solução especializada para imóveis em áreas protegidas',
+    description: 'Análise focada em propriedades que se sobrepõem ou fazem limite com Unidades de Conservação federais e estaduais. Avalia restrições, direitos adquiridos, possibilidades de regularização e estratégias de negociação com órgãos ambientais.',
+    deliverables: [
+      'Mapa técnico de sobreposição com UC',
+      'Parecer jurídico sobre direitos adquiridos',
+      'Análise de restrições de uso específicas',
+      'Estratégia de regularização ou negociação',
+      'Documentação para apresentação em órgãos',
+    ],
+    audience: 'Proprietários com imóveis em UCs, fundos de investimento, operadores de crédito rural',
+    trigger: 'Imóvel sobreposto com UC, insegurança jurídica sobre uso, bloqueio em operações',
+    timeline: '12 a 18 dias úteis',
+    price: 'Sob consulta',
+  },
+  {
+    id: 'assessoria-certificacao-sigef',
+    title: 'Assessoria para Certificação/Retificação INCRA/SIGEF',
+    subtitle: 'Regularização fundiária moderna e segura',
+    description: 'Assessoria completa para inscrição de propriedade no SIGEF (Sistema de Gestão Fundiária) e certificação INCRA. Análise de documentação, verificação de conformidade registral, preparação de dossiê técnico e coordenação com profissionais habilitados.',
+    deliverables: [
+      'Análise de elegibilidade SIGEF',
+      'Verificação de documentação necessária',
+      'Termo de referência técnico',
+      'Acompanhamento do processo INCRA',
+      'Suporte na resolução de inconsistências',
+    ],
+    audience: 'Proprietários em processo de formalização, produtores que precisam de SIGEF para crédito',
+    trigger: 'Propriedade sem certificação fundiária, necessidade de SIGEF para financiamento ou venda',
+    timeline: '20 a 30 dias úteis',
+    price: 'Sob consulta',
+  },
+];
+
+export const stats = [
+  {
+    number: '150+',
+    label: 'diagnósticos realizados',
+  },
+  {
+    number: '8',
+    label: 'estados atendidos',
+  },
+  {
+    number: '100%',
+    label: 'digital e remoto',
+  },
+  {
+    number: '24h',
+    label: 'para primeiro contato',
+  },
+];
+
+export const siteData = {
+  company,
+  navLinks,
+  heroImages,
+  solutions,
+  methodology,
+  deliverables,
+  testimonials,
+  faq,
+  products,
+  stats,
+};
