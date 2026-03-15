@@ -1,14 +1,9 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { getPageMetadata } from '@/lib/seo';
 import { siteData } from '@/content/siteData';
 import SchedulingCTA from '@/components/SchedulingCTA';
 
-export const metadata: Metadata = getPageMetadata({
-  title: 'Metodologia | VENTURI',
-  description: 'Conheça a metodologia Venturi em 5 etapas. Processo comprovado para diagnóstico e solução de questões fundiárias e ambientais.',
-  ogImage: '/og-image-metodologia.jpg',
-});
+export const metadata = getPageMetadata('Metodologia | VENTURI');
 
 export default function MetodologiaPage() {
   const { methodology, deliverables, company } = siteData;
