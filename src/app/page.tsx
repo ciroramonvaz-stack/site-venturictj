@@ -46,7 +46,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 mb-8 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-venturi-gold pulse-gold" />
                 <span className="text-xs uppercase tracking-[0.2em] text-white/70">
-                  Im&oacute;vel embargada, sobreposta com UC ou com CAR irregular? A Venturi destrava.
+                  Im&oacute;vel embargado, sobreposto com UC ou com CAR irregular? A Venturi destrava.
                 </span>
               </div>
 
@@ -65,7 +65,7 @@ export default function HomePage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={`${company.whatsappLink}?text=${encodeURIComponent('OlÃ¡! Gostaria de saber mais sobre a consultoria Venturi.')}`}
+                  href={`${company.whatsappLink}?text=${encodeURIComponent('OlÃÂ¡! Gostaria de saber mais sobre a consultoria Venturi.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-glow inline-flex items-center justify-center gap-3 px-8 py-4 bg-venturi-gold text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 text-sm tracking-wide"
@@ -131,9 +131,10 @@ export default function HomePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 stagger">
                 {solutions.map((solution, index) => (
-                  <div
+                  <Link
+                    href={`/solucoes/#${solution.id}`}
                     key={index}
-                    className="reveal premium-card rounded-xl p-6 md:p-8 group cursor-pointer"
+                    className="reveal premium-card rounded-xl p-6 md:p-8 group cursor-pointer block no-underline"
                   >
                     {solution.icon && (
                       <div className="text-4xl mb-5 group-hover:scale-110 transition-transform duration-500">
@@ -146,7 +147,7 @@ export default function HomePage() {
                     <p className="text-white/40 text-sm leading-relaxed line-clamp-3">
                       {solution.longDescription}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -195,7 +196,7 @@ export default function HomePage() {
                     {product.deliverables && product.deliverables.length > 0 && (
                       <div className="mb-8 pt-6 border-t border-white/5">
                         <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">
-                          EntregÃ¡veis
+                          EntregÃÂ¡veis
                         </p>
                         <ul className="space-y-2.5">
                           {product.deliverables.map((deliverable, idx) => (
