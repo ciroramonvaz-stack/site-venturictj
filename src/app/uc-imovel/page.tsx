@@ -6,15 +6,15 @@ export const metadata = getPageMetadata('UC & Imóvel | VENTURI');
 const cards = [
   {
     title: 'Imóvel dentro da UC',
-    text: 'Em regra, exige atenção máxima ao regime da categoria da unidade, zoneamento e atos específicos ((citar ato/número)).'
+    text: 'Exige análise detalhada do regime da categoria da UC, zoneamento e atos normativos específicos. A Venturi identifica restrições de uso, direitos adquiridos e caminhos para regularização.'
   },
   {
     title: 'Imóvel no entorno da UC',
-    text: 'A leitura do entorno depende de critérios técnicos e da atividade pretendida, podendo existir condicionantes administrativas.'
+    text: 'A análise do entorno depende de critérios técnicos e da atividade pretendida. Avaliamos condicionantes administrativas e licenciamentos necessários para operar sem risco.'
   },
   {
     title: 'Zona de amortecimento (ZA)',
-    text: 'Quando instituída, a ZA pode gerar exigências adicionais para licenciamento, manejo e expansão de atividades.'
+    text: 'Quando instituída, a ZA impõe exigências adicionais para licenciamento, manejo e expansão. Mapeamos as restrições aplicáveis e orientamos a estratégia de conformidade.'
   }
 ];
 
@@ -23,8 +23,8 @@ export default function UcImovelPage() {
     <>
       <PageHero
         kicker="Guia prático"
-        title="UC & Imóvel Rural: o que muda na prática"
-        description="Resumo didático para entender cenários de dentro, entorno e zona de amortecimento, com foco em decisão e planejamento."
+        title="UC & Imóvel Rural: entenda o que trava e como destravar"
+        description="Seu imóvel está dentro, no entorno ou na zona de amortecimento de uma UC? Entenda os impactos reais sobre uso, venda e financiamento — e as alternativas jurídicas disponíveis."
       />
       <section className="section-wrap py-14">
         <div className="grid gap-5 md:grid-cols-3">
