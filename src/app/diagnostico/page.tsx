@@ -142,7 +142,7 @@ export default function DiagnosticoPage() {
 
             {/* STEP 1 */}
             {step === 1 && (
-              <div className="space-y-5 reveal">
+              <div className="space-y-5">
                 <h2 className="font-serif text-xl font-bold text-white mb-6">Identificação do Solicitante</h2>
                 <div>
                   <label className={labelClass}>Nome completo *</label>
@@ -171,7 +171,7 @@ export default function DiagnosticoPage() {
 
             {/* STEP 2 */}
             {step === 2 && (
-              <div className="space-y-5 reveal">
+              <div className="space-y-5">
                 <h2 className="font-serif text-xl font-bold text-white mb-6">Dados do Imóvel Rural</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
@@ -242,7 +242,7 @@ export default function DiagnosticoPage() {
 
             {/* STEP 3 */}
             {step === 3 && (
-              <div className="space-y-8 reveal">
+              <div className="space-y-8">
                 <h2 className="font-serif text-xl font-bold text-white mb-2">Identificação do Problema</h2>
                 <p className="text-white/50 text-sm mb-6">Marque todas as situações que se aplicam ao seu caso.</p>
 
@@ -271,7 +271,7 @@ export default function DiagnosticoPage() {
 
             {/* STEP 4 */}
             {step === 4 && (
-              <div className="space-y-5 reveal">
+              <div className="space-y-5">
                 <h2 className="font-serif text-xl font-bold text-white mb-6">Contexto e Objetivo</h2>
                 <div>
                   <label className={labelClass}>O que você quer resolver com esse diagnóstico?</label>
