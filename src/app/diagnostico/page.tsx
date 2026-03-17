@@ -94,7 +94,7 @@ export default function DiagnosticoPage() {
 
   const RadioOption = ({ field, value, label }: { field: string; value: string; label: string }) => (
     <label className={radioClass}>
-      <input type="radio" name={field} value={value} checked={(form as Record<string, string>)[field] === value}
+      <input type="radio" name={field} value={value} checked={(form as unknown as Record<string, string>)[field] === value}
         onChange={() => update(field, value)}
         className="w-4 h-4 accent-amber-600" />
       {label}
