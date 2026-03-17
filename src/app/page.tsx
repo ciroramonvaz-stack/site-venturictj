@@ -74,7 +74,7 @@ export default function HomePage() {
                   WhatsApp: An&aacute;lise Gratuita
                 </a>
                 <Link
-                  href="/contato"
+                  href="/diagnostico"
                   className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 hover:border-white/30 transition-all duration-300 text-sm tracking-wide"
                 >
                   Iniciar Diagn&oacute;stico Gratuito &rarr;
