@@ -43,8 +43,11 @@ export default function DiagnosticoPage() {
   const [form, setForm] = useState({
     nome: '', telefone: '', email: '', municipioResidente: '', comoEncontrou: '',
     nomeImovel: '', municipioImovel: '', areaTotal: '', tipoUso: '',
-    temMatricula: '', temCAR: '', temSIGEF: '', temEscritura: '', anosPossse: '', emInventario: '',
-    problemasDoc: [] as string[], problemasAmb: [] as string[], problemasOp: [] as string[],
+    temMatricula: '', temCAR: '', temSIGEF: '', temEscritura: '',
+    anosPossse: '', emInventario: '',
+    problemasDoc: [] as string[],
+    problemasAmb: [] as string[],
+    problemasOp: [] as string[],
     objetivo: '', jaTentou: '', prazoUrgente: '', observacoes: '',
   });
 
@@ -59,15 +62,13 @@ export default function DiagnosticoPage() {
 
   const handleSubmit = () => {
     const lines = [
-      '*PRÉ-DIAGNÓSTICO FUNDIÁRIO*',
-      '',
+      '*PRÉ-DIAGNÓSTICO FUNDIÁRIO*', '',
       '*Identificação*',
       'Nome: ' + form.nome,
       'Telefone: ' + form.telefone,
       'E-mail: ' + form.email,
       'Município: ' + form.municipioResidente,
-      'Como encontrou: ' + form.comoEncontrou,
-      '',
+      'Como encontrou: ' + form.comoEncontrou, '',
       '*Dados do Imóvel*',
       'Imóvel: ' + form.nomeImovel,
       'Localização: ' + form.municipioImovel,
@@ -80,24 +81,35 @@ export default function DiagnosticoPage() {
       'Posse: ' + form.anosPossse + ' anos',
       'Inventário: ' + form.emInventario,
     ];
+
     const allProblemas = [...form.problemasDoc, ...form.problemasAmb, ...form.problemasOp];
     if (allProblemas.length > 0) {
       lines.push('', '*Problemas Identificados*');
       allProblemas.forEach(p => lines.push('- ' + p));
     }
+
     if (form.objetivo) lines.push('', '*Objetivo:* ' + form.objetivo);
     if (form.jaTentou) lines.push('*Já tentou resolver:* ' + form.jaTentou);
     if (form.prazoUrgente) lines.push('*Prazo urgente:* ' + form.prazoUrgente);
     if (form.observacoes) lines.push('*Obs:* ' + form.observacoes);
 
     const msg = encodeURIComponent(lines.join('\n'));
-    // Google Ads conversion tracking
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    const waUrl = company.whatsappLink + '?text=' + msg;
+
+    // Google Ads conversion tracking with event_callback
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      let opened = false;
       window.gtag('event', 'conversion', {
-        'send_to': 'AW-18018469103/kpwVCLDEpYscEO-J8I9D'
+        'send_to': 'AW-18018469103/kpwVCLDEpYscEO-J8I9D',
+        'event_callback': () => {
+          if (!opened) { opened = true; window.open(waUrl, '_blank'); }
+        }
       });
+      // Fallback if callback doesn't fire within 1s
+      setTimeout(() => { if (!opened) { opened = true; window.open(waUrl, '_blank'); } }, 1000);
+    } else {
+      window.open(waUrl, '_blank');
     }
-    window.open(company.whatsappLink + '?text=' + msg, '_blank');
   };
 
   const inputClass = "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-venturi-gold/50 focus:ring-1 focus:ring-venturi-gold/30 transition-colors";
@@ -134,8 +146,7 @@ export default function DiagnosticoPage() {
               Formulário de Pré-Diagnóstico <span className="text-venturi-gold">Fundiário Rural</span>
             </h1>
             <p className="text-white/60 max-w-xl mx-auto">
-              Preencha com as informações disponíveis. Não é necessário ter todos os documentos agora.
-              Após o envio, entraremos em contato em até 24 horas.
+              Preencha com as informações disponíveis. Não é necessário ter todos os documentos agora. Após o envio, entraremos em contato em até 24 horas.
             </p>
           </div>
 
@@ -145,9 +156,7 @@ export default function DiagnosticoPage() {
               <button key={s} onClick={() => setStep(s)}
                 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${
                   step === s ? 'bg-venturi-gold text-venturi-bg' : s < step ? 'bg-venturi-gold/30 text-white' : 'bg-white/10 text-white/40'
-                }`}>
-                {s}
-              </button>
+                }`}>{s}</button>
             ))}
           </div>
 
@@ -288,30 +297,23 @@ export default function DiagnosticoPage() {
                 <h2 className="font-serif text-xl font-bold text-white mb-6">Contexto e Objetivo</h2>
                 <div>
                   <label className={labelClass}>O que você quer resolver com esse diagnóstico?</label>
-                  <textarea className={inputClass + ' h-24 resize-none'} value={form.objetivo} onChange={e => update('objetivo', e.target.value)}
-                    placeholder="Descreva brevemente seu objetivo principal..." />
+                  <textarea className={inputClass + ' h-24 resize-none'} value={form.objetivo} onChange={e => update('objetivo', e.target.value)} placeholder="Descreva brevemente seu objetivo principal..." />
                 </div>
                 <div>
                   <label className={labelClass}>Já tentou resolver antes? O que aconteceu?</label>
-                  <textarea className={inputClass + ' h-20 resize-none'} value={form.jaTentou} onChange={e => update('jaTentou', e.target.value)}
-                    placeholder="Ex: Contratei um topógrafo mas o processo travou no INCRA..." />
+                  <textarea className={inputClass + ' h-20 resize-none'} value={form.jaTentou} onChange={e => update('jaTentou', e.target.value)} placeholder="Ex: Contratei um topógrafo mas o processo travou no INCRA..." />
                 </div>
                 <div>
                   <label className={labelClass}>Tem prazo urgente? Qual?</label>
-                  <input className={inputClass} value={form.prazoUrgente} onChange={e => update('prazoUrgente', e.target.value)}
-                    placeholder="Ex: Preciso vender até julho, financiamento..." />
+                  <input className={inputClass} value={form.prazoUrgente} onChange={e => update('prazoUrgente', e.target.value)} placeholder="Ex: Preciso vender até julho, financiamento..." />
                 </div>
                 <div>
                   <label className={labelClass}>Observações adicionais</label>
-                  <textarea className={inputClass + ' h-20 resize-none'} value={form.observacoes} onChange={e => update('observacoes', e.target.value)}
-                    placeholder="Qualquer informação extra que julgue relevante..." />
+                  <textarea className={inputClass + ' h-20 resize-none'} value={form.observacoes} onChange={e => update('observacoes', e.target.value)} placeholder="Qualquer informação extra que julgue relevante..." />
                 </div>
-
                 <div className="bg-venturi-gold/10 border border-venturi-gold/20 rounded-xl p-5 mt-6">
                   <p className="text-white/70 text-sm leading-relaxed">
-                    Ao enviar, suas respostas serão encaminhadas via WhatsApp para nossa equipe.
-                    As informações são <strong className="text-white">sigilosas</strong> e utilizadas exclusivamente para elaboração do diagnóstico.
-                    Retornaremos em até <strong className="text-white">24 horas úteis</strong>.
+                    Ao enviar, suas respostas serão encaminhadas via WhatsApp para nossa equipe. As informações são <strong className="text-white">sigilosas</strong> e utilizadas exclusivamente para elaboração do diagnóstico. Retornaremos em até <strong className="text-white">24 horas úteis</strong>.
                   </p>
                 </div>
               </div>
@@ -334,7 +336,7 @@ export default function DiagnosticoPage() {
               ) : (
                 <button onClick={handleSubmit}
                   className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-lg transition-all flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" /><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.03L.789 23.553a.5.5 0 00.611.611l4.523-1.495A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.327 0-4.49-.752-6.246-2.032l-.436-.328-2.692.889.889-2.692-.328-.436A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" /></svg>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.03L.789 23.553a.5.5 0 00.611.611l4.523-1.495A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.327 0-4.49-.752-6.246-2.032l-.436-.328-2.692.889.889-2.692-.328-.436A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
                   Enviar via WhatsApp
                 </button>
               )}
