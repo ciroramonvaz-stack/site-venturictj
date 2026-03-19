@@ -1,5 +1,12 @@
 'use client';
 
+// Extend Window for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 import { useState } from 'react';
 import { siteData } from '@/content/siteData';
 
@@ -84,6 +91,12 @@ export default function DiagnosticoPage() {
     if (form.observacoes) lines.push('*Obs:* ' + form.observacoes);
 
     const msg = encodeURIComponent(lines.join('\n'));
+    // Google Ads conversion tracking
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-18018469103/kpwVCLDEpYscEO-J8I9D'
+      });
+    }
     window.open(company.whatsappLink + '?text=' + msg, '_blank');
   };
 
