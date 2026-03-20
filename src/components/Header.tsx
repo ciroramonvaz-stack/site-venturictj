@@ -4,6 +4,27 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { company, navLinks } from '@/content/siteData';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function trackWhatsAppConversion(url: string) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    let navigated = false;
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-18018469103/kpwVCLDEpYscEO-J8I9D',
+      'event_callback': () => {
+        if (!navigated) { navigated = true; window.open(url, '_blank'); }
+      }
+    });
+    setTimeout(() => { if (!navigated) { navigated = true; window.open(url, '_blank'); } }, 1000);
+  } else {
+    window.open(url, '_blank');
+  }
+}
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,6 +34,11 @@ export function Header() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    trackWhatsAppConversion(company.whatsappLink);
+  };
 
   return (
     <header
@@ -59,6 +85,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <a
             href={company.whatsappLink}
+            onClick={handleWhatsAppClick}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-venturi-gold/10 border border-venturi-gold/30 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-venturi-gold hover:bg-venturi-gold hover:text-black transition-all duration-300"
@@ -99,6 +126,7 @@ export function Header() {
           ))}
           <a
             href={company.whatsappLink}
+            onClick={handleWhatsAppClick}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-venturi-gold px-6 py-3 text-sm font-semibold text-black"
