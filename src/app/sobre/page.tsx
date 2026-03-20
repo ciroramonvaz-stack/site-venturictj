@@ -15,7 +15,7 @@ const team = [
     initials: 'CR',
     photo: '/ciro.jpg.jpeg',
     specialties: ['Regularização Fundiária', 'Licenciamento Ambiental', 'Tributação Rural', 'Créditos de Carbono'],
-    bio: 'Bacharel em Direito com mais de uma década de atuação estratégica na Polícia Militar do Paraná (PMPR), onde desenvolveu expertise de alto nível em gestão institucional, compliance, inteligência operacional e articulação direta com órgãos públicos das esferas estadual e federal — competências que hoje aceleram a resolução de processos ambientais e fundiários complexos. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa simultaneamente MBA em Atualizações Tributárias e MBA em Créditos de Carbono e Sustentabilidade. Idealizador e líder da Venturi, conecta leitura regulatória aprofundada, prova territorial e visão de mercado para destravar patrimônios rurais travados por embargos, sobreposições e pendências fundiárias — sempre com segurança jurídica e resultado mensurável.',
+    bio: 'Bacharel em Direito com mais de uma década em gestão pública e articulação institucional nas esferas estadual e federal. Essa vivência no aparato governamental — em compliance, inteligência de dados e coordenação com autarquias — é o que permite à Venturi antecipar movimentos dos órgãos reguladores e encurtar prazos que, para outros escritórios, levam meses. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa MBA em Atualizações Tributárias e MBA em Créditos de Carbono e Sustentabilidade. Idealizador da Venturi, une leitura regulatória profunda e visão de negócio para transformar propriedades travadas em ativos produtivos novamente.',
   },
   {
     name: 'Eduardo Gabriel F. de Andrade',
@@ -24,7 +24,7 @@ const team = [
     initials: 'EA',
     photo: '/eduardo.jpg.jpeg',
     specialties: ['Direito Empresarial', 'Direito Civil', 'Direito Penal', 'Propriedade Intelectual'],
-    bio: 'Advogado com atuação consolidada no Direito Privado e mais de 780 processos conduzidos perante o TJPR e tribunais superiores. Especialista em Direito Empresarial, Civil, Penal e Propriedade Intelectual, entrega assessoria com foco em estratégia e resultado mensurável. Referência em contencioso cível e criminal, assegura defesa técnica rigorosa para produtores rurais e empresas do agro.',
+    bio: 'Mais de 780 processos conduzidos perante o TJPR e tribunais superiores — um dos currículos mais densos do contencioso paranaense. Especialista em Direito Empresarial, Civil e Penal, Eduardo é quem assume a linha de frente quando o caso exige litigação: defesas administrativas que viram ações judiciais, disputas possessórias e recursos em tribunais superiores. Sua experiência em Propriedade Intelectual complementa a proteção patrimonial, blindando marcas e registros ligados à operação rural.',
   },
   {
     name: 'Geliandra Lopes A. Pereira',
@@ -33,7 +33,7 @@ const team = [
     initials: 'GA',
     photo: '/geliandra.jpg.jpeg',
     specialties: ['Direito Ambiental', 'Agronegócio', 'EIA/RIMA', 'Compliance Ambiental'],
-    bio: 'Advogada ambiental e do agronegócio com mais de 10 anos em contencioso administrativo, compliance ambiental e estudos de impacto (EIA/RIMA). Presidente da Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa, MBA em Avaliação de Impacto Ambiental pela UNICURITIBA. Referência em mediação ambiental, transforma embargos e autuações em acordos viáveis para o produtor rural.',
+    bio: 'A voz da Venturi nas mesas de negociação com ICMBio, IBAMA e órgãos estaduais. Com mais de 10 anos dedicados exclusivamente ao Direito Ambiental e do Agronegócio, Geliandra domina contencioso administrativo, compliance e estudos de impacto (EIA/RIMA). Preside a Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa — e possui MBA em Avaliação de Impacto Ambiental pela UNICURITIBA. É quem converte embargos e autuações em acordos concretos, preservando a operação do produtor e o equilíbrio ambiental.',
   },
   {
     name: 'José Alaertes Silveira',
@@ -42,7 +42,7 @@ const team = [
     initials: 'JS',
     photo: '/jose.jpg.jpeg',
     specialties: ['Direito do Consumidor', 'Direito Empresarial', 'Direito Civil', 'Precatórios'],
-    bio: 'Advogado com trajetória consolidada no Direito Privado e mais de 110 processos conduzidos perante o TJPR e tribunais superiores. Especialista em Direito Empresarial, Civil, do Consumidor e atuação estratégica em precatórios, combina décadas de experiência com visão pragmática. Sua assessoria é marcada pela ética, precisão técnica e defesa intransigente dos interesses patrimoniais de seus clientes.',
+    bio: 'Décadas de banca têm um preço — e um privilégio: José Alaertes conhece cada engrenagem do sistema judiciário paranaense. Com atuação em Direito Empresarial, Civil, Tributário e gestão estratégica de precatórios, é o conselheiro sênior da Venturi para questões patrimoniais de longo prazo: sucessão de fazendas, proteção de ativos e negociação de créditos. Mais de 110 processos perante o TJPR e tribunais superiores respaldam uma abordagem que privilegia a prevenção sobre o litígio.',
   },
 ];
 
