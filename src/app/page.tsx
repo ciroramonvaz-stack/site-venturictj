@@ -331,7 +331,7 @@ export default function HomePage() {
         )}
 
         
-      {/* ===== CREDITOS DE CARBONO - DESTAQUE ===== */}
+      {/* ===== CRÉDITOS DE CARBONO - DESTAQUE ===== */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-950/40 via-gray-950 to-gray-900" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-green-500/5 rounded-full blur-3xl" />
@@ -339,25 +339,25 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium tracking-wide mb-6">
-                Novo Servico
+                Novo Serviço
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                Creditos de Carbono:{' '}
+                Créditos de Carbono:{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
-                  Monetize Suas Acoes Ambientais
+                  Monetize Suas Ações Ambientais
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                 Com a Lei 15.042/2024, produtores rurais e empresas podem gerar receita
-                a partir de praticas sustentaveis. Oferecemos consultoria juridica e tecnica
-                completa para certificacao e comercializacao de creditos de carbono.
+                a partir de práticas sustentáveis. Oferecemos consultoria jurídica e técnica
+                completa para certificação e comercialização de creditos de carbono.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/creditos-de-carbono/"
                   className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-3.5 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25"
                 >
-                  Conheca a Consultoria
+                  Conheça a Consultoria
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -372,10 +372,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: 'REDD+', desc: 'Reducao de desmatamento e degradacao florestal' },
-                { title: 'Energia Renovavel', desc: 'Projetos solares, eolicos e biomassa' },
-                { title: 'Agricultura', desc: 'Praticas regenerativas e sequestro de carbono' },
-                { title: 'Assessoria Juridica', desc: 'Conformidade legal e regulatoria completa' },
+                { title: 'REDD+', desc: 'Redução de desmatamento e degradação florestal' },
+                { title: 'Energia Renovável', desc: 'Projetos solares, eólicos e biomassa' },
+                { title: 'Agricultura', desc: 'Práticas regenerativas e sequestro de carbono' },
+                { title: 'Assessoria Jurídica', desc: 'Conformidade legal e regulatória completa' },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-green-500/30 transition-all duration-300 hover:bg-white/[0.07]">
                   <h3 className="text-white font-semibold mb-2">{item.title}</h3>
