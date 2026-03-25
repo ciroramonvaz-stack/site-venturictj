@@ -330,67 +330,66 @@ export default function HomePage() {
           </section>
         )}
 
-        {/* ===== FAQ ===== */}
-        {faq && faq.length > 0 && (
-          
-        {/* ===== CREDITOS DE CARBONO - DESTAQUE ===== */}
-        <section className="relative py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 via-black to-green-900/30" />
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-green-500 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500 rounded-full blur-3xl" />
-          </div>
-          <div className="relative section-wrap">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <span className="inline-block text-green-400 text-sm font-semibold tracking-widest uppercase mb-4 border border-green-400/30 px-4 py-1.5 rounded-full">
-                  Novo Serviço
+        
+      {/* ===== CREDITOS DE CARBONO - DESTAQUE ===== */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-950/40 via-gray-950 to-gray-900" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-green-500/5 rounded-full blur-3xl" />
+        <div className="relative section-wrap">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium tracking-wide mb-6">
+                Novo Servico
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Creditos de Carbono:{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+                  Monetize Suas Acoes Ambientais
                 </span>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-                  Créditos de Carbono:{' '}
-                  <span className="text-green-400">Monetize Suas Ações Ambientais</span>
-                </h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                  Com a Lei 15.042/2024, o Brasil criou o Sistema Brasileiro de Comércio de Emissões.
-                  Produtores rurais, empresas e municípios podem agora gerar receita real a partir de
-                  projetos de carbono certificados. A Venturi oferece consultoria técnica e jurídica
-                  completa para você entrar nesse mercado com segurança.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="/creditos-de-carbono/"
-                    className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
-                  >
-                    Conheça a Consultoria
-                  </Link>
-                  <Link
-                    href={company.whatsappLink}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-yellow-500/60 text-yellow-400 hover:bg-yellow-500/10 font-semibold px-8 py-4 rounded-lg transition-all"
-                    target="_blank"
-                  >
-                    Fale com Especialista
-                  </Link>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: '🌲', title: 'REDD+ & Restauração', desc: 'Proteção florestal e reflorestamento' },
-                  { icon: '⚡', title: 'Energia Renovável', desc: 'Solar, eólica e biomassa' },
-                  { icon: '🌱', title: 'Agricultura Sustentável', desc: 'Baixo carbono na agropecuária' },
-                  { icon: '⚖️', title: 'Assessoria Jurídica', desc: 'Contratos e compliance regulatório' },
-                ].map((item, i) => (
-                  <div key={i} className="bg-gray-900/80 border border-gray-800 rounded-xl p-5 hover:border-green-500/40 transition-all">
-                    <span className="text-3xl block mb-2">{item.icon}</span>
-                    <h3 className="text-white font-bold text-sm mb-1">{item.title}</h3>
-                    <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
+              </h2>
+              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                Com a Lei 15.042/2024, produtores rurais e empresas podem gerar receita
+                a partir de praticas sustentaveis. Oferecemos consultoria juridica e tecnica
+                completa para certificacao e comercializacao de creditos de carbono.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/creditos-de-carbono/"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-3.5 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25"
+                >
+                  Conheca a Consultoria
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+                <Link
+                  href={company.whatsappLink}
+                  className="inline-flex items-center justify-center gap-2 border border-green-500/30 hover:border-green-500/60 text-green-400 hover:text-green-300 font-semibold py-3.5 px-8 rounded-lg transition-all duration-300"
+                >
+                  Fale com Especialista
+                </Link>
               </div>
             </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { title: 'REDD+', desc: 'Reducao de desmatamento e degradacao florestal' },
+                { title: 'Energia Renovavel', desc: 'Projetos solares, eolicos e biomassa' },
+                { title: 'Agricultura', desc: 'Praticas regenerativas e sequestro de carbono' },
+                { title: 'Assessoria Juridica', desc: 'Conformidade legal e regulatoria completa' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-green-500/30 transition-all duration-300 hover:bg-white/[0.07]">
+                  <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-24 md:py-32">
+      {/* ===== FAQ ===== */}
+        {faq && faq.length > 0 && (
+          <section className="py-24 md:py-32">
             <div className="section-wrap">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                 {/* Left: Header */}
