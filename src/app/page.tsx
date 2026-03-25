@@ -364,7 +364,7 @@ export default function HomePage() {
                     Conheça a Consultoria
                   </Link>
                   <Link
-                    href={`${company.whatsappLink}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a consultoria em Créditos de Carbono da Venturi.')}`}
+                    href={company.whatsappLink}
                     className="inline-flex items-center justify-center gap-2 border-2 border-yellow-500/60 text-yellow-400 hover:bg-yellow-500/10 font-semibold px-8 py-4 rounded-lg transition-all"
                     target="_blank"
                   >
