@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { company } from '@/content/siteData'
 
 export const metadata: Metadata = {
-  title: 'Créditos de Carbono | Consultoria Técnica & Jurídica | VENTURI',
+  title: 'Consultoria em Créditos de Carbono | Projetos, Certificação e Assessoria Jurídica | VENTURI',
   description: 'Consultoria especializada em créditos de carbono para produtores rurais, empresas e órgãos públicos. Inventário de GEE, projetos de carbono, assessoria jurídica e certificação. Atendimento em todo o Brasil.',
   openGraph: {
     title: 'Créditos de Carbono | VENTURI Consultoria Técnica & Jurídica',
-    description: 'Transforme sua propriedade ou empresa em protagonista da economia de baixo carbono. Consultoria técnica e jurídica completa em créditos de carbono.',
+    description: 'Monetize suas ações ambientais com segurança. Consultoria completa em créditos de carbono: inventário GEE, projetos REDD+, certificação e assessoria jurídica para produtores rurais e empresas.',
     url: 'https://venturictj.com/creditos-de-carbono/',
     siteName: company.name,
     type: 'website',
@@ -26,19 +26,20 @@ export default function CreditosDeCarbonoPage() {
         </div>
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <span className="inline-block text-green-400 text-sm font-semibold tracking-widest uppercase mb-4 border border-green-400/30 px-4 py-1.5 rounded-full">
-            Novo Serviço
+            Consultoria Especializada
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Créditos de Carbono:{' '}
+            Transforme Sua Terra em{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
-              Oportunidade Real
+              Ativo de Carbono
             </span>{' '}
-            para Quem Está no Campo
+            com Segurança Jurídica
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Sua propriedade rural, sua empresa ou seu município podem gerar receita,
-            agregar valor e contribuir com o clima. A Venturi oferece consultoria técnica
-            e jurídica completa para você entrar no mercado de carbono com segurança.
+            O mercado de créditos de carbono no Brasil movimenta bilhões e a nova legislação
+            (Lei 15.042/2024) abriu as portas para produtores rurais, empresas e municípios.
+            A Venturi é a consultoria que une expertise técnica e jurídica para você
+            monetizar suas ações ambientais com total segurança e credibilidade.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
