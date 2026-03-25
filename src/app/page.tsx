@@ -333,7 +333,7 @@ export default function HomePage() {
         {/* ===== FAQ ===== */}
         {faq && faq.length > 0 && (
           
-        {/* ===== CRÉDITOS DE CARBONO — DESTAQUE ===== */}
+        {/* ===== CREDITOS DE CARBONO - DESTAQUE ===== */}
         <section className="relative py-20 md:py-28 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 via-black to-green-900/30" />
           <div className="absolute inset-0 opacity-10">
