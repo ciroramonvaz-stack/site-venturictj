@@ -332,7 +332,65 @@ export default function HomePage() {
 
         {/* ===== FAQ ===== */}
         {faq && faq.length > 0 && (
-          <section className="py-24 md:py-32">
+          
+        {/* ===== CRÉDITOS DE CARBONO — DESTAQUE ===== */}
+        <section className="relative py-20 md:py-28 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 via-black to-green-900/30" />
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-green-500 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500 rounded-full blur-3xl" />
+          </div>
+          <div className="relative section-wrap">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="inline-block text-green-400 text-sm font-semibold tracking-widest uppercase mb-4 border border-green-400/30 px-4 py-1.5 rounded-full">
+                  Novo Serviço
+                </span>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+                  Créditos de Carbono:{' '}
+                  <span className="text-green-400">Monetize Suas Ações Ambientais</span>
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  Com a Lei 15.042/2024, o Brasil criou o Sistema Brasileiro de Comércio de Emissões.
+                  Produtores rurais, empresas e municípios podem agora gerar receita real a partir de
+                  projetos de carbono certificados. A Venturi oferece consultoria técnica e jurídica
+                  completa para você entrar nesse mercado com segurança.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/creditos-de-carbono/"
+                    className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
+                  >
+                    Conheça a Consultoria
+                  </Link>
+                  <Link
+                    href={`${company.whatsappLink}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a consultoria em Créditos de Carbono da Venturi.')}`}
+                    className="inline-flex items-center justify-center gap-2 border-2 border-yellow-500/60 text-yellow-400 hover:bg-yellow-500/10 font-semibold px-8 py-4 rounded-lg transition-all"
+                    target="_blank"
+                  >
+                    Fale com Especialista
+                  </Link>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: '🌲', title: 'REDD+ & Restauração', desc: 'Proteção florestal e reflorestamento' },
+                  { icon: '⚡', title: 'Energia Renovável', desc: 'Solar, eólica e biomassa' },
+                  { icon: '🌱', title: 'Agricultura Sustentável', desc: 'Baixo carbono na agropecuária' },
+                  { icon: '⚖️', title: 'Assessoria Jurídica', desc: 'Contratos e compliance regulatório' },
+                ].map((item, i) => (
+                  <div key={i} className="bg-gray-900/80 border border-gray-800 rounded-xl p-5 hover:border-green-500/40 transition-all">
+                    <span className="text-3xl block mb-2">{item.icon}</span>
+                    <h3 className="text-white font-bold text-sm mb-1">{item.title}</h3>
+                    <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 md:py-32">
             <div className="section-wrap">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                 {/* Left: Header */}
