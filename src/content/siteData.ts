@@ -268,19 +268,19 @@ export const products = [
 export const stats = [
   {
     number: '150+',
-    label: 'imóveis diagnosticados',
+    label: 'propriedades destravadas em todo o Brasil',
+  },
+  {
+    number: 'R$ 2,3 Mi+',
+    label: 'em crédito rural liberado para clientes',
   },
   {
     number: '8',
-    label: 'estados atendidos',
+    label: 'estados atendidos — 100% remoto',
   },
   {
-    number: '100%',
-    label: 'digital — atendemos todo o Brasil',
-  },
-  {
-    number: '24h',
-    label: 'para retorno após primeiro contato',
+    number: '< 2h',
+    label: 'para retorno em horário comercial',
   },
 ];
 
