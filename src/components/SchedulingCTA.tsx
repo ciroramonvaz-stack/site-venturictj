@@ -43,7 +43,7 @@ export default function SchedulingCTA() {
 
           {/* Trust line */}
           <p className="mt-10 text-xs text-white/25 tracking-wide">
-            Resposta em até 24h • 100% remoto • Atendimento em todo o Brasil
+            Resposta em at&eacute; 2h em hor&aacute;rio comercial &bull; 100% remoto &bull; Atendimento em todo o Brasil &bull; Diagn&oacute;stico preliminar gratuito
           </p>
         </div>
       </div>
