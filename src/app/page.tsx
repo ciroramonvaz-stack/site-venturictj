@@ -4,6 +4,7 @@ import { getPageMetadata } from '@/lib/seo';
 import { siteData } from '@/content/siteData';
 import SchedulingCTA from '@/components/SchedulingCTA';
 import ScrollReveal from '@/components/ScrollReveal';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export const metadata = getPageMetadata('Home | VENTURI');
 
@@ -41,44 +42,68 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
 
           <div className="section-wrap relative z-10 py-32 md:py-40">
-            <div className="max-w-3xl">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 mb-8 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-venturi-gold pulse-gold" />
-                <span className="text-xs uppercase tracking-[0.2em] text-white/70">
-                  Im&oacute;vel embargado, sobreposto com UC ou com CAR irregular? A Venturi destrava.
-                </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Coluna esquerda - Conteúdo */}
+              <div className="max-w-2xl">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 mb-8 backdrop-blur-sm">
+                  <span className="w-2 h-2 rounded-full bg-venturi-gold pulse-gold" />
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/70">
+                    Im&oacute;vel embargado, sobreposto com UC ou com CAR irregular? A Venturi destrava.
+                  </span>
+                </div>
+
+                {/* Headline */}
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[0.95] mb-8">
+                  Destravar{' '}
+                  <span className="gradient-text">propriedades embargadas</span>{' '}
+                  &eacute; nossa especialidade
+                </h1>
+
+                {/* Subtitle */}
+                <p className="text-lg md:text-xl text-white/60 mb-8 max-w-xl leading-relaxed">
+                  Consultoria estrat&eacute;gica para resolver os desafios mais complexos do seu im&oacute;vel rural. Regulariza&ccedil;&atilde;o, zoneamento, licenciamento e expertise jur&iacute;dica integrada &mdash; sem precisar de cinco escrit&oacute;rios diferentes.
+                </p>
+
+                {/* Garantia / Risk Reversal */}
+                <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex items-center gap-2 text-sm text-white/50">
+                    <svg className="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    An&aacute;lise preliminar gratuita
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white/50">
+                    <svg className="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    Retorno em at&eacute; 2 horas
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white/50">
+                    <svg className="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    100% remoto &mdash; todo o Brasil
+                  </div>
+                </div>
+
+                {/* CTAs mobile (visível só em telas menores que lg) */}
+                <div className="flex flex-col sm:flex-row gap-4 lg:hidden">
+                  <a
+                    href={`${company.whatsappLink}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a consultoria Venturi.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-glow inline-flex items-center justify-center gap-3 px-8 py-4 bg-venturi-gold text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 text-sm tracking-wide"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-green-700" />
+                    WhatsApp: An&aacute;lise Gratuita
+                  </a>
+                  <Link
+                    href="/diagnostico"
+                    className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 hover:border-white/30 transition-all duration-300 text-sm tracking-wide"
+                  >
+                    Iniciar Diagn&oacute;stico Gratuito &rarr;
+                  </Link>
+                </div>
               </div>
 
-              {/* Headline */}
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-8">
-                Destravar{' '}
-                <span className="gradient-text">propriedades embargadas</span>{' '}
-                &eacute; nossa especialidade
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-lg md:text-xl text-white/60 mb-12 max-w-xl leading-relaxed">
-                Consultoria estrat&eacute;gica para resolver os desafios mais complexos do seu im&oacute;vel rural. Regulariza&ccedil;&atilde;o, zoneamento, licenciamento e expertise jur&iacute;dica integrada &mdash; sem precisar de cinco escrit&oacute;rios diferentes.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={`${company.whatsappLink}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a consultoria Venturi.')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-glow inline-flex items-center justify-center gap-3 px-8 py-4 bg-venturi-gold text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 text-sm tracking-wide"
-                >
-                  <span className="w-2 h-2 rounded-full bg-green-700" />
-                  WhatsApp: An&aacute;lise Gratuita
-                </a>
-                <Link
-                  href="/diagnostico"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 hover:border-white/30 transition-all duration-300 text-sm tracking-wide"
-                >
-                  Iniciar Diagn&oacute;stico Gratuito &rarr;
-                </Link>
+              {/* Coluna direita - Formulário de captação */}
+              <div className="hidden lg:flex justify-end">
+                <LeadCaptureForm />
               </div>
             </div>
           </div>
@@ -383,6 +408,91 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GARANTIA / RISK REVERSAL ===== */}
+      <section className="py-16 md:py-20 border-y border-white/5 bg-[#050810]">
+        <div className="section-wrap">
+          <div className="reveal max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-venturi-gold/10 border border-venturi-gold/20 mb-6">
+              <svg className="w-8 h-8 text-venturi-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+              Diagn&oacute;stico Preliminar <span className="gradient-text">100% Gratuito</span>
+            </h2>
+            <p className="text-white/50 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+              Avaliamos sua situa&ccedil;&atilde;o sem nenhum custo e sem compromisso. Se o diagn&oacute;stico n&atilde;o esclarecer sua principal d&uacute;vida, voc&ecirc; n&atilde;o paga nada. Simples assim.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/40">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                Sem taxa de consulta
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                Sem letra miúda
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                Proposta com escopo e valor definidos
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                Atendemos de 20 a 20.000 hectares
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== QUEM SOMOS (Resumo na Home) ===== */}
+      <section className="py-24 md:py-32">
+        <div className="section-wrap">
+          <div className="reveal mb-16 md:mb-20 text-center">
+            <div className="gold-kicker mb-4">Quem Est&aacute; Por Tr&aacute;s</div>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Conhe&ccedil;a o <span className="gradient-text">time Venturi</span>
+            </h2>
+            <p className="text-white/50 max-w-2xl mx-auto text-lg">
+              4 s&oacute;cios especialistas com mais de 900 processos conduzidos, d&eacute;cada de atua&ccedil;&atilde;o em &oacute;rg&atilde;os p&uacute;blicos e lideran&ccedil;a em comiss&otilde;es da OAB.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 stagger">
+            {[
+              { name: 'Ciro Ramon', role: 'S\u00f3cio-Administrador', credential: 'Bacharel em Direito', photo: '/ciro.jpg.jpeg', specialty: 'Regulariza\u00e7\u00e3o Fundi\u00e1ria' },
+              { name: 'Eduardo Gabriel', role: 'S\u00f3cio-Administrador', credential: 'OAB/PR 58.941', photo: '/eduardo.jpg.jpeg', specialty: 'Contencioso' },
+              { name: 'Geliandra Lopes', role: 'S\u00f3cia Especialista', credential: 'OAB/PR 115.178', photo: '/geliandra.jpg.jpeg', specialty: 'Direito Ambiental' },
+              { name: 'Jos\u00e9 Alaertes', role: 'S\u00f3cio-Administrador', credential: 'OAB/PR 60.934', photo: '/jose.jpg.jpeg', specialty: 'Direito Empresarial' },
+            ].map((member, i) => (
+              <Link href="/sobre" key={i} className="reveal premium-card rounded-2xl p-5 md:p-6 group text-center block no-underline">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl mx-auto mb-4 bg-gradient-to-br from-venturi-gold/20 to-venturi-gold/5 border border-venturi-gold/20 overflow-hidden relative group-hover:border-venturi-gold/40 transition-all duration-500">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    className="object-cover rounded-2xl"
+                    sizes="96px"
+                  />
+                </div>
+                <h3 className="font-semibold text-sm md:text-base group-hover:text-venturi-gold transition-colors duration-300">{member.name}</h3>
+                <p className="text-venturi-gold/60 text-xs mt-1">{member.credential}</p>
+                <p className="text-white/30 text-[10px] mt-1 uppercase tracking-wider">{member.specialty}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="reveal mt-12 text-center">
+            <Link
+              href="/sobre"
+              className="inline-flex items-center gap-2 text-sm text-venturi-gold hover:text-yellow-400 transition-colors"
+            >
+              Conhe&ccedil;a o time completo &rarr;
+            </Link>
           </div>
         </div>
       </section>
