@@ -25,10 +25,10 @@ export const company = {
 };
 
 export const navLinks = [
-  { href: '/solucoes/', label: 'Soluções' },
-  { href: '/sobre/', label: 'Quem Somos' },
-  { href: '/contato/', label: 'Contato' },
-  { href: '/carbono/', label: 'Carbono' },
+  { href: '/#solucoes', label: 'Soluções' },
+  { href: '/#resultados', label: 'Resultados' },
+  { href: '/#quem-somos', label: 'Quem Somos' },
+  { href: '/#contato', label: 'Contato' },
   { href: '/dividas-rurais/', label: 'Dívidas Rurais' },
 ];
 
@@ -147,22 +147,32 @@ export const deliverables = [
 export const testimonials = [
   {
     author: 'Cliente (M.F.)',
+    area: 'Sobreposição UC',
+    result: 'Venda concluída em 45 dias',
     text: 'Após 18 meses sem conseguir vender por conta de sobreposição com UC, a Venturi mapeou os direitos adquiridos e entregou o relatório que destravou a operação. Fechamos a venda em 45 dias.',
   },
   {
     author: 'Cliente (A.C.)',
+    area: 'Diagnóstico Fundiário',
+    result: 'Resolvido em 12 dias',
     text: 'O diagnóstico expedito da Venturi resolveu em 12 dias dúvidas que três advogados diferentes não conseguiram esclarecer em dois anos. Profissionalismo de outro nível.',
   },
   {
     author: 'Cliente (J.P.)',
+    area: 'Crédito Rural',
+    result: 'R$ 2,3 Mi liberados',
     text: 'O relatório técnico da Venturi foi aceito sem ressalvas pelo banco para liberação de R$ 2,3 milhões em crédito rural. Documentação impecável.',
   },
   {
     author: 'Cliente (R.L.)',
+    area: 'Embargo Ambiental',
+    result: 'Embargo revertido em 60 dias',
     text: 'Fazenda travada há 3 anos por embargo de órgão ambiental federal. A Venturi reverteu o embargo em 60 dias com defesa administrativa impecável. Equipe extremamente competente.',
   },
   {
     author: 'Cliente (S.M.)',
+    area: 'Dívidas Rurais',
+    result: 'Leilão suspenso + R$ 380 mil em redução',
     text: 'Minha fazenda ia a leilão em 20 dias. A Venturi conseguiu suspensão liminar e revisou o contrato que tinha R$ 380 mil em juros abusivos. Hoje renegociei com condições justas.',
   },
 ];
