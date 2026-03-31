@@ -18,7 +18,7 @@ export default function HomePage() {
       <ScrollReveal />
       <main className="relative w-full overflow-hidden bg-venturi-dark text-white">
         {/* ============ HERO SECTION ============ */}
-        <section className="section-wrap relative min-h-screen w-full flex items-center justify-center px-6 py-20 lg:py-0">
+        <section className="section-wrap relative min-h-screen w-full flex items-center px-6 py-24 lg:py-0">
           <div className="absolute inset-0 z-0">
             <Image
               src={heroImages[0]}
@@ -30,55 +30,133 @@ export default function HomePage() {
             <div className="hero-overlay absolute inset-0 bg-black/60" />
           </div>
 
-          <div className="reveal relative z-10 max-w-3xl text-center lg:text-left">
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-venturi-gold/30 backdrop-blur-sm">
-              <span className="text-xs font-medium text-venturi-gold">ESPECIALISTAS</span>
-              <span className="text-xs text-white/70">Imóveis Rurais | Embargos | Sobreposição UC | Dívidas</span>
-            </div>
+          <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
+            {/* Left side - Headlines */}
+            <div className="reveal lg:w-1/2 text-center lg:text-left lg:pt-8">
+              <div className="mb-6 inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-venturi-gold/30 backdrop-blur-sm">
+                <span className="text-xs font-medium text-venturi-gold">ESPECIALISTAS</span>
+                <span className="text-xs text-white/70">Imóveis Rurais | Embargos | Sobreposição UC | Dívidas</span>
+              </div>
 
-            {/* Headline */}
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Seu imóvel rural está travado? A Venturi{' '}
-              <span className="gradient-text">destrava</span>.
-            </h1>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+                Seu imóvel rural está travado? A Venturi{' '}
+                <span className="gradient-text">destrava</span>.
+              </h1>
 
-            {/* Subtitle */}
-            <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Regularizamos, defendemos e destravamos propriedades rurais em todo o Brasil.{' '}
-              <span className="text-venturi-gold font-semibold">Análise gratuita.</span>
-            </p>
+              <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                Regularizamos, defendemos e destravamos propriedades rurais em todo o Brasil.
+              </p>
 
-            {/* Trust Badges */}
-            <div className="grid grid-cols-2 gap-3 mb-8 max-w-sm mx-auto lg:mx-0">
-              {[
-                '✓ Análise gratuita',
-                '✓ Retorno em até 2h',
-                '✓ 100% remoto',
-                '✓ 8 estados',
-              ].map((badge, idx) => (
-                <div key={idx} className="text-sm text-venturi-gold">
-                  {badge}
-                </div>
-              ))}
-            </div>
+              <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto lg:mx-0 mb-6">
+                {[
+                  '✓ Análise gratuita',
+                  '✓ Retorno em até 2h',
+                  '✓ 100% remoto',
+                  '✓ 8 estados',
+                ].map((badge, idx) => (
+                  <div key={idx} className="text-sm text-venturi-gold">
+                    {badge}
+                  </div>
+                ))}
+              </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href={`${company.whatsappLink}?text=${encodeURIComponent('Olá Venturi, quero uma análise gratuita do meu imóvel rural')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-glow bg-venturi-gold text-venturi-dark font-bold py-4 px-8 rounded-lg inline-flex items-center justify-center gap-2 hover:bg-opacity-90 transition"
-              >
-                💬 WhatsApp
-              </a>
               <Link
                 href="/solucoes/"
-                className="border-2 border-venturi-gold text-venturi-gold font-bold py-4 px-8 rounded-lg hover:bg-venturi-gold/10 transition inline-flex items-center justify-center gap-2"
+                className="border-2 border-venturi-gold text-venturi-gold font-bold py-3 px-8 rounded-lg hover:bg-venturi-gold/10 transition inline-flex items-center justify-center gap-2"
               >
                 Ver Soluções →
               </Link>
+            </div>
+
+            {/* Right side - Lead Capture Form */}
+            <div className="reveal lg:w-5/12 w-full max-w-md mx-auto lg:mx-0">
+              <div className="bg-venturi-dark/90 backdrop-blur-md border border-venturi-gold/30 rounded-2xl p-6 lg:p-8 shadow-2xl">
+                {/* Form header */}
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center gap-2 bg-venturi-gold/20 text-venturi-gold text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    ATENDIMENTO IMEDIATO
+                  </div>
+                  <h2 className="text-2xl font-bold text-white mb-1">
+                    Análise Gratuita
+                  </h2>
+                  <p className="text-white/60 text-sm">
+                    Descubra a solução para seu imóvel em até 2h
+                  </p>
+                </div>
+
+                {/* Form fields */}
+                <form className="space-y-4">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Seu nome completo"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-venturi-gold focus:bg-white/15 transition"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      placeholder="WhatsApp (00) 00000-0000"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-venturi-gold focus:bg-white/15 transition"
+                    />
+                  </div>
+                  <div>
+                    <select
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
+                    >
+                      <option value="">Qual o problema do imóvel?</option>
+                      <option value="sobreposto">Sobreposto com UC</option>
+                      <option value="embargado">Embargado (ICMBio/IBAMA/IAT)</option>
+                      <option value="documentacao">Documentação / SIGEF</option>
+                      <option value="divida">Dívida rural com banco</option>
+                      <option value="leilao">Fazenda indo a leilão</option>
+                      <option value="carbono">Créditos de carbono</option>
+                      <option value="due-diligence">Due diligence / Compra</option>
+                      <option value="outro">Outro problema</option>
+                    </select>
+                  </div>
+
+                  <a
+                    href={`${company.whatsappLink}?text=${encodeURIComponent('Olá Venturi! Gostaria de uma análise gratuita do meu imóvel rural.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-glow w-full bg-venturi-gold text-venturi-dark font-bold py-4 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-opacity-90 transition text-lg"
+                  >
+                    Solicitar Análise Gratuita →
+                  </a>
+                </form>
+
+                {/* Social proof */}
+                <div className="mt-5 pt-5 border-t border-white/10">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="flex -space-x-2">
+                      {['/ciro.jpg.jpeg', '/eduardo.jpg.jpeg', '/geliandra.jpg.jpeg'].map((img, idx) => (
+                        <div key={idx} className="w-7 h-7 rounded-full border-2 border-venturi-dark overflow-hidden">
+                          <Image src={img} alt="Especialista" width={28} height={28} className="object-cover w-full h-full" />
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-white/60 text-xs">
+                      <span className="text-venturi-gold font-bold">150+</span> proprietários atendidos
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center gap-4 text-xs text-white/40">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-3.5 h-3.5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Gratuito
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg className="w-3.5 h-3.5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Sem compromisso
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg className="w-3.5 h-3.5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Sigilo total
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -226,82 +304,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ LEAD CAPTURE ============ */}
-        <section className="section-wrap py-20 bg-gradient-to-b from-venturi-dark to-[#0a0f1a]">
-          <div className="max-w-5xl mx-auto">
-            <div className="reveal premium-card bg-white/5 border border-venturi-gold/30 rounded-2xl p-8 lg:p-12">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
-                {/* Left side - Text */}
-                <div className="lg:w-2/5 mb-8 lg:mb-0">
-                  <span className="gold-kicker">Análise Gratuita</span>
-                  <h2 className="text-3xl lg:text-4xl font-bold mt-4 mb-4">
-                    Seu imóvel rural tem <span className="gradient-text">solução</span>?
-                  </h2>
-                  <p className="text-white/70 text-base">
-                    Descubra em até 2 horas. Sem compromisso, sem custo inicial.
-                  </p>
-                  <div className="mt-4 space-y-2 text-sm text-white/50">
-                    <div className="flex items-center gap-2">
-                      <span className="text-venturi-gold">✓</span> Diagnóstico preliminar gratuito
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-venturi-gold">✓</span> Retorno em até 2 horas
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-venturi-gold">✓</span> Sigilo total garantido
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right side - Form */}
-                <div className="lg:w-3/5">
-                  <form className="space-y-4">
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <input
-                        type="text"
-                        id="lead-nome"
-                        placeholder="Seu nome"
-                        className="flex-1 px-4 py-3 bg-venturi-dark/80 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-venturi-gold transition"
-                      />
-                      <input
-                        type="tel"
-                        id="lead-telefone"
-                        placeholder="(00) 00000-0000"
-                        className="flex-1 px-4 py-3 bg-venturi-dark/80 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-venturi-gold transition"
-                      />
-                    </div>
-                    <select
-                      id="lead-situacao"
-                      className="w-full px-4 py-3 bg-venturi-dark/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
-                    >
-                      <option value="">Qual a situação do seu imóvel?</option>
-                      <option value="sobreposto">Sobreposto com Unidade de Conservação</option>
-                      <option value="embargado">Embargado por órgão ambiental</option>
-                      <option value="documentacao">Problema de documentação / SIGEF</option>
-                      <option value="divida">Dívida rural com banco</option>
-                      <option value="carbono">Créditos de carbono</option>
-                      <option value="due-diligence">Due diligence / Compra</option>
-                      <option value="outro">Outro</option>
-                    </select>
-                    <a
-                      href={`${company.whatsappLink}?text=${encodeURIComponent('Olá Venturi! Gostaria de uma análise gratuita do meu imóvel rural.')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-glow w-full bg-venturi-gold text-venturi-dark font-bold py-4 px-8 rounded-lg inline-flex items-center justify-center gap-3 hover:bg-opacity-90 transition text-lg"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.47-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                      </svg>
-                      Solicitar Análise Gratuita
-                    </a>
-                    <p className="text-white/40 text-xs text-center">Seus dados estão protegidos. Sem spam.</p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ============ FINAL CTA ============ */}
         <section className="section-wrap py-20 bg-gradient-to-r from-venturi-gold/10 to-venturi-dark/50 border-t border-venturi-gold/20">
           <div className="max-w-3xl mx-auto text-center reveal">
@@ -312,20 +314,18 @@ export default function HomePage() {
               Análise gratuita e sem compromisso. Retorno em até 2 horas.
             </p>
 
-            <div className="flex flex-col lg:flex-row gap-4 justify-center">
-              <a
-                href={`${company.whatsappLink}?text=${encodeURIComponent('Olá Venturi, quero uma análise gratuita do meu imóvel rural')}`}
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contato/"
                 className="btn-glow bg-venturi-gold text-venturi-dark font-bold py-4 px-12 rounded-lg inline-flex items-center justify-center gap-2 hover:bg-opacity-90 transition"
               >
-                💬 Enviar WhatsApp
-              </a>
+                Solicitar Análise Gratuita →
+              </Link>
               <Link
                 href="/contato/"
                 className="border-2 border-venturi-gold text-venturi-gold font-bold py-4 px-12 rounded-lg hover:bg-venturi-gold/10 transition inline-flex items-center justify-center gap-2"
               >
-                Ir para Contato →
+                Formulário de Contato
               </Link>
             </div>
           </div>
