@@ -385,22 +385,77 @@ export default function ContatoPage() {
             <details className="group border border-gray-700 rounded-lg overflow-hidden">
               <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
                 <span>Posso enviar documentos pelo WhatsApp?</span>
-                <svg
-                  className="w-5 h-5 transition group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
                 Sim, é nosso canal principal de recebimento. O WhatsApp oferece praticidade e rastreamento das comunicações. Todos os documentos serão organizados e tratados com sigilo total.
+              </div>
+            </details>
+
+            {/* FAQ 6 */}
+            <details className="group border border-gray-700 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
+                <span>Meu imóvel está embargado. Vocês podem ajudar?</span>
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
+                Sim. Temos ampla experiência em defesa contra embargos do ICMBio, IBAMA e IAT. Atuamos na esfera administrativa e judicial para reverter a decisão e devolver o uso da sua propriedade. Nossa taxa de êxito em reversão de embargos é superior a 90%.
+              </div>
+            </details>
+
+            {/* FAQ 7 */}
+            <details className="group border border-gray-700 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
+                <span>Quais documentos preciso ter em mãos para a análise?</span>
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
+                Para a conversa inicial, não precisa de nada — basta nos contar sua situação. Se decidir prosseguir, os documentos comuns são: matrícula do imóvel, CAR, CCIR, ITR, e qualquer notificação ou auto de infração que tenha recebido. Orientamos você sobre tudo que precisaremos.
+              </div>
+            </details>
+
+            {/* FAQ 8 */}
+            <details className="group border border-gray-700 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
+                <span>Vocês trabalham com créditos de carbono?</span>
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
+                Sim. Ajudamos proprietários rurais a monetizar a preservação ambiental das suas propriedades através de créditos de carbono voluntários. Fazemos a análise de viabilidade, estruturação jurídica e conexão com mercados. Tudo com segurança e transparência.
+              </div>
+            </details>
+
+            {/* FAQ 9 */}
+            <details className="group border border-gray-700 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
+                <span>Minha fazenda está indo a leilão. Tem como impedir?</span>
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
+                Em muitos casos, sim. Atuamos com ações judiciais urgentes para suspensão de leilão, podendo ser resolutivo em até 48 horas dependendo do caso. O tempo é crítico — quanto antes entrar em contato, maiores as chances de proteger seu patrimônio.
+              </div>
+            </details>
+
+            {/* FAQ 10 */}
+            <details className="group border border-gray-700 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-gray-900 group-open:bg-gray-800 transition flex items-center justify-between">
+                <span>Vocês atendem pessoa jurídica (empresas rurais)?</span>
+                <svg className="w-5 h-5 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-300 bg-gray-950 border-t border-gray-700">
+                Sim. Atendemos tanto pessoas físicas quanto jurídicas. Para empresas rurais, oferecemos também consultoria em estruturação societária, contratos agrários, planejamento sucessório e compliance ambiental. Nossa equipe tem especialistas em Direito Empresarial dedicados a esse perfil de cliente.
               </div>
             </details>
           </div>
