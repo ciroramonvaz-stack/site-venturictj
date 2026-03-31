@@ -237,6 +237,121 @@ export default function SolucoesPage() {
         </div>
       </section>
 
+      {/* STATS SECTION */}
+      <section className="section-wrap py-16 border-t border-venturi-gold/10 bg-white/[0.02]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          {[
+            { number: '150+', label: 'Propriedades destravadas' },
+            { number: '8', label: 'Estados atendidos' },
+            { number: '94%', label: 'Taxa de êxito' },
+            { number: '<2h', label: 'Tempo de retorno' },
+          ].map((stat, idx) => (
+            <div key={idx} className="reveal">
+              <div className="text-4xl lg:text-5xl font-bold text-venturi-gold mb-2">{stat.number}</div>
+              <p className="text-white/60 text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* WHY VENTURI */}
+      <section className="section-wrap py-16 border-t border-venturi-gold/10">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 gold-kicker">
+            Por Que Escolher a Venturi
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-venturi-gold to-transparent"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              icon: '🔒',
+              title: 'Sigilo Total',
+              desc: 'Todas as informações do seu imóvel são tratadas com confidencialidade absoluta. Nenhum dado é compartilhado com terceiros.',
+            },
+            {
+              icon: '🎯',
+              title: 'Equipe Multidisciplinar',
+              desc: 'Jurídico, técnico fundiário e ambiental trabalhando juntos. Sem intermediários, sem terceirização — cada sócio atua diretamente no seu caso.',
+            },
+            {
+              icon: '📱',
+              title: '100% Remoto',
+              desc: 'Não importa onde seu imóvel está. Nosso modelo digital permite atender proprietários rurais em qualquer estado do Brasil com a mesma eficiência.',
+            },
+            {
+              icon: '⚡',
+              title: 'Respostas Rápidas',
+              desc: 'Retorno em até 2 horas em horário comercial. Você fala direto com o especialista responsável, nunca com uma secretária.',
+            },
+            {
+              icon: '💡',
+              title: 'Diagnóstico Antes de Tudo',
+              desc: 'Não começamos nada sem entender completamente sua situação. A análise inicial é gratuita e sem compromisso — você decide se quer prosseguir.',
+            },
+            {
+              icon: '📈',
+              title: 'Resultados Comprovados',
+              desc: 'Mais de 900 processos resolvidos em 8 estados. Taxa de êxito superior a 90% em reversão de embargos ambientais.',
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="premium-card reveal"
+              style={{ animationDelay: `${idx * 80}ms` }}
+            >
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h3 className="text-lg font-bold mb-2 text-white">{item.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="section-wrap py-16 border-t border-venturi-gold/10">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 gold-kicker">
+            Dúvidas Comuns sobre Nossos Serviços
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-venturi-gold to-transparent"></div>
+        </div>
+
+        <div className="max-w-3xl space-y-4">
+          {[
+            {
+              q: 'Meu imóvel está sobreposto com uma UC. Vou perder a propriedade?',
+              a: 'Não necessariamente. A sobreposição com Unidade de Conservação não significa perda automática. Existem caminhos jurídicos para regularizar a situação, incluindo indenização, recategorização da área ou retificação de limites. Cada caso exige análise individualizada.',
+            },
+            {
+              q: 'Quanto tempo leva para resolver um caso de embargo?',
+              a: 'Depende da complexidade. Casos simples de defesa administrativa podem ser resolvidos em 30 a 90 dias. Processos judiciais podem levar de 6 meses a 2 anos. Na análise inicial gratuita, damos uma estimativa realista de prazo para seu caso específico.',
+            },
+            {
+              q: 'Vocês atendem pequenos proprietários ou só grandes fazendas?',
+              a: 'Atendemos propriedades de todos os tamanhos. Temos experiência desde pequenas propriedades familiares até grandes fazendas. O que importa é a situação do imóvel, não seu tamanho.',
+            },
+            {
+              q: 'Preciso ir até Ponta Grossa para contratar?',
+              a: 'Não. Nosso atendimento é 100% remoto. Toda a comunicação, envio de documentos e acompanhamento é feito por WhatsApp, e-mail e videochamada. Atendemos 8 estados brasileiros dessa forma.',
+            },
+          ].map((faq, idx) => (
+            <details key={idx} className="group border border-white/10 rounded-lg overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 font-semibold text-white bg-white/5 group-open:bg-white/10 transition flex items-center justify-between">
+                <span>{faq.q}</span>
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 py-4 text-gray-400 bg-white/[0.02] border-t border-white/10 text-sm leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       {/* CTA SECTION */}
       <section className="section-wrap py-20 bg-gradient-to-r from-venturi-gold/5 via-transparent to-venturi-gold/5 border-y border-venturi-gold/10">
         <div className="text-center max-w-3xl mx-auto">
