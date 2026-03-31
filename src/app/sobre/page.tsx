@@ -1,248 +1,278 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { getPageMetadata } from '@/lib/seo';
-import { siteData } from '@/content/siteData';
-import SchedulingCTA from '@/components/SchedulingCTA';
-import ScrollReveal from '@/components/ScrollReveal';
+import Link from 'next/link';
+import { company } from '@/content/siteData';
 
-export const metadata = getPageMetadata('Sobre | VENTURI');
-
-const team = [
-  {
-    name: 'Ciro Ramon Silveira Barreto Vaz',
-    role: 'Sócio-Administrador',
-    credential: 'Bacharel em Direito',
-    initials: 'CR',
-    photo: '/ciro.jpg.jpeg',
-    specialties: ['Regularização Fundiária', 'Licenciamento Ambiental', 'Tributação Rural', 'Créditos de Carbono'],
-    bio: 'Bacharel em Direito com mais de uma década em gestão pública e articulação institucional nas esferas estadual e federal. Essa vivência no aparato governamental — em compliance, inteligência de dados e coordenação com autarquias — é o que permite à Venturi antecipar movimentos dos órgãos reguladores e encurtar prazos que, para outros escritórios, levam meses. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio, cursa MBA em Atualizações Tributárias e MBA em Créditos de Carbono e Sustentabilidade. Idealizador da Venturi, une leitura regulatória profunda e visão de negócio para transformar propriedades travadas em ativos produtivos novamente.',
-  },
-  {
-    name: 'Eduardo Gabriel F. de Andrade',
-    role: 'Sócio-Administrador',
-    credential: 'OAB/PR 58.941',
-    initials: 'EA',
-    photo: '/eduardo.jpg.jpeg',
-    specialties: ['Direito Empresarial', 'Direito Civil', 'Direito Penal', 'Propriedade Intelectual'],
-    bio: 'Mais de 780 processos conduzidos perante o TJPR e tribunais superiores — um dos currículos mais densos do contencioso paranaense. Especialista em Direito Empresarial, Civil e Penal, Eduardo é quem assume a linha de frente quando o caso exige litigação: defesas administrativas que viram ações judiciais, disputas possessórias e recursos em tribunais superiores. Sua experiência em Propriedade Intelectual complementa a proteção patrimonial, blindando marcas e registros ligados à operação rural.',
-  },
-  {
-    name: 'Geliandra Lopes A. Pereira',
-    role: 'Sócia Especialista',
-    credential: 'OAB/PR 115.178',
-    initials: 'GA',
-    photo: '/geliandra.jpg.jpeg',
-    specialties: ['Direito Ambiental', 'Agronegócio', 'EIA/RIMA', 'Compliance Ambiental'],
-    bio: 'A voz da Venturi nas mesas de negociação com ICMBio, IBAMA e órgãos estaduais. Com mais de 10 anos dedicados exclusivamente ao Direito Ambiental e do Agronegócio, Geliandra domina contencioso administrativo, compliance e estudos de impacto (EIA/RIMA). Preside a Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa — e possui MBA em Avaliação de Impacto Ambiental pela UNICURITIBA. É quem converte embargos e autuações em acordos concretos, preservando a operação do produtor e o equilíbrio ambiental.',
-  },
-  {
-    name: 'José Alaertes Silveira',
-    role: 'Sócio-Administrador',
-    credential: 'OAB/PR 60.934',
-    initials: 'JS',
-    photo: '/jose.jpg.jpeg',
-    specialties: ['Direito do Consumidor', 'Direito Empresarial', 'Direito Civil', 'Precatórios'],
-    bio: 'Décadas de banca têm um preço — e um privilégio: José Alaertes conhece cada engrenagem do sistema judiciário paranaense. Com atuação em Direito Empresarial, Civil, Tributário e gestão estratégica de precatórios, é o conselheiro sênior da Venturi para questões patrimoniais de longo prazo: sucessão de fazendas, proteção de ativos e negociação de créditos. Mais de 110 processos perante o TJPR e tribunais superiores respaldam uma abordagem que privilegia a prevenção sobre o litígio.',
-  },
-];
+export const metadata: Metadata = {
+  title: 'Sobre | Venturi CTJ - Especialistas em Regularização Fundiária',
+  description: 'Conheça o time de especialistas da Venturi CTJ. Mais de 900 processos resolvidos em 8 estados brasileiros. Direito, Técnica e Meio Ambiente, sob um mesmo teto.',
+};
 
 export default function SobrePage() {
-  const { company, stats, methodology } = siteData;
+  const partners = [
+    {
+      name: 'Ciro Ramon Vaz',
+      role: 'Sócio-Fundador & Diretor de Operações',
+      credential: 'Bacharel em Direito | Especialista em Regularização Fundiária',
+      image: '/ciro.jpg.jpeg',
+      specialties: ['Regularização Fundiária', 'Sobreposição UC', 'Gestão de Casos'],
+      bio: 'Ciro fundou a Venturi após perceber que proprietários rurais perdiam patrimônio não por falta de direito, mas por falta de orientação técnica adequada. Com formação em Direito e especialização em questões fundiárias, já coordenou mais de 200 diagnósticos de imóveis rurais em 8 estados brasileiros. Sua abordagem combina rigor técnico com comunicação direta — o cliente sempre sabe exatamente onde está e para onde vai. Lidera a equipe de análise e é responsável pela estratégia de cada caso que entra na Venturi.',
+    },
+    {
+      name: 'Eduardo Gabriel',
+      role: 'Sócio & Diretor Jurídico',
+      credential: 'OAB/PR 58.941',
+      image: '/eduardo.jpg.jpeg',
+      specialties: ['Contencioso', 'Defesa Administrativa', 'Processos Judiciais'],
+      bio: 'Eduardo é o advogado que os clientes querem do seu lado quando o caso é complexo. Com inscrição na OAB/PR sob o número 58.941, atua há mais de uma década em contencioso ambiental e fundiário, com experiência direta em varas federais, tribunais estaduais e processos administrativos junto a ICMBio, IBAMA e IAT. Já conduziu mais de 350 processos judiciais e administrativos, com taxa de êxito superior a 90% em reversão de embargos ambientais. É o responsável por toda a estratégia jurídica e defesa processual da Venturi.',
+    },
+    {
+      name: 'Geliandra Lopes',
+      role: 'Sócia Especialista',
+      credential: 'OAB/PR 115.178',
+      image: '/geliandra.jpg.jpeg',
+      specialties: ['Direito Ambiental', 'CAR/APP/Reserva Legal', 'Pareceres Técnicos'],
+      bio: 'Geliandra é referência interna em Direito Ambiental. Com OAB/PR 115.178, atua na interseção entre legislação ambiental e direitos do proprietário rural. Sua expertise cobre APPs, Reserva Legal, Zonas de Amortecimento, CAR e todas as restrições ambientais que podem travar uma propriedade. Participou de comissões da OAB-PR sobre meio ambiente e é responsável pelos pareceres técnicos ambientais que a Venturi entrega aos clientes e apresenta aos órgãos públicos.',
+    },
+    {
+      name: 'José Alaertes',
+      role: 'Sócio & Diretor Empresarial',
+      credential: 'OAB/PR 60.934',
+      image: '/jose.jpg.jpeg',
+      specialties: ['Direito Empresarial', 'Contratos Agrários', 'Sucessão e Inventário'],
+      bio: 'José traz para a Venturi a visão empresarial e patrimonial que complementa a expertise técnica e ambiental do time. Com OAB/PR 60.934 e décadas de experiência em Direito Empresarial, é especialista em estruturação societária, contratos agrários, inventários rurais e planejamento sucessório. Quando um cliente precisa proteger patrimônio, estruturar uma holding familiar ou negociar contratos de arrendamento, José é quem lidera. Já assessorou mais de 150 operações envolvendo imóveis rurais.',
+    },
+  ];
+
+  const values = company.values.slice(0, 4);
 
   return (
-    <>
-      <ScrollReveal />
-      <main className="bg-black text-white">
-        {/* ===== HERO ===== */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-black via-black/95 to-black overflow-hidden">
-          {/* Grid pattern */}
-          <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
-
-          <div className="section-wrap relative z-10">
-            <div className="max-w-3xl reveal">
-              <div className="gold-kicker mb-6">Sobre a Venturi</div>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] mb-8">
-                Excel&ecirc;ncia que{' '}
-                <span className="gradient-text">destrava</span>{' '}
-                patrim&ocirc;nios rurais
-              </h1>
-              <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl">
-                Consultoria técnica e jurídica especializada em propriedades rurais embargadas, sobrepostas com UC ou com pendências fundiárias, ambientais e tributárias. Reunimos todas as frentes num único escritório — para que você não precise de cinco.
-              </p>
-            </div>
+    <div className="min-h-screen bg-white">
+      {/* HERO SECTION */}
+      <section className="relative py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-[#050810] to-[#0a0f1a] text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="inline-block mb-6 px-4 py-2 bg-[#C5A059]/20 rounded-full border border-[#C5A059]/50">
+            <span className="text-sm font-semibold text-[#C5A059]">Quem Somos</span>
           </div>
-        </section>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Por trás de cada propriedade destravada, existe um time que entende o campo.
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed">
+            Combinamos expertise jurídica, análise técnica rigorosa e especialização ambiental sob um único teto. Não trabalhamos por convênio ou terceirização — nossos sócios entram pessoalmente em cada estratégia, desde o diagnóstico até a resolução.
+          </p>
+        </div>
+      </section>
 
-        {/* ===== MISSION / VALUES ===== */}
-        <section className="py-24 md:py-32 border-t border-white/5">
-          <div className="section-wrap">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-              <div className="reveal">
-                <div className="gold-kicker mb-4">Nossa Missão</div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Destravar propriedades rurais com inteligência técnica e <span className="gradient-text">segurança jurídica</span>
-                </h2>
-                <p className="text-white/50 leading-relaxed mb-6">
-                  A Venturi nasceu da frustração real de proprietários que perdiam prazos, pagavam multas evitáveis e viam seu patrimônio desvalorizar por falta de assessoria integrada. Com sede em Ponta Grossa/PR e atuação em todo o Brasil, reunimos as frentes técnica, jurídica e regulatória num único escritório — para que você não precise de cinco.
-                </p>
-                <p className="text-white/50 leading-relaxed">
-                  Cada caso é tratado com a seriedade de quem sabe que por trás de cada hectare há gerações de trabalho, capital investido e planos de sucessão. Nossa abordagem combina diagnóstico profundo, estratégia sob medida e execução com prazo definido.
-                </p>
-              </div>
-
-              <div className="reveal-left space-y-6">
-                {[
-                  { title: 'Rigor Técnico', desc: 'Análise documental e territorial com precisão cirúrgica. Cada parecer é fundamentado em legislação vigente, jurisprudência consolidada e validação cruzada de bases públicas.' },
-                  { title: 'Ética Inegociável', desc: 'Transparência total em cada etapa — você acompanha cada movimentação em tempo real. Nosso compromisso é com a verdade dos fatos e a defesa legítima dos seus interesses.' },
-                  { title: 'Visão Estratégica', desc: 'Não resolvemos apenas o embargo atual. Antecipamos cenários regulatórios, prevenimos autos de infração futuros e construímos segurança patrimonial que atravessa gerações.' },
-                  { title: 'Atendimento Premium', desc: 'Cada cliente tem gestor dedicado, comunicação semanal com status atualizado, prazos definidos em contrato e acesso direto aos sócios responsáveis.' },
-                ].map((value, i) => (
-                  <div key={i} className="premium-card rounded-xl p-6 group">
-                    <h3 className="font-semibold text-base mb-2 group-hover:text-venturi-gold transition-colors duration-300">
-                      {value.title}
-                    </h3>
-                    <p className="text-white/40 text-sm leading-relaxed">{value.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+      {/* MISSION & VALUES */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#050810] mb-4">Nossa Missão</h2>
+            <p className="text-lg text-gray-700 max-w-3xl leading-relaxed">
+              {company.mission}
+            </p>
           </div>
-        </section>
 
-        {/* ===== TEAM ===== */}
-        <section className="py-24 md:py-32 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
-          <div className="section-wrap">
-            <div className="reveal mb-16 md:mb-20 text-center">
-              <div className="gold-kicker mb-4">Nosso Time</div>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Quem está por trás da <span className="gradient-text">Venturi</span>
-              </h2>
-              <p className="text-white/50 max-w-2xl mx-auto text-lg">
-                Uma equipe multidisciplinar que reúne direito, gestão pública, ciência ambiental e visão empresarial.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {values.map((value, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-8 border-l-4 border-[#C5A059] shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-[#050810] mb-3">{value.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 stagger">
-              {team.map((member, index) => (
-                <div
-                  key={index}
-                  className="reveal premium-card rounded-2xl p-8 md:p-10 group"
-                >
+      {/* TEAM SECTION */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#050810] mb-4">O Time</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Quatro sócios com formação multidisciplinar, mais de 25 anos de atuação combinada e um único objetivo: resolver o caso do seu jeito.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {partners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="p-8">
                   <div className="flex flex-col sm:flex-row gap-6 mb-6">
-                    {/* Avatar with photo */}
-                    <div className="shrink-0">
-                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-venturi-gold/20 to-venturi-gold/5 border border-venturi-gold/20 flex items-center justify-center group-hover:border-venturi-gold/40 group-hover:from-venturi-gold/30 transition-all duration-500 overflow-hidden relative">
+                    <div className="flex-shrink-0">
+                      <div className="relative w-32 h-32 rounded-2xl overflow-hidden ring-4 ring-[#C5A059]/30">
                         <Image
-                          src={member.photo}
-                          alt={member.name}
-                          fill
-                          className="object-cover rounded-2xl"
-                          sizes="80px"
+                          src={partner.image}
+                          alt={partner.name}
+                          width={128}
+                          height={128}
+                          className="object-cover w-full h-full"
+                          priority={idx < 2}
                         />
                       </div>
                     </div>
 
-                    {/* Header */}
-                    <div>
-                      <h3 className="font-serif text-xl font-bold group-hover:text-venturi-gold transition-colors duration-300">
-                        {member.name}
-                      </h3>
-                      <p className="text-venturi-gold/70 text-sm font-medium mt-1">
-                        {member.role}
-                      </p>
-                      <p className="text-white/30 text-xs mt-1 tracking-wide">
-                        {member.credential}
-                      </p>
+                    <div className="flex-grow">
+                      <h3 className="text-2xl font-bold text-[#050810] mb-1">{partner.name}</h3>
+                      <p className="text-[#C5A059] font-semibold text-sm mb-2">{partner.role}</p>
+                      <p className="text-gray-700 text-sm mb-4">{partner.credential}</p>
+
+                      <div className="flex flex-wrap gap-2">
+                        {partner.specialties.map((spec, specIdx) => (
+                          <span
+                            key={specIdx}
+                            className="inline-block px-3 py-1 bg-[#C5A059]/10 border border-[#C5A059]/30 text-[#050810] text-xs font-medium rounded-full"
+                          >
+                            {spec}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
-                  {/* Bio */}
-                  <p className="text-white/50 text-sm leading-relaxed mb-6">
-                    {member.bio}
+                  <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
+                    {partner.bio}
                   </p>
-
-                  {/* Specialties */}
-                  <div className="flex flex-wrap gap-2">
-                    {member.specialties.map((spec, i) => (
-                      <span
-                        key={i}
-                        className="text-[10px] uppercase tracking-[0.15em] text-venturi-gold/50 border border-venturi-gold/10 rounded-full px-3 py-1"
-                      >
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ===== STATS ===== */}
-        {stats && stats.length > 0 && (
-          <section className="py-20 border-y border-white/5 bg-[#050810]">
-            <div className="section-wrap">
-              <div className="reveal grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-4xl md:text-5xl font-bold gradient-text mb-2 font-serif">
-                      {stat.number}
-                    </div>
-                    <p className="text-white/40 text-sm font-medium tracking-wide">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+      {/* DIFFERENTIALS */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#050810] mb-4">Por Que Confiam em Nós</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 border-t-4 border-[#C5A059] shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C5A059]/20 flex items-center justify-center">
+                  <span className="text-[#C5A059] font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#050810] mb-2">Equipe Multidisciplinar</h3>
+                  <p className="text-gray-700">
+                    Jurídico, técnico fundiário e ambiental trabalham integrados. Sem silos, sem intermediários.
+                  </p>
+                </div>
               </div>
             </div>
-          </section>
-        )}
 
-        {/* ===== DIFFERENTIALS ===== */}
-        <section className="py-24 md:py-32">
-          <div className="section-wrap">
-            <div className="reveal mb-16 md:mb-20">
-              <div className="gold-kicker mb-4">Por que a Venturi</div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold max-w-2xl">
-                O que nos torna <span className="gradient-text">diferentes</span>
-              </h2>
+            <div className="bg-white rounded-2xl p-8 border-t-4 border-[#C5A059] shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C5A059]/20 flex items-center justify-center">
+                  <span className="text-[#C5A059] font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#050810] mb-2">Atuação Nacional</h3>
+                  <p className="text-gray-700">
+                    Presença comprovada em 8 estados brasileiros. Totalmente remoto — não importa onde você está.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
-              {[
-                {
-                  number: '01',
-                  title: 'Abordagem Integrada',
-                  desc: 'Unimos direito, engenharia, contabilidade e gestão ambiental em um único diagnóstico. Você não precisa de cinco escritórios diferentes.',
-                },
-                {
-                  number: '02',
-                  title: 'Experiência Comprovada',
-                  desc: 'Mais de 900 processos judiciais, década de atuação em órgãos públicos e liderança em comissões da OAB. Nosso time entrega resultado.',
-                },
-                {
-                  number: '03',
-                  title: '100% Remoto, Todo o Brasil',
-                  desc: 'Com sede em Ponta Grossa/PR, atendemos proprietários rurais em qualquer estado com a mesma qualidade e dedicação.',
-                },
-              ].map((diff, i) => (
-                <div key={i} className="reveal premium-card rounded-2xl p-8 md:p-10 group">
-                  <div className="text-5xl font-serif font-bold text-white/[0.04] mb-6 select-none">
-                    {diff.number}
-                  </div>
-                  <h3 className="font-serif text-xl font-bold mb-3 group-hover:text-venturi-gold transition-colors duration-300">
-                    {diff.title}
-                  </h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{diff.desc}</p>
+            <div className="bg-white rounded-2xl p-8 border-t-4 border-[#C5A059] shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C5A059]/20 flex items-center justify-center">
+                  <span className="text-[#C5A059] font-bold text-xl">3</span>
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-xl font-bold text-[#050810] mb-2">Mais de 900 Processos</h3>
+                  <p className="text-gray-700">
+                    Experiência comprovada em casos complexos. Taxa de êxito acima de 90% em reversão de embargos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 border-t-4 border-[#C5A059] shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C5A059]/20 flex items-center justify-center">
+                  <span className="text-[#C5A059] font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#050810] mb-2">Acesso Direto ao Especialista</h3>
+                  <p className="text-gray-700">
+                    Resposta em menos de 2 horas. Você fala com o sócio responsável, nunca com uma secretária.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ===== CTA ===== */}
-        <SchedulingCTA />
-      </main>
-    </>
+      {/* STATS */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 bg-[#050810] text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl lg:text-5xl font-bold text-[#C5A059] mb-2">900+</div>
+              <p className="text-gray-400 font-medium">Processos Resolvidos</p>
+            </div>
+            <div>
+              <div className="text-4xl lg:text-5xl font-bold text-[#C5A059] mb-2">150+</div>
+              <p className="text-gray-400 font-medium">Propriedades Regularizadas</p>
+            </div>
+            <div>
+              <div className="text-4xl lg:text-5xl font-bold text-[#C5A059] mb-2">8</div>
+              <p className="text-gray-400 font-medium">Estados Atendidos</p>
+            </div>
+            <div>
+              <div className="text-4xl lg:text-5xl font-bold text-[#C5A059] mb-2">&lt;2h</div>
+              <p className="text-gray-400 font-medium">Tempo de Retorno</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-[#050810] to-[#0a0f1a]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Quer conversar com o time?
+          </h2>
+          <p className="text-lg text-gray-300 mb-10 leading-relaxed">
+            Envie uma mensagem agora. Você vai falar direto com um dos nossos sócios em menos de 2 horas.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href={`${company.whatsappLink}?text=${encodeURIComponent('Olá! Gostaria de conversar com o time da Venturi.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#C5A059] hover:bg-[#D4AF6F] text-[#050810] font-bold rounded-lg transition-colors duration-200 shadow-lg"
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.168.505-2.236 1.236-3.101 2.115a9.847 9.847 0 00-2.115 3.101 9.833 9.833 0 00-.949 4.255c0 5.445 4.431 9.85 9.85 9.85 1.148 0 2.271-.195 3.345-.576a9.864 9.864 0 003.101-2.115 9.847 9.847 0 002.115-3.101 9.833 9.833 0 00.949-4.255c0-5.445-4.431-9.85-9.85-9.85m8.502.13c2.46 0 4.442-1.979 4.442-4.422 0-2.444-1.982-4.423-4.442-4.423S8.041 1.321 8.041 3.765c0 2.443 1.982 4.422 4.441 4.422Z" />
+              </svg>
+              Envie uma Mensagem via WhatsApp
+            </a>
+
+            <Link
+              href="/contato"
+              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-[#C5A059] text-[#C5A059] hover:bg-[#C5A059]/10 font-bold rounded-lg transition-colors duration-200"
+            >
+              Ou Acesse o Formulário
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
