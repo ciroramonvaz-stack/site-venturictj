@@ -233,10 +233,10 @@ export default function ContatoPage() {
                 <select
                   id="situacao"
                   name="situacao"
-                  className="w-full px-4 py-3 bg-venturi-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
+                  className="w-full px-4 py-3 bg-[#0a0f1a] border border-gray-700 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
                 >
                   <option value="">Selecione sua necessidade</option>
-                  <optgroup label="Regularização e Documentação">
+                  <optgroup label="── Regularização e Documentação">
                     <option value="loteamento">Conversão rural → urbano / Loteamento</option>
                     <option value="documentacao">Regularização de documentação / SIGEF</option>
                     <option value="car">Regularização de CAR</option>
