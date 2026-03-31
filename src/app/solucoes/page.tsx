@@ -99,7 +99,7 @@ export default function SolucoesPage() {
       icon: '🌱',
       title: 'Créditos de Carbono',
       description: 'Monetize a preservação da sua propriedade com segurança jurídica. Acesso a mercados de créditos voluntários.',
-      link: '/carbono/',
+      link: '/creditos-de-carbono/',
     },
     {
       category: 'Novas Oportunidades',
