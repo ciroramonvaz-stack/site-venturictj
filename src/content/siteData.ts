@@ -34,6 +34,7 @@ export const navLinks = [
   { href: '/faq/', label: 'FAQ' },
   { href: '/contato/', label: 'Contato' },
   { href: '/creditos-de-carbono/', label: 'Créditos de Carbono' },
+  { href: '/dividas-rurais/', label: 'Dívidas Rurais' },
 ];
 
 export const heroImages = [
@@ -77,6 +78,13 @@ export const solutions = [
     slug: 'defesa-administrativa',
     icon: '⚖️',
     longDescription: 'Elaboração e protocolo de recursos administrativos contra autuações fundiárias, ambientais e tributárias em todas as esferas. Análise jurídica aprofundada da fundamentação legal, construção de contraposição técnica com prova documental e pericial, e estratégia de negociação direta com órgãos autuantes. Histórico consistente de reversões e reduções de penalidades.',
+  },
+  {
+    id: 'dividas-rurais',
+    title: 'Dívidas Rurais e Direito Bancário',
+    slug: 'dividas-rurais',
+    icon: '💰',
+    longDescription: 'Defesa jurídica completa do produtor rural contra cobranças abusivas de instituições financeiras. Revisão de contratos bancários, renegociação de cédulas de crédito rural, defesa em execuções bancárias, suspensão de leilão de propriedades e recuperação judicial. Perícia contábil própria para identificação de juros abusivos e anatocismo.',
   },
 ];
 
@@ -158,6 +166,10 @@ export const testimonials = [
     author: 'Cliente (R.L.)',
     text: 'Fazenda travada há 3 anos por embargo de órgão ambiental federal. A Venturi reverteu o embargo em 60 dias com defesa administrativa impecável. Equipe extremamente competente.',
   },
+  {
+    author: 'Cliente (S.M.)',
+    text: 'Minha fazenda ia a leilão em 20 dias. A Venturi conseguiu suspensão liminar e revisou o contrato que tinha R$ 380 mil em juros abusivos. Hoje renegociei com condições justas.',
+  },
 ];
 
 export const faq = [
@@ -208,6 +220,14 @@ export const faq = [
   {
     question: 'Como funciona o pagamento?',
     answer: '50% na assinatura do contrato para iniciar os trabalhos e 50% na entrega do relatório final. Aceitamos transferência bancária e Pix. Para projetos acima de R$ 50 mil, oferecemos condições especiais de parcelamento.',
+  },
+  {
+    question: 'Tenho dívida rural com o banco. Vocês podem ajudar?',
+    answer: 'Sim. Atuamos na defesa jurídica completa do produtor rural contra cobranças abusivas: revisão de contratos bancários, renegociação de cédulas de crédito rural, defesa em execuções, suspensão de leilão e recuperação judicial. A análise preliminar do contrato é gratuita.',
+  },
+  {
+    question: 'O banco quer leiloar minha fazenda. O que faço?',
+    answer: 'Entre em contato imediatamente. Atuamos com medidas judiciais urgentes (tutela de urgência) que podem suspender o leilão em 24-48 horas. Quanto antes agir, maiores as chances de proteger seu patrimônio. A análise inicial é gratuita e o atendimento é prioritário.',
   },
 ];
 
@@ -261,6 +281,23 @@ export const products = [
     audience: 'Proprietários em processo de formalização, produtores que precisam de SIGEF para crédito',
     trigger: 'Propriedade sem certificação fundiária, necessidade de SIGEF para financiamento ou venda',
     timeline: '20 a 30 dias úteis',
+    price: 'Sob consulta',
+  },
+  {
+    id: 'defesa-dividas-rurais',
+    title: 'Defesa em Dívidas Rurais',
+    subtitle: 'Banco cobrando abusivamente? Revisamos e defendemos.',
+    description: 'Defesa jurídica completa contra cobranças abusivas de bancos e cooperativas. Inclui revisão contratual, perícia contábil, renegociação, defesa em execuções bancárias, suspensão de leilão e assessoria para recuperação judicial do produtor rural.',
+    deliverables: [
+      'Análise preliminar gratuita do contrato',
+      'Laudo pericial contábil com recálculo',
+      'Peças judiciais (embargos, tutela de urgência)',
+      'Estratégia de renegociação com o banco',
+      'Acompanhamento processual até resolução',
+    ],
+    audience: 'Produtores rurais endividados, proprietários com imóvel ameaçado, agricultores com contratos abusivos',
+    trigger: 'Dívida rural crescendo, execução bancária, leilão marcado, juros abusivos',
+    timeline: '48h para medidas urgentes | 30 a 60 dias para revisão completa',
     price: 'Sob consulta',
   },
 ];
