@@ -25,15 +25,10 @@ export const company = {
 };
 
 export const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/solucoes/', label: 'Soluções' },
-  { href: '/metodologia/', label: 'Metodologia' },
-  { href: '/entregaveis/', label: 'Entregáveis' },
-  { href: '/uc-imovel/', label: 'UC & Imóvel' },
-  { href: '/sobre/', label: 'Sobre' },
-  { href: '/faq/', label: 'FAQ' },
+  { href: '/sobre/', label: 'Quem Somos' },
   { href: '/contato/', label: 'Contato' },
-  { href: '/creditos-de-carbono/', label: 'Créditos de Carbono' },
+  { href: '/carbono/', label: 'Carbono' },
   { href: '/dividas-rurais/', label: 'Dívidas Rurais' },
 ];
 
@@ -46,42 +41,42 @@ export const heroImages = [
 export const solutions = [
   {
     id: 'uc-restricoes',
-    title: 'Sobreposição com Unidades de Conservação',
+    title: 'Imóvel em Área Protegida',
     slug: 'uc-restricoes',
     icon: '🏛️',
     longDescription: 'Análise especializada de imóveis sobrepostos ou limítrofes a Unidades de Conservação federais e estaduais. Levantamento de restrições legais, mapeamento de direitos adquiridos e construção de estratégia para regularização fundiária. Atuação em negociação com ICMBio, IAT, IBAMA e demais órgãos gestores, incluindo elaboração de dossiê técnico-jurídico completo para destravar o patrimônio.',
   },
   {
     id: 'icmbio',
-    title: 'Embargos e Autos de Infração Ambiental',
+    title: 'Embargos Ambientais',
     slug: 'icmbio',
     icon: '📋',
     longDescription: 'Defesa administrativa contra autos de infração lavrados por ICMBio, IBAMA, IAT (PR) e demais órgãos ambientais estaduais e federais. Análise de legalidade do embargo, documentação histórica da propriedade, argumentação técnico-jurídica e apresentação de recursos administrativos. Atuação comprovada na reversão de embargos e negociação direta com autarquias ambientais em todo o Brasil.',
   },
   {
     id: 'iat-pr',
-    title: 'Análise de Restrições Ambientais (IAT-PR)',
+    title: 'Restrições Ambientais',
     slug: 'iat-pr',
     icon: '🌊',
     longDescription: 'Diagnóstico completo de restrições ambientais em âmbito estadual e federal: APPs, Reserva Legal, Áreas Úmidas, Zonas de Amortecimento e servidões administrativas. Cruzamento de dados geoespaciais com legislação vigente para identificar limitações e oportunidades de uso. Elaboração de parecer técnico com estratégias de compatibilização produtiva dentro do marco regulatório.',
   },
   {
     id: 'fundiario-sigef',
-    title: 'Regularização Fundiária e SIGEF',
+    title: 'Regularização de Documentos',
     slug: 'fundiario-sigef',
     icon: '📐',
     longDescription: 'Assessoria completa para certificação INCRA/SIGEF de propriedades rurais de qualquer porte. Análise minuciosa de cadeia dominial, verificação de conformidade registral e resolução de inconsistências cartoriais. Preparação de dossiê técnico robusto e coordenação com profissionais habilitados para georreferenciamento, retificação de área e inscrição definitiva no SIGEF.',
   },
   {
     id: 'defesa-administrativa',
-    title: 'Defesa Administrativa e Contestações',
+    title: 'Defesa em Multas e Autuações',
     slug: 'defesa-administrativa',
     icon: '⚖️',
     longDescription: 'Elaboração e protocolo de recursos administrativos contra autuações fundiárias, ambientais e tributárias em todas as esferas. Análise jurídica aprofundada da fundamentação legal, construção de contraposição técnica com prova documental e pericial, e estratégia de negociação direta com órgãos autuantes. Histórico consistente de reversões e reduções de penalidades.',
   },
   {
     id: 'dividas-rurais',
-    title: 'Dívidas Rurais e Direito Bancário',
+    title: 'Dívidas Rurais',
     slug: 'dividas-rurais',
     icon: '💰',
     longDescription: 'Defesa jurídica completa do produtor rural contra cobranças abusivas de instituições financeiras. Revisão de contratos bancários, renegociação de cédulas de crédito rural, defesa em execuções bancárias, suspensão de leilão de propriedades e recuperação judicial. Perícia contábil própria para identificação de juros abusivos e anatocismo.',
@@ -234,7 +229,7 @@ export const faq = [
 export const products = [
   {
     id: 'diagnostico-fundiario',
-    title: 'Diagnóstico Fundiário Rural',
+    title: 'Raio-X do Imóvel',
     subtitle: 'O raio-X que revela o que está travando seu imóvel',
     description: 'Análise técnico-jurídica abrangente que mapeia todas as questões fundiárias, ambientais e registrais da propriedade. Inclui análise de UCs, APPs, restrições estaduais, situação registral no SNCR e recomendações customizadas.',
     deliverables: [
@@ -251,7 +246,7 @@ export const products = [
   },
   {
     id: 'diagnostico-sobreposicao-uc',
-    title: 'Diagnóstico de Sobreposição com UC',
+    title: 'Análise de Área Protegida',
     subtitle: 'Seu imóvel sobrepõe com UC? Destrancamos a situação.',
     description: 'Análise focada em propriedades que se sobrepõem ou fazem limite com Unidades de Conservação federais e estaduais. Avalia restrições, direitos adquiridos, possibilidades de regularização e estratégias de negociação com órgãos ambientais.',
     deliverables: [
@@ -268,7 +263,7 @@ export const products = [
   },
   {
     id: 'assessoria-certificacao-sigef',
-    title: 'Assessoria para Certificação/Retificação INCRA/SIGEF',
+    title: 'Regularização INCRA/SIGEF',
     subtitle: 'Sem SIGEF, sem venda. Resolvemos para você.',
     description: 'Assessoria completa para inscrição de propriedade no SIGEF (Sistema de Gestão Fundiária) e certificação INCRA. Análise de documentação, verificação de conformidade registral, preparação de dossiê técnico e coordenação com profissionais habilitados.',
     deliverables: [
@@ -285,7 +280,7 @@ export const products = [
   },
   {
     id: 'defesa-dividas-rurais',
-    title: 'Defesa em Dívidas Rurais',
+    title: 'Defesa Contra o Banco',
     subtitle: 'Banco cobrando abusivamente? Revisamos e defendemos.',
     description: 'Defesa jurídica completa contra cobranças abusivas de bancos e cooperativas. Inclui revisão contratual, perícia contábil, renegociação, defesa em execuções bancárias, suspensão de leilão e assessoria para recuperação judicial do produtor rural.',
     deliverables: [
