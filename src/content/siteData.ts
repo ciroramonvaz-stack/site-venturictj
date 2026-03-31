@@ -1,4 +1,5 @@
 export const company = {
+    name: 'Venturi Consultoria Técnica & Jurídica',
   fullName: 'VENTURI CONSULTORIA TÉCNICA & JURÍDICA',
   shortName: 'VENTURI',
   pronunciation: 'Vênturi',
