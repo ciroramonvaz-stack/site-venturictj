@@ -230,6 +230,26 @@ body {
   z-index: 9999;
 }
 
+/* Select dropdown styling */
+select option {
+  background-color: #0a0f1a;
+  color: #e2e8f0;
+  padding: 8px 12px;
+}
+
+select optgroup {
+  background-color: #050810;
+  color: #c9a84c;
+  font-weight: 700;
+  font-style: normal;
+  padding-top: 8px;
+}
+
+select option:hover,
+select option:checked {
+  background-color: #1a1f2e;
+}
+
 ::selection {
   background: rgba(201, 168, 76, 0.3);
   color: white;
