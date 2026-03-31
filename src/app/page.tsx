@@ -103,17 +103,38 @@ export default function HomePage() {
                   </div>
                   <div>
                     <select
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
+                      className="w-full px-4 py-3 bg-[#0a0f1a] border border-white/20 rounded-lg text-white focus:outline-none focus:border-venturi-gold transition"
                     >
-                      <option value="">Qual o problema do imóvel?</option>
-                      <option value="sobreposto">Sobreposto com UC</option>
-                      <option value="embargado">Embargado (ICMBio/IBAMA/IAT)</option>
-                      <option value="documentacao">Documentação / SIGEF</option>
-                      <option value="divida">Dívida rural com banco</option>
-                      <option value="leilao">Fazenda indo a leilão</option>
-                      <option value="carbono">Créditos de carbono</option>
-                      <option value="due-diligence">Due diligence / Compra</option>
-                      <option value="outro">Outro problema</option>
+                      <option value="">Selecione sua necessidade</option>
+                      <optgroup label="── Regularização e Documentação">
+                        <option value="loteamento">Conversão rural → urbano / Loteamento</option>
+                        <option value="documentacao">Regularização de documentação / SIGEF</option>
+                        <option value="car">Regularização de CAR</option>
+                        <option value="retificacao">Retificação de matrícula</option>
+                        <option value="usucapiao">Usucapião rural</option>
+                      </optgroup>
+                      <optgroup label="── Sobreposição e Áreas Protegidas">
+                        <option value="sobreposto-uc">Sobreposição com Unidade de Conservação</option>
+                        <option value="zona-amortecimento">Zona de amortecimento</option>
+                        <option value="terra-indigena">Conflito com Terra Indígena / Quilombola</option>
+                      </optgroup>
+                      <optgroup label="── Defesa e Embargos">
+                        <option value="embargado">Embargo ambiental (ICMBio/IBAMA/IAT)</option>
+                        <option value="multa">Multa ou autuação ambiental</option>
+                        <option value="licenciamento">Licenciamento ambiental</option>
+                      </optgroup>
+                      <optgroup label="── Proteção Patrimonial">
+                        <option value="divida">Dívida rural / Juros abusivos</option>
+                        <option value="leilao">Fazenda indo a leilão</option>
+                        <option value="inventario">Inventário e partilha rural</option>
+                        <option value="contratos">Contratos agrários (arrendamento, parceria)</option>
+                      </optgroup>
+                      <optgroup label="── Oportunidades e Análise">
+                        <option value="due-diligence">Due diligence / Compra de imóvel</option>
+                        <option value="carbono">Créditos de carbono</option>
+                        <option value="holding">Holding familiar / Planejamento sucessório</option>
+                      </optgroup>
+                      <option value="outro">Outro assunto não listado</option>
                     </select>
                   </div>
 
