@@ -1,125 +1,766 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURI | Inteligência Jurídica & Estratégia Territorial</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <style>
-        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
-        body { font-family: 'Montserrat', sans-serif; }
-        .bg-venturi-dark { background-color: #050810; }
-        .text-gold { color: #C5A059; }
-        .bg-gold { background-color: #C5A059; }
-        .border-gold { border-color: #C5A059; }
-        .hero-mask { background: linear-gradient(rgba(5, 8, 16, 0.9), rgba(5, 8, 16, 0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000'); background-size: cover; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VENTURI | Consultoria Técnica & Jurídica para Propriedades Rurais</title>
+<meta name="description" content="Propriedade rural travada? A Venturi destrava. Embargos, sobreposição com UC, pendências registrais, restrições ambientais. +150 propriedades diagnosticadas em 8 estados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1F44;
+  --navy-dark: #001F3F;
+  --navy-mid: #2C3E50;
+  --gold: #C9A96E;
+  --gold-dark: #B8860B;
+  --cream: #FAF8F5;
+  --white: #FFFFFF;
+  --gray-100: #F7F6F3;
+  --gray-200: #E8E6E1;
+  --gray-400: #9A9790;
+  --gray-600: #6B6860;
+  --gray-800: #3A3833;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --max: 980px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--gray-800); background: var(--white); -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+/* ─── TYPOGRAPHY ─── */
+.heading { font-family: var(--serif); font-weight: 600; line-height: 1.15; color: var(--navy); }
+.heading--light { color: var(--white); }
+.heading--xl { font-size: clamp(34px, 5vw, 48px); }
+.heading--lg { font-size: clamp(28px, 4vw, 36px); }
+.heading--md { font-size: clamp(22px, 3vw, 28px); }
+.heading--sm { font-size: clamp(18px, 2.5vw, 22px); }
+.accent { color: var(--gold); }
+.subtitle { font-size: 17px; color: var(--gray-600); line-height: 1.65; max-width: 600px; }
+.subtitle--light { color: rgba(255,255,255,0.75); }
+.body-text { font-size: 16px; color: var(--gray-600); line-height: 1.75; }
+.label { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; }
+/* ─── BUTTONS ─── */
+.btn {
+  display: inline-block; padding: 13px 30px; border-radius: 8px;
+  font-size: 14.5px; font-weight: 700; font-family: var(--sans);
+  transition: all 0.25s ease; cursor: pointer; border: none;
+}
+.btn--primary { background: var(--gold); color: var(--navy); }
+.btn--primary:hover { background: var(--gold-dark); }
+.btn--outline { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+.btn--outline:hover { background: rgba(201,169,110,0.1); }
+.btn--whatsapp { background: #25D366; color: white; }
+.btn--whatsapp:hover { background: #1da851; }
+/* ─── SECTIONS ─── */
+.section { padding: 72px 0; }
+.section--navy { background: var(--navy); }
+.section--navy-dark { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%); }
+.section--gray { background: var(--gray-100); }
+.section--white { background: var(--white); }
+.section__header { margin-bottom: 40px; }
+/* ─── GRID ─── */
+.grid { display: grid; gap: 20px; }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.grid--services { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+/* ─── NAVBAR ─── */
+.nav {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--navy); border-bottom: 1px solid var(--navy-mid);
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px;
+}
+.nav__brand { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.nav__brand-icon { color: var(--gold); font-size: 26px; font-family: var(--serif); font-weight: 700; }
+.nav__brand-name { color: white; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; }
+.nav__brand-sub { color: var(--gray-400); font-size: 8.5px; letter-spacing: 1.5px; }
+.nav__links { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
+.nav__link {
+  background: transparent; border: none; color: var(--gray-200);
+  padding: 8px 12px; border-radius: 6px; font-size: 12.5px;
+  cursor: pointer; font-family: var(--sans); transition: all 0.2s;
+}
+.nav__link:hover, .nav__link--active { background: rgba(201,169,110,0.12); color: var(--gold); font-weight: 600; }
+.nav__cta { padding: 8px 16px; border-radius: 8px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+/* ─── CARDS ─── */
+.card {
+  background: var(--white); border-radius: 12px; padding: 26px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-2px); }
+.card--glass { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
+.card--bordered { border-bottom: 3px solid var(--gold); }
+.card--topped { border-top: 3px solid var(--gold); }
+.card__icon { font-size: 26px; margin-bottom: 12px; }
+.card__title { font-family: var(--serif); font-size: 18px; color: var(--navy); font-weight: 600; margin-bottom: 8px; line-height: 1.3; }
+.card__text { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+/* ─── RESULT CARDS ─── */
+.result-card { padding: 24px; border-radius: 12px; background: var(--white); box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
+.result-card__tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
+.result-card__before { font-size: 14.5px; color: var(--gray-600); margin-bottom: 10px; line-height: 1.5; }
+.result-card__after { font-size: 15.5px; color: var(--navy); font-weight: 600; }
+/* ─── CASE DETAIL ─── */
+.case { border-left: 4px solid var(--gold); padding-left: 28px; max-width: 720px; }
+.case__label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--navy); margin-bottom: 6px; }
+.case__text { font-size: 15.5px; color: var(--gray-600); line-height: 1.65; }
+.case__result { background: var(--navy); border-radius: 10px; padding: 18px 22px; margin-top: 16px; }
+.case__result-label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 6px; }
+.case__result-text { font-size: 16.5px; color: white; line-height: 1.5; font-weight: 500; }
+/* ─── TEAM ─── */
+.team-card { background: var(--gray-100); border-radius: 14px; padding: 28px; }
+.team-card__avatar {
+  width: 60px; height: 60px; border-radius: 50%; background: var(--navy);
+  display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 16px;
+}
+.team-card__name { font-family: var(--serif); font-size: 20px; color: var(--navy); font-weight: 600; margin-bottom: 4px; }
+.team-card__role { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 2px; }
+.team-card__sub { font-size: 12px; color: var(--gray-400); margin-bottom: 14px; }
+.team-card__bio { font-size: 14px; color: var(--gray-600); line-height: 1.65; margin-bottom: 14px; }
+.team-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.team-card__tag { font-size: 11px; background: var(--navy); color: var(--gold); padding: 3px 10px; border-radius: 20px; }
+/* ─── FAQ ─── */
+.faq-item { border-bottom: 1px solid var(--gray-200); }
+.faq-item__q {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; font-family: var(--sans); font-size: 16.5px;
+  color: var(--navy); font-weight: 600; line-height: 1.4;
+}
+.faq-item__q:hover { color: var(--gold); }
+.faq-item__icon { font-size: 22px; color: var(--gold); flex-shrink: 0; transition: transform 0.2s; margin-left: 16px; }
+.faq-item__a { padding: 0 0 20px; font-size: 15px; color: var(--gray-600); line-height: 1.7; display: none; }
+.faq-item--open .faq-item__a { display: block; }
+.faq-item--open .faq-item__icon { transform: rotate(45deg); }
+/* ─── FORM ─── */
+.form-group { margin-bottom: 14px; }
+.form-label { font-size: 12.5px; font-weight: 600; color: var(--gray-600); display: block; margin-bottom: 4px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 11px 14px; border-radius: 8px;
+  border: 1px solid var(--gray-200); font-size: 14.5px;
+  font-family: var(--sans); transition: border-color 0.2s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); outline: none; }
+.form-textarea { resize: vertical; }
+.form-input--dark, .form-select--dark, .form-textarea--dark {
+  border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: white;
+}
+.form-input--dark::placeholder, .form-textarea--dark::placeholder { color: rgba(255,255,255,0.4); }
+/* ─── STATS ─── */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; text-align: center; }
+.stat__number { font-size: 34px; font-family: var(--serif); color: var(--gold); font-weight: 700; }
+.stat__label { font-size: 12.5px; color: rgba(255,255,255,0.6); }
+/* ─── TESTIMONIAL ─── */
+.testimonial { background: var(--gray-100); border-radius: 12px; padding: 24px; }
+.testimonial__quote { font-size: 32px; color: var(--gold); font-family: var(--serif); margin-bottom: 8px; }
+.testimonial__text { font-size: 14.5px; color: var(--gray-800); line-height: 1.6; font-style: italic; margin-bottom: 16px; }
+.testimonial__author { font-size: 14px; font-weight: 600; color: var(--navy); }
+.testimonial__detail { font-size: 12.5px; color: var(--gray-400); }
+/* ─── CONTACT CARD ─── */
+.contact-card {
+  display: flex; align-items: center; gap: 14px; padding: 18px;
+  background: var(--gray-100); border-radius: 12px; margin-bottom: 10px; transition: transform 0.2s;
+}
+.contact-card:hover { transform: translateX(4px); }
+.contact-card--green { background: #E8F5E9; }
+.contact-card__icon { font-size: 26px; flex-shrink: 0; }
+.contact-card__title { font-size: 13.5px; font-weight: 700; color: var(--navy); }
+.contact-card__detail { font-size: 14.5px; color: var(--gray-600); }
+.contact-card__extra { font-size: 12.5px; color: var(--gray-400); margin-top: 2px; }
+/* ─── FOOTER ─── */
+.footer { background: var(--navy-dark); padding: 48px 24px 24px; border-top: 1px solid var(--navy-mid); }
+.footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 32px; }
+.footer__heading { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--gray-400); margin-bottom: 12px; }
+.footer__link { display: block; color: var(--gray-200); font-size: 13.5px; padding: 3px 0; cursor: pointer; transition: color 0.2s; background: none; border: none; font-family: var(--sans); text-align: left; }
+.footer__link:hover { color: var(--gold); }
+.footer__info { font-size: 13.5px; color: rgba(255,255,255,0.6); line-height: 2; }
+.footer__bottom { border-top: 1px solid var(--navy-mid); padding-top: 16px; font-size: 12px; color: var(--gray-400); text-align: center; }
+/* ─── FLOATING WHATSAPP ─── */
+.wa-float {
+  position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px;
+  background: #25D366; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  z-index: 999; transition: transform 0.2s;
+}
+.wa-float:hover { transform: scale(1.1); }
+/* ─── UTILITY ─── */
+.text-center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-40 { margin-top: 40px; }
+.mb-6 { margin-bottom: 6px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-14 { margin-bottom: 14px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-28 { margin-bottom: 28px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-36 { margin-bottom: 36px; }
+.gap-14 { gap: 14px; }
+.gap-16 { gap: 16px; }
+.flex-wrap { display: flex; flex-wrap: wrap; }
+.max-660 { max-width: 660px; }
+.max-720 { max-width: 720px; }
+.hidden { display: none; }
+/* ─── SERVICE DETAIL ─── */
+.svc-detail { max-width: 720px; }
+.svc-detail__icon { font-size: 32px; }
+.svc-detail__title { font-family: var(--serif); font-size: 26px; color: var(--navy); font-weight: 600; margin: 12px 0 16px; line-height: 1.3; }
+.svc-detail__body { font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; }
+.svc-detail__result { background: var(--navy); color: white; border-radius: 8px; padding: 14px 18px; font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
+.svc-detail__items-label { font-size: 12px; font-weight: 700; color: var(--navy); letter-spacing: 1.5px; margin-bottom: 8px; }
+.svc-detail__item { font-size: 14.5px; color: var(--gray-600); padding: 3px 0; }
+.svc-detail__item::before { content: "✓ "; color: var(--gold); font-weight: 700; }
+.svc-detail__prazo { font-size: 13.5px; color: var(--gray-400); margin-top: 6px; }
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .hero__title { font-size: 32px !important; }
+  .grid--2, .grid--3, .grid--4, .grid--services { grid-template-columns: 1fr; }
+  .section { padding: 48px 0; }
+  .contact-grid { grid-template-columns: 1fr !important; }
+}
+/* ─── PAGE TRANSITIONS ─── */
+.page { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
 </head>
-<body class="bg-venturi-dark text-slate-300">
-
-    <nav class="fixed w-full z-50 bg-venturi-dark/90 border-b border-white/5 backdrop-blur-lg">
-        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
-            <div class="flex items-center gap-5">
-                <img src="logo.png" alt="VENTURI" class="h-16 w-auto">
-                <div class="hidden sm:block border-l border-white/10 pl-5">
-                    <span class="block text-white font-bold text-xl tracking-widest uppercase">VENTURI</span>
-                    <span class="block text-gold text-[9px] font-bold uppercase tracking-[0.3em]">Consultoria Técnica & Jurídica</span>
-                </div>
-            </div>
-            <div class="hidden lg:flex items-center gap-10">
-                <a href="#solucoes" class="text-[11px] font-bold uppercase tracking-widest hover:text-gold transition">Soluções</a>
-                <a href="https://wa.me/5542999413730" class="flex items-center gap-2 border border-gold/50 text-gold px-6 py-2 rounded-full text-[11px] font-bold hover:bg-gold hover:text-black transition">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    42 99941-3730
-                </a>
-            </div>
+<body>
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav__brand" onclick="goTo('home')">
+    <span class="nav__brand-icon">V</span>
+    <div>
+      <div class="nav__brand-name">VENTURI</div>
+      <div class="nav__brand-sub">CONSULTORIA TÉCNICA & JURÍDICA</div>
+    </div>
+  </a>
+  <div class="nav__links" id="navLinks">
+    <button class="nav__link nav__link--active" onclick="goTo('home')">Home</button>
+    <button class="nav__link" onclick="goTo('solucoes')">Soluções</button>
+    <button class="nav__link" onclick="goTo('resultados')">Resultados</button>
+    <button class="nav__link" onclick="goTo('sobre')">Sobre</button>
+    <button class="nav__link" onclick="goTo('perguntas')">Perguntas</button>
+    <button class="nav__link" onclick="goTo('contato')">Contato</button>
+  </div>
+  <a href="https://wa.me/5542999763857" target="_blank" class="btn btn--whatsapp nav__cta">WhatsApp</a>
+</nav>
+<!-- ═══════════════════════════════════════ -->
+<!-- HOME -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-home" class="page">
+  <!-- HERO -->
+  <section class="section--navy-dark" style="padding:88px 0 80px; position:relative; overflow:hidden;">
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(circle at 60% 40%, rgba(201,169,110,0.06) 0%, transparent 70%)"></div>
+    <div class="container" style="position:relative">
+      <div class="label accent mb-28">Consultoria Técnica & Jurídica para Propriedades Rurais</div>
+      <h1 class="heading heading--light heading--xl" style="max-width:680px;margin-bottom:22px">
+        Propriedade rural travada?<br><span class="accent">A Venturi destrava.</span>
+      </h1>
+      <p class="subtitle subtitle--light mb-16" style="font-size:18px; max-width:560px">
+        Embargos, sobreposição com UC, pendências registrais, restrições ambientais — resolvemos o que impede a venda, o crédito e a operação do seu imóvel. Para proprietários, investidores, instituições financeiras e entes públicos.
+      </p>
+      <p style="font-size:14.5px; color:var(--gold); margin-bottom:32px; font-weight:500">
+        ✓ Avaliação preliminar gratuita &nbsp;&nbsp; ✓ 100% remoto &nbsp;&nbsp; ✓ Todo o Brasil
+      </p>
+      <div class="flex-wrap gap-14">
+        <a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Fale com um especialista</a>
+        <a href="#" class="btn btn--outline" onclick="goTo('resultados'); return false;">Conheça nossos resultados</a>
+      </div>
+    </div>
+  </section>
+  <!-- QUEM CONFIA -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="heading heading--lg mb-8">Quem confia na Venturi.</h2>
+        <p class="subtitle">Cada perfil tem uma necessidade específica. Atendemos todas com a mesma profundidade técnica.</p>
+      </div>
+      <div class="grid grid--4">
+        <div class="card card--bordered">
+          <div class="card__icon">🌾</div>
+          <div class="card__title">Proprietários Rurais</div>
+          <p class="card__text">Terra embargada, multada ou com pendência que impede venda, crédito ou operação.</p>
         </div>
-    </nav>
-
-    <section class="hero-mask min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="w-12 h-px bg-gold"></span>
-                    <span class="text-gold uppercase tracking-[0.4em] text-xs font-semibold">Exclusividade & Rigor Técnico</span>
-                </div>
-                <h1 class="text-5xl md:text-8xl text-white mb-10 leading-[1.1]">
-                    O Destravamento Estratégico do seu <span class="italic text-gold">Patrimônio Rural.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-light">
-                    Especialistas em áreas sob restrição administrativa e Unidades de Conservação. Transformamos passivos fundiários em ativos de liquidez.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <a href="https://wa.me/5542999413730" class="bg-gold hover:bg-[#b08b49] text-black font-bold py-6 px-12 text-sm uppercase tracking-widest transition-all shadow-2xl">
-                        Agendar Consultoria Direta
-                    </a>
-                </div>
-            </div>
+        <div class="card card--bordered">
+          <div class="card__icon">📊</div>
+          <div class="card__title">Investidores e Fundos</div>
+          <p class="card__text">Due diligence ambiental e fundiária. Análise de risco antes de aquisições.</p>
         </div>
-    </section>
-
-    <section id="solucoes" class="py-32 bg-venturi-dark border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-20">
-                <div class="lg:w-1/3">
-                    <h2 class="text-4xl text-white mb-8">Nossa Atuação <br><span class="text-gold italic">Multidisciplinar</span></h2>
-                    <p class="text-slate-500 leading-relaxed mb-10">
-                        A integração entre o Direito Agrário e a Engenharia de Precisão é o que nos permite reverter embargos e liberar áreas dadas como perdidas.
-                    </p>
-                    <div class="p-8 bg-white/5 border border-white/10 rounded-lg">
-                        <span class="text-3xl font-bold text-white block mb-2">SNUC</span>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Domínio total do Sistema Nacional de Unidades de Conservação.</p>
-                    </div>
-                </div>
-
-                <div class="lg:w-2/3 grid md:grid-cols-2 gap-8">
-                    <div class="p-10 border border-white/10 hover:border-gold/50 transition duration-500 group">
-                        <div class="mb-6 text-gold">
-                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A2 2 0 013 15.487V6a2 2 0 011.106-1.789l5.447-2.724a2 2 0 011.894 0l5.447 2.724A2 2 0 0118 6v9.487a2 2 0 01-1.106 1.789L11.447 20a2 2 0 01-1.894 0z"></path></svg>
-                        </div>
-                        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Unidades de Conservação</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed">Regularização de áreas sobrepostas em Parques (PARNA), Reservas (REBIO) e Estações Ecológicas (ESEC).</p>
-                    </div>
-                    <div class="p-10 border border-white/10 hover:border-gold/50 transition duration-500 group">
-                        <div class="mb-6 text-gold">
-                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                        </div>
-                        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Regularização Fundiária</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed">Processos complexos de titulação, retificação administrativa e domínio pleno de propriedades rurais.</p>
-                    </div>
-                    <div class="p-10 border border-white/10 hover:border-gold/50 transition duration-500 group">
-                        <div class="mb-6 text-gold">
-                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                        </div>
-                        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Inteligência Territorial</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed">Georreferenciamento de precisão, CAR, SIG e prova técnica pericial para litígios de alto valor.</p>
-                    </div>
-                    <div class="p-10 border border-white/10 hover:border-gold/50 transition duration-500 group">
-                        <div class="mb-6 text-gold">
-                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
-                        </div>
-                        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Defesa Administrativa</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed">Cancelamento de embargos e multas ambientais baseados em inconsistências técnicas e jurídicas.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="card card--bordered">
+          <div class="card__icon">🏦</div>
+          <div class="card__title">Instituições Financeiras</div>
+          <p class="card__text">Pareceres técnicos para liberação de crédito rural e garantias reais.</p>
         </div>
-    </section>
-
-    <footer class="py-20 bg-black">
-        <div class="container mx-auto px-6 text-center">
-            <img src="logo.png" alt="Logo Venturi" class="h-20 mx-auto mb-10 opacity-80">
-            <h5 class="text-white font-bold uppercase tracking-widest mb-4">Venturi Consultoria Jurídica & Técnica LTDA</h5>
-            <p class="text-gold font-bold mb-10">42 99941-3730</p>
-            <div class="h-px w-20 bg-gold mx-auto mb-10"></div>
-            <p class="text-[10px] text-slate-600 uppercase tracking-[0.2em]">© 2026 | Ponta Grossa - Paraná | Todos os direitos reservados</p>
+        <div class="card card--bordered">
+          <div class="card__icon">🏛️</div>
+          <div class="card__title">Municípios e Entes Públicos</div>
+          <p class="card__text">Regularização fundiária, gestão de passivos ambientais e conformidade regulatória.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+  <!-- RESULTADOS NA HOME -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="heading heading--lg mb-6">Resultados concretos.</h2>
+        <p class="subtitle">Cada número representa um patrimônio que estava travado — e que hoje não está mais.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="result-card" style="border-left:4px solid var(--gold)">
+          <div class="result-card__tag accent">SOBREPOSIÇÃO COM UC</div>
+          <p class="result-card__before">Terra parada há 18 meses</p>
+          <p class="result-card__after">→ Destravada em 45 dias. Venda concluída.</p>
+        </div>
+        <div class="result-card" style="border-left:4px solid #C0392B">
+          <div class="result-card__tag" style="color:#C0392B">EMBARGO FEDERAL</div>
+          <p class="result-card__before">Fazenda embargada há 3 anos</p>
+          <p class="result-card__after">→ Embargo revertido em 60 dias.</p>
+        </div>
+        <div class="result-card" style="border-left:4px solid #27AE60">
+          <div class="result-card__tag" style="color:#27AE60">CRÉDITO RURAL</div>
+          <p class="result-card__before">R$ 2,3 milhões travados no banco</p>
+          <p class="result-card__after">→ Relatório aceito sem ressalvas. Crédito liberado.</p>
+        </div>
+        <div class="result-card" style="border-left:4px solid var(--navy-mid)">
+          <div class="result-card__tag" style="color:var(--navy-mid)">CASO COMPLEXO</div>
+          <p class="result-card__before">3 profissionais em 2 anos sem solução</p>
+          <p class="result-card__after">→ Resolvido em 12 dias pela Venturi.</p>
+        </div>
+      </div>
+      <p class="text-center mt-24" style="font-size:14px;color:var(--gray-400)">📌 +150 propriedades diagnosticadas &nbsp;|&nbsp; 8 estados &nbsp;|&nbsp; 100% remoto</p>
+    </div>
+  </section>
+  <!-- EMPATIA -->
+  <section class="section section--white">
+    <div class="container">
+      <h2 class="heading heading--lg mb-16">Entendemos o que está em jogo.</h2>
+      <div class="max-660">
+        <p class="body-text mb-14">Atrás de cada propriedade rural existe patrimônio construído ao longo de gerações, capital investido e planos de família ou de negócio. Quando um embargo, uma pendência registral ou uma restrição ambiental trava a operação, o prejuízo é real — e cresce a cada mês.</p>
+        <p class="body-text mb-14">O problema se agrava quando o proprietário busca ajuda e encontra profissionais que conhecem o direito mas não entendem de mapa — ou que entendem de engenharia mas não dominam a legislação. Três, quatro profissionais depois, o problema continua lá.</p>
+        <p class="body-text" style="color:var(--navy); font-weight:500">A Venturi junta numa equipe só o que outros separam em cinco escritórios. Direito, engenharia, contabilidade, gestão ambiental e negociação com órgãos públicos — tudo numa análise integrada. Esse é o nosso diferencial. É assim que destravamos.</p>
+      </div>
+    </div>
+  </section>
+  <!-- 3 PASSOS -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="text-center section__header">
+        <h2 class="heading heading--lg heading--light mb-8">Como funciona.</h2>
+        <p class="subtitle subtitle--light" style="max-width:500px; margin:0 auto">Da primeira conversa à resolução — com transparência total.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card card--glass" style="border-top:2px solid var(--gold); padding:28px">
+          <div style="font-size:32px; font-family:var(--serif); color:var(--gold); margin-bottom:12px">01</div>
+          <div class="label" style="color:white; margin-bottom:10px">CONTE A SITUAÇÃO</div>
+          <p style="font-size:14.5px; color:rgba(255,255,255,0.65); line-height:1.6">WhatsApp, formulário ou e-mail. Texto, áudio ou foto de documento. A avaliação preliminar é gratuita.</p>
+        </div>
+        <div class="card card--glass" style="border-top:2px solid var(--gold); padding:28px">
+          <div style="font-size:32px; font-family:var(--serif); color:var(--gold); margin-bottom:12px">02</div>
+          <div class="label" style="color:white; margin-bottom:10px">RECEBA UM DIRECIONAMENTO</div>
+          <p style="font-size:14.5px; color:rgba(255,255,255,0.65); line-height:1.6">Diagnóstico inicial: o que trava, por que trava e quais os caminhos possíveis.</p>
+        </div>
+        <div class="card card--glass" style="border-top:2px solid var(--gold); padding:28px">
+          <div style="font-size:32px; font-family:var(--serif); color:var(--gold); margin-bottom:12px">03</div>
+          <div class="label" style="color:white; margin-bottom:10px">PROPOSTA E EXECUÇÃO</div>
+          <p style="font-size:14.5px; color:rgba(255,255,255,0.65); line-height:1.6">Escopo, prazo e valor definidos. Aprovação prévia obrigatória. Acompanhamento semanal.</p>
+        </div>
+      </div>
+      <div class="text-center mt-24">
+        <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-bottom:20px">Sem compromisso até a aprovação da proposta. Sem surpresas em nenhuma etapa.</p>
+        <a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Fale com um especialista</a>
+      </div>
+    </div>
+  </section>
+  <!-- SERVIÇOS -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="heading heading--lg mb-6">Áreas de atuação.</h2>
+        <p class="subtitle">Todas as frentes técnicas e jurídicas que determinam o valor e a viabilidade de propriedades rurais.</p>
+      </div>
+      <div class="grid grid--services">
+        <div class="card" style="padding:22px"><span style="font-size:24px">🔒</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Embargos e Autos de Infração</h3><p class="card__text" style="font-size:13px">Defesa administrativa contra IBAMA, ICMBio, IAT e demais órgãos.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🗺️</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Sobreposição com UC</h3><p class="card__text" style="font-size:13px">Direitos adquiridos, regularização e negociação com órgãos gestores.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">📐</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Regularização Fundiária</h3><p class="card__text" style="font-size:13px">SIGEF, CAR, georreferenciamento, retificação, certificação INCRA.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">📋</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Restrições Ambientais</h3><p class="card__text" style="font-size:13px">APP, Reserva Legal, zona de amortecimento, licenciamento.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">⚖️</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Due Diligence Rural</h3><p class="card__text" style="font-size:13px">Análise de risco para aquisições, investimentos e operações financeiras.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🏛️</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Inventário e Sucessão</h3><p class="card__text" style="font-size:13px">Partilha, usucapião, planejamento sucessório, proteção patrimonial.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">💰</span><h3 class="card__title" style="font-size:16px; margin-top:8px">ITR e VTN</h3><p class="card__text" style="font-size:13px">Contestação tributária com laudo técnico de profissional habilitado.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🏦</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Crédito Rural</h3><p class="card__text" style="font-size:13px">Pareceres para liberação de financiamento em instituições financeiras.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🌿</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Créditos de Carbono</h3><p class="card__text" style="font-size:13px">Da elegibilidade à comercialização. Consultoria jurídica completa.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🚧</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Desapropriação e Servidão</h3><p class="card__text" style="font-size:13px">Avaliação de valor justo, defesa e negociação de indenizações.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">💧</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Outorga Hídrica</h3><p class="card__text" style="font-size:13px">Regularização de outorga de uso de recursos hídricos.</p></div>
+        <div class="card" style="padding:22px"><span style="font-size:24px">🏘️</span><h3 class="card__title" style="font-size:16px; margin-top:8px">Regularização Municipal</h3><p class="card__text" style="font-size:13px">REURB, passivos ambientais e conformidade regulatória para municípios.</p></div>
+      </div>
+      <p class="text-center mt-24" style="font-size:15px; color:var(--gray-600)">Caso específico? <a href="https://wa.me/5542999763857" target="_blank" style="color:var(--gold); font-weight:600">Consulte nossa equipe →</a></p>
+    </div>
+  </section>
+  <!-- DEPOIMENTOS -->
+  <section class="section section--white">
+    <div class="container">
+      <h2 class="heading heading--lg text-center mb-36">O que dizem nossos clientes.</h2>
+      <div class="grid grid--2">
+        <div class="testimonial">
+          <div class="testimonial__quote">"</div>
+          <p class="testimonial__text">Tentei vender por 18 meses sem conseguir — sobreposição com UC. A Venturi mapeou meus direitos e destravou a situação. Vendi em 45 dias.</p>
+          <div class="testimonial__author">Marcos F.</div>
+          <div class="testimonial__detail">Proprietário rural — PR ★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__quote">"</div>
+          <p class="testimonial__text">O diagnóstico da Venturi resolveu em 12 dias o que três profissionais não conseguiram em dois anos. Profissionalismo de outro nível.</p>
+          <div class="testimonial__author">André C.</div>
+          <div class="testimonial__detail">Proprietário rural — SP ★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__quote">"</div>
+          <p class="testimonial__text">Relatório aceito pelo banco sem nenhuma ressalva. Crédito de R$ 2,3 milhões liberado. Documentação impecável.</p>
+          <div class="testimonial__author">João P.</div>
+          <div class="testimonial__detail">Produtor rural — MG ★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__quote">"</div>
+          <p class="testimonial__text">Fazenda embargada há 3 anos. A Venturi reverteu em 60 dias com defesa administrativa. Equipe extremamente competente.</p>
+          <div class="testimonial__author">Roberto L.</div>
+          <div class="testimonial__detail">Produtor rural — PR ★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA FINAL + FORMULÁRIO -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="text-center" style="max-width:620px; margin:0 auto">
+        <h2 class="heading heading--lg heading--light mb-8">A situação não melhora sozinha.</h2>
+        <p class="subtitle subtitle--light mb-32" style="margin-left:auto; margin-right:auto; text-align:center">Cada mês pendente é patrimônio depreciando, crédito travado e oportunidade perdida. A avaliação preliminar é gratuita.</p>
+        <div class="mb-36"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Fale com um especialista</a></div>
+        <div style="background:rgba(255,255,255,0.04); border-radius:14px; padding:32px; text-align:left; border:1px solid rgba(255,255,255,0.08)">
+          <div style="font-size:13px; color:var(--gold); font-weight:600; margin-bottom:18px">Ou preencha o formulário — retornamos em até 24h</div>
+          <input type="text" class="form-input form-input--dark mb-8" placeholder="Nome completo">
+          <input type="tel" class="form-input form-input--dark mb-8" placeholder="Telefone / WhatsApp">
+          <input type="text" class="form-input form-input--dark mb-8" placeholder="Município / Estado do imóvel">
+          <select class="form-select form-select--dark mb-8">
+            <option value="">Perfil do solicitante</option>
+            <option>Proprietário rural / Família</option>
+            <option>Investidor / Fundo</option>
+            <option>Instituição financeira</option>
+            <option>Município / Ente público</option>
+            <option>Advogado / Profissional técnico</option>
+            <option>Outro</option>
+          </select>
+          <textarea class="form-textarea form-textarea--dark mb-14" rows="3" placeholder="Descreva brevemente a situação"></textarea>
+          <button class="btn btn--primary" type="button">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ═══════════════════════════════════════ -->
+<!-- SOLUÇÕES -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-solucoes" class="page hidden">
+  <section class="section--navy" style="padding:72px 0">
+    <div class="container">
+      <h1 class="heading heading--light heading--xl" style="margin-bottom:16px">Cada propriedade tem um desafio.<br><span class="accent">Cada desafio tem uma solução.</span></h1>
+      <p class="subtitle subtitle--light">Cobrimos todas as frentes técnicas e jurídicas que determinam o valor, a viabilidade e a segurança de propriedades rurais.</p>
+    </div>
+  </section>
+  <section class="section section--white"><div class="container"><div class="svc-detail">
+    <div class="svc-detail__icon">🗺️</div>
+    <h2 class="svc-detail__title">Sobreposição com Unidades de Conservação</h2>
+    <p class="svc-detail__body">Seu imóvel está dentro, no entorno ou na zona de amortecimento de uma UC? Mapeamos cada restrição legal, identificamos direitos adquiridos e construímos a estratégia para destravar uso, venda e financiamento — com atuação perante ICMBio, IBAMA, IAT e demais órgãos gestores.</p>
+    <div class="svc-detail__result">📌 Proprietário travado há 18 meses por sobreposição com UC — destravamos e a venda foi concluída em 45 dias.</div>
+    <div class="svc-detail__items-label">ENTREGÁVEIS:</div>
+    <div class="svc-detail__item">Mapa técnico de sobreposição</div>
+    <div class="svc-detail__item">Análise de direitos adquiridos</div>
+    <div class="svc-detail__item">Estratégia de regularização ou negociação</div>
+    <div class="svc-detail__item">Documentação para protocolo em órgãos</div>
+    <div class="svc-detail__prazo">⏱️ Prazo estimado: 12 a 18 dias úteis</div>
+    <div class="mt-24"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Consulte um especialista →</a></div>
+  </div></div></section>
+  <section class="section section--gray"><div class="container"><div class="svc-detail">
+    <div class="svc-detail__icon">🔒</div>
+    <h2 class="svc-detail__title">Embargos e Autos de Infração Ambiental</h2>
+    <p class="svc-detail__body">Defesa administrativa contra autos lavrados por ICMBio, IBAMA, IAT e demais órgãos. Análise de legalidade, documentação histórica, argumentação técnico-jurídica e negociação direta. Muitos embargos têm falhas formais que permitem reversão — inclusive os mais antigos.</p>
+    <div class="svc-detail__result">📌 Fazenda embargada há 3 anos por órgão federal — embargo revertido em 60 dias com defesa administrativa.</div>
+    <div class="svc-detail__items-label">ENTREGÁVEIS:</div>
+    <div class="svc-detail__item">Análise da legalidade do embargo</div>
+    <div class="svc-detail__item">Levantamento documental e histórico</div>
+    <div class="svc-detail__item">Defesa administrativa fundamentada</div>
+    <div class="svc-detail__item">Negociação direta com o órgão</div>
+    <div class="mt-24"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Consulte um especialista →</a></div>
+  </div></div></section>
+  <section class="section section--white"><div class="container"><div class="svc-detail">
+    <div class="svc-detail__icon">📐</div>
+    <h2 class="svc-detail__title">Regularização Fundiária e SIGEF</h2>
+    <p class="svc-detail__body">Assessoria completa para certificação INCRA/SIGEF: análise de cadeia dominial, verificação de conformidade registral, resolução de inconsistências e coordenação com profissionais habilitados para georreferenciamento, retificação e inscrição definitiva.</p>
+    <div class="svc-detail__result">📌 Banco exigia parecer técnico para liberar R$ 2,3 milhões — relatório aceito sem ressalvas.</div>
+    <div class="svc-detail__items-label">ENTREGÁVEIS:</div>
+    <div class="svc-detail__item">Análise de elegibilidade SIGEF</div>
+    <div class="svc-detail__item">Dossiê técnico completo</div>
+    <div class="svc-detail__item">Coordenação com profissional de campo</div>
+    <div class="svc-detail__item">Acompanhamento no INCRA até certificação</div>
+    <div class="svc-detail__prazo">⏱️ Prazo estimado: 20 a 30 dias úteis</div>
+    <div class="mt-24"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Consulte um especialista →</a></div>
+  </div></div></section>
+  <section class="section section--gray"><div class="container"><div class="svc-detail">
+    <div class="svc-detail__icon">⚖️</div>
+    <h2 class="svc-detail__title">Due Diligence de Imóvel Rural</h2>
+    <p class="svc-detail__body">Análise completa de risco técnico, jurídico e ambiental para aquisições, investimentos e operações financeiras. Verificação de passivos ocultos, ônus registrais, indisponibilidades, sobreposições e conformidade documental — o raio-X que o comprador inteligente exige antes de fechar.</p>
+    <div class="svc-detail__items-label">ENTREGÁVEIS:</div>
+    <div class="svc-detail__item">Análise de matrícula e cadeia dominial</div>
+    <div class="svc-detail__item">Verificação CNIB e ônus reais</div>
+    <div class="svc-detail__item">Mapeamento de sobreposições e restrições</div>
+    <div class="svc-detail__item">Relatório de risco com recomendações</div>
+    <div class="svc-detail__prazo">⏱️ Prazo estimado: 10 a 15 dias úteis</div>
+    <div class="mt-24"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Consulte um especialista →</a></div>
+  </div></div></section>
+  <section class="section section--white"><div class="container"><div class="svc-detail">
+    <div class="svc-detail__icon">🏘️</div>
+    <h2 class="svc-detail__title">Regularização Fundiária Municipal</h2>
+    <p class="svc-detail__body">Assessoria especializada para municípios e entes públicos em regularização fundiária urbana e rural (REURB), gestão de passivos ambientais, adequação cadastral e conformidade regulatória. Soluções sob medida para a administração pública — com a mesma profundidade técnica que aplicamos ao setor privado.</p>
+    <div class="svc-detail__items-label">ENTREGÁVEIS:</div>
+    <div class="svc-detail__item">Diagnóstico fundiário municipal</div>
+    <div class="svc-detail__item">Plano de regularização</div>
+    <div class="svc-detail__item">Assessoria em REURB</div>
+    <div class="svc-detail__item">Conformidade ambiental e cadastral</div>
+    <div class="mt-24"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Consulte um especialista →</a></div>
+  </div></div></section>
+  <!-- METODOLOGIA -->
+  <section class="section section--navy">
+    <div class="container text-center">
+      <h2 class="heading heading--lg heading--light mb-8">Metodologia Venturi.</h2>
+      <p class="subtitle subtitle--light mb-32" style="margin:0 auto 32px">Cinco etapas. Transparência total.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px">
+        <div class="card card--glass" style="padding:20px; text-align:center"><div style="font-size:26px; font-family:var(--serif); color:var(--gold)">1</div><div class="label" style="color:white; margin:6px 0">ESCUTA</div><p style="font-size:12.5px; color:rgba(255,255,255,0.6); line-height:1.5">Fatos, documentos e histórico.</p></div>
+        <div class="card card--glass" style="padding:20px; text-align:center"><div style="font-size:26px; font-family:var(--serif); color:var(--gold)">2</div><div class="label" style="color:white; margin:6px 0">INVESTIGAÇÃO</div><p style="font-size:12.5px; color:rgba(255,255,255,0.6); line-height:1.5">Bases oficiais e legislação.</p></div>
+        <div class="card card--glass" style="padding:20px; text-align:center"><div style="font-size:26px; font-family:var(--serif); color:var(--gold)">3</div><div class="label" style="color:white; margin:6px 0">DIAGNÓSTICO</div><p style="font-size:12.5px; color:rgba(255,255,255,0.6); line-height:1.5">Riscos, cenários, recomendações.</p></div>
+        <div class="card card--glass" style="padding:20px; text-align:center"><div style="font-size:26px; font-family:var(--serif); color:var(--gold)">4</div><div class="label" style="color:white; margin:6px 0">ESTRATÉGIA</div><p style="font-size:12.5px; color:rgba(255,255,255,0.6); line-height:1.5">Escopo, prazo e valor definidos.</p></div>
+        <div class="card card--glass" style="padding:20px; text-align:center"><div style="font-size:26px; font-family:var(--serif); color:var(--gold)">5</div><div class="label" style="color:white; margin:6px 0">EXECUÇÃO</div><p style="font-size:12.5px; color:rgba(255,255,255,0.6); line-height:1.5">Acompanhamento semanal.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ═══════════════════════════════════════ -->
+<!-- RESULTADOS -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-resultados" class="page hidden">
+  <section class="section--navy" style="padding:72px 0"><div class="container">
+    <h1 class="heading heading--light heading--xl" style="margin-bottom:14px">Resultados que<br><span class="accent">falam por si.</span></h1>
+    <p class="subtitle subtitle--light">Cada caso abaixo é uma propriedade que estava travada — e que hoje não está mais.</p>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <div class="case" style="border-color:var(--gold)">
+      <div class="result-card__tag accent mb-16">SOBREPOSIÇÃO COM UC — PARANÁ</div>
+      <div class="mb-14"><div class="case__label">SITUAÇÃO</div><p class="case__text">Propriedade rural sobreposta com Unidade de Conservação federal. Proprietário tentou comercializar por 18 meses sem sucesso — compradores e instituições financeiras recuavam diante do risco jurídico.</p></div>
+      <div class="mb-14"><div class="case__label">ATUAÇÃO</div><p class="case__text">Mapeamento técnico da sobreposição, identificação de direitos adquiridos anteriores à criação da UC, elaboração de dossiê técnico-jurídico completo para regularização.</p></div>
+      <div class="case__result"><div class="case__result-label">RESULTADO</div><p class="case__result-text">Situação destravada. Transação imobiliária concluída em 45 dias após entrega do diagnóstico.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--gray"><div class="container">
+    <div class="case" style="border-color:#C0392B">
+      <div class="result-card__tag mb-16" style="color:#C0392B">EMBARGO AMBIENTAL FEDERAL — PARANÁ</div>
+      <div class="mb-14"><div class="case__label">SITUAÇÃO</div><p class="case__text">Fazenda embargada há 3 anos por autarquia ambiental federal. Proprietário impossibilitado de operar, obter crédito ou comercializar — prejuízo acumulado a cada mês.</p></div>
+      <div class="mb-14"><div class="case__label">ATUAÇÃO</div><p class="case__text">Análise de legalidade do auto de infração, levantamento de documentação histórica e elaboração de defesa administrativa com argumentação técnica robusta.</p></div>
+      <div class="case__result"><div class="case__result-label">RESULTADO</div><p class="case__result-text">Embargo revertido em 60 dias na esfera administrativa. Operação retomada integralmente.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <div class="case" style="border-color:#27AE60">
+      <div class="result-card__tag mb-16" style="color:#27AE60">CRÉDITO RURAL — MINAS GERAIS</div>
+      <div class="mb-14"><div class="case__label">SITUAÇÃO</div><p class="case__text">Instituição financeira condicionou liberação de R$ 2,3 milhões à apresentação de parecer técnico que o proprietário não conseguia obter.</p></div>
+      <div class="mb-14"><div class="case__label">ATUAÇÃO</div><p class="case__text">Elaboração de relatório técnico-jurídico no padrão exigido pela instituição, com mapeamento de sobreposições, análise registral e fundamentação normativa.</p></div>
+      <div class="case__result"><div class="case__result-label">RESULTADO</div><p class="case__result-text">Relatório aceito sem ressalvas. Crédito rural de R$ 2,3 milhões liberado integralmente.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--gray"><div class="container">
+    <div class="case" style="border-color:var(--navy-mid)">
+      <div class="result-card__tag mb-16" style="color:var(--navy-mid)">DIAGNÓSTICO DE ALTA COMPLEXIDADE — SÃO PAULO</div>
+      <div class="mb-14"><div class="case__label">SITUAÇÃO</div><p class="case__text">Propriedade com múltiplas pendências fundiárias e ambientais. Proprietário havia contratado três profissionais distintos ao longo de dois anos sem obter resolução.</p></div>
+      <div class="mb-14"><div class="case__label">ATUAÇÃO</div><p class="case__text">Diagnóstico técnico-jurídico integrado com cruzamento de bases oficiais (CAR, SIGEF, CNUC, SNCI) e análise registral completa.</p></div>
+      <div class="case__result"><div class="case__result-label">RESULTADO</div><p class="case__result-text">Todas as pendências identificadas e resolvidas em 12 dias úteis.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--navy"><div class="container text-center">
+    <h2 class="heading heading--lg heading--light mb-16">O próximo caso pode ser o seu.</h2>
+    <a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Fale com um especialista</a>
+  </div></section>
+</div>
+<!-- ═══════════════════════════════════════ -->
+<!-- SOBRE -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-sobre" class="page hidden">
+  <section class="section--navy" style="padding:72px 0"><div class="container">
+    <h1 class="heading heading--light heading--xl" style="margin-bottom:14px">Quem está<br><span class="accent">por trás da Venturi.</span></h1>
+    <p class="subtitle subtitle--light">Conheça a equipe e entenda por que fazemos o que fazemos.</p>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <h2 class="heading heading--lg mb-16">A Venturi nasceu de uma lacuna real do mercado.</h2>
+    <div class="max-720">
+      <p class="body-text mb-14">Proprietários rurais, investidores e até municípios enfrentam o mesmo problema: a complexidade regulatória de imóveis rurais no Brasil exige domínio simultâneo de direito, engenharia, contabilidade e gestão ambiental — competências que o mercado oferece de forma fragmentada.</p>
+      <p class="body-text mb-14">O resultado é previsível: o cliente contrata um advogado que não entende de mapa, depois um engenheiro que não domina a legislação, depois outro advogado para corrigir o primeiro. Três, quatro profissionais e meses de prazo — muitas vezes sem resolução.</p>
+      <p class="body-text" style="color:var(--navy); font-weight:500">A Venturi foi estruturada para eliminar essa fragmentação. Uma equipe multidisciplinar que integra todas as frentes numa análise única — com profundidade técnica, segurança jurídica e agilidade operacional.</p>
+    </div>
+  </div></section>
+  <section class="section section--gray"><div class="container">
+    <div class="grid grid--4">
+      <div class="card card--topped"><div style="font-size:11.5px; font-weight:700; letter-spacing:2px; color:var(--navy); margin-bottom:10px">RIGOR TÉCNICO</div><p class="card__text">Cada relatório é construído cruzando documentos, mapas, bases oficiais e legislação — produzido para resistir ao escrutínio de órgãos, bancos e tribunais.</p></div>
+      <div class="card card--topped"><div style="font-size:11.5px; font-weight:700; letter-spacing:2px; color:var(--navy); margin-bottom:10px">TRANSPARÊNCIA ABSOLUTA</div><p class="card__text">Se podemos resolver, mostramos o caminho e o investimento. Se não podemos, dizemos antes de qualquer cobrança.</p></div>
+      <div class="card card--topped"><div style="font-size:11.5px; font-weight:700; letter-spacing:2px; color:var(--navy); margin-bottom:10px">VISÃO ESTRATÉGICA</div><p class="card__text">Não resolvemos apenas o problema imediato. Antecipamos cenários regulatórios e protegemos o patrimônio a longo prazo.</p></div>
+      <div class="card card--topped"><div style="font-size:11.5px; font-weight:700; letter-spacing:2px; color:var(--navy); margin-bottom:10px">ACESSO DIRETO</div><p class="card__text">Cada cliente fala com quem cuida do caso. Atualização semanal, prazo contratual e acesso aos sócios responsáveis.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <h2 class="heading heading--lg mb-8">A equipe.</h2>
+    <p class="subtitle mb-32">Multidisciplinar: direito, engenharia, contabilidade, gestão ambiental e negociação institucional.</p>
+    <div class="grid grid--2" style="gap:24px">
+      <div class="team-card"><div class="team-card__avatar">🏛️</div><div class="team-card__name">Ciro Ramon S. Barreto Vaz</div><div class="team-card__role">Sócio-Administrador</div><div class="team-card__sub">Bacharel em Direito</div><p class="team-card__bio">Mais de uma década de atuação em gestão pública — o que confere à Venturi conhecimento interno de como órgãos ambientais e fundiários operam. Essa vivência permite antecipar movimentos de ICMBio, IBAMA e IAT e encurtar prazos que outros escritórios levam meses para cumprir. Pós-graduado em Contabilidade, Tributação e Direito do Agronegócio. Cursando MBA em Atualizações Tributárias e MBA em Créditos de Carbono. Idealizador da Venturi.</p><div class="team-card__tags"><span class="team-card__tag">Regularização Fundiária</span><span class="team-card__tag">Licenciamento</span><span class="team-card__tag">Tributação Rural</span><span class="team-card__tag">Créditos de Carbono</span></div></div>
+      <div class="team-card"><div class="team-card__avatar">⚖️</div><div class="team-card__name">Eduardo Gabriel F. de Andrade</div><div class="team-card__role">Sócio-Administrador</div><div class="team-card__sub">OAB/PR 58.941</div><p class="team-card__bio">Mais de 780 processos conduzidos perante o TJPR e tribunais superiores — um dos currículos mais sólidos do contencioso paranaense. Assume a linha de frente quando defesas administrativas evoluem para litígio judicial, disputas possessórias ou recursos em instâncias superiores. Especialista em Direito Empresarial, Civil e Penal.</p><div class="team-card__tags"><span class="team-card__tag">Direito Empresarial</span><span class="team-card__tag">Civil</span><span class="team-card__tag">Penal</span><span class="team-card__tag">Propriedade Intelectual</span></div></div>
+      <div class="team-card"><div class="team-card__avatar">🌿</div><div class="team-card__name">Geliandra Lopes A. Pereira</div><div class="team-card__role">Sócia Especialista</div><div class="team-card__sub">OAB/PR 115.178</div><p class="team-card__bio">A representante da Venturi nas mesas de negociação com ICMBio, IBAMA e órgãos estaduais. Mais de 10 anos de atuação exclusiva em Direito Ambiental e do Agronegócio. Preside a Comissão de Direito Ambiental da OAB/PR — Subseção Ponta Grossa. MBA em Avaliação de Impacto Ambiental. Especialista em converter embargos e autuações em acordos concretos.</p><div class="team-card__tags"><span class="team-card__tag">Direito Ambiental</span><span class="team-card__tag">Agronegócio</span><span class="team-card__tag">EIA/RIMA</span><span class="team-card__tag">Compliance</span></div></div>
+      <div class="team-card"><div class="team-card__avatar">📜</div><div class="team-card__name">José Alaertes Silveira</div><div class="team-card__role">Sócio-Administrador</div><div class="team-card__sub">OAB/PR 60.934</div><p class="team-card__bio">Décadas de experiência no sistema judiciário paranaense. Conselheiro sênior da Venturi para questões patrimoniais de longo prazo: sucessão de fazendas, proteção de ativos familiares e gestão estratégica de precatórios. Mais de 110 processos em tribunais do Paraná e superiores. Abordagem que privilegia prevenção sobre litígio.</p><div class="team-card__tags"><span class="team-card__tag">Direito Empresarial</span><span class="team-card__tag">Civil</span><span class="team-card__tag">Precatórios</span><span class="team-card__tag">Sucessão</span></div></div>
+    </div>
+  </div></section>
+  <section class="section section--navy"><div class="container">
+    <div class="stats mb-36">
+      <div><div class="stat__number">150+</div><div class="stat__label">propriedades</div></div>
+      <div><div class="stat__number">900+</div><div class="stat__label">processos</div></div>
+      <div><div class="stat__number">8</div><div class="stat__label">estados</div></div>
+      <div><div class="stat__number">100%</div><div class="stat__label">remoto</div></div>
+    </div>
+    <div class="text-center"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Fale com um especialista</a></div>
+  </div></section>
+</div>
+<!-- ═══════════════════════════════════════ -->
+<!-- PERGUNTAS -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-perguntas" class="page hidden">
+  <section class="section--navy" style="padding:72px 0"><div class="container">
+    <h1 class="heading heading--light heading--xl" style="margin-bottom:12px">Perguntas frequentes.</h1>
+    <p class="subtitle subtitle--light">Se a sua não está aqui, entre em contato que respondemos.</p>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <div class="max-720" id="faqList">
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Como saber se a Venturi pode resolver meu caso?<span class="faq-item__icon">+</span></button><div class="faq-item__a">A avaliação preliminar é gratuita e sem compromisso. Você descreve a situação, nossa equipe analisa e devolve um direcionamento claro — incluindo se podemos ou não ajudar. Nosso histórico inclui mais de 150 propriedades em 8 estados, com reversão de embargos em 60 dias e destravamento de transações em 45 dias.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Quanto custa?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Cada caso tem complexidade diferente, por isso trabalhamos com proposta sob medida. Garantimos: avaliação preliminar gratuita, proposta com escopo/prazo/valor definidos antes de qualquer execução, e aprovação prévia obrigatória. Parcelamento disponível em alguns casos. Considere também: patrimônio depreciando, crédito travado e oportunidades perdidas quase sempre superam o investimento na regularização.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Qual o processo de trabalho?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Cinco etapas: (1) Escuta — você conta a situação. (2) Investigação — cruzamos documentos e bases oficiais. (3) Diagnóstico — relatório com riscos, cenários e recomendações. (4) Proposta — escopo, prazo e valor definidos, com aprovação prévia. (5) Execução — acompanhamento semanal até resolução.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Vocês atendem fora do Paraná?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Sim. Atuamos 100% remoto e já atendemos propriedades em 8 estados. Todo o trabalho é baseado em análise documental e cruzamento de bases oficiais — funciona de qualquer lugar do Brasil.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Qual o prazo médio?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Depende da complexidade: Diagnóstico geral: 10 a 15 dias úteis. Sobreposição com UC: 12 a 18 dias úteis. Regularização SIGEF: 20 a 30 dias úteis. Já resolvemos casos de alta complexidade em 12 dias que outros profissionais não solucionaram em 2 anos.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Atendem embargos do IBAMA, ICMBio e IAT?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Sim — é uma das nossas principais áreas. Analisamos a legalidade, preparamos defesa administrativa e negociamos diretamente com o órgão. Já revertemos embargo federal de 3 anos em 60 dias.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Atendem municípios e entes públicos?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Sim. Oferecemos assessoria em regularização fundiária municipal (REURB), gestão de passivos ambientais, adequação cadastral e conformidade regulatória para a administração pública.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Qual a diferença da Venturi para um escritório tradicional?<span class="faq-item__icon">+</span></button><div class="faq-item__a">Integramos numa equipe só o que outros fragmentam: direito, engenharia, contabilidade e gestão ambiental. Isso elimina a necessidade de múltiplos profissionais, reduz prazo e custo, e entrega um diagnóstico genuinamente integrado.</div></div>
+      <div class="faq-item"><button class="faq-item__q" onclick="toggleFaq(this)">Não sei qual é o problema da minha propriedade.<span class="faq-item__icon">+</span></button><div class="faq-item__a">Essa é a situação mais comum. A maioria dos clientes sabe que existe algo travando, mas não identifica a causa. Nosso Diagnóstico Fundiário Rural foi desenhado para isso — é o raio-X que revela o que está errado e indica o caminho para resolver.</div></div>
+    </div>
+    <div class="text-center mt-32"><a href="https://wa.me/5542999763857" target="_blank" class="btn btn--primary">Entre em contato →</a></div>
+  </div></section>
+</div>
+<!-- ═══════════════════════════════════════ -->
+<!-- CONTATO -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-contato" class="page hidden">
+  <section class="section--navy" style="padding:72px 0"><div class="container">
+    <h1 class="heading heading--light heading--xl" style="margin-bottom:12px">Entre em contato.</h1>
+    <p class="subtitle subtitle--light">Avaliação preliminar gratuita. Descreva a situação — retornamos em até 24 horas úteis.</p>
+  </div></section>
+  <section class="section section--white"><div class="container">
+    <div class="grid grid--2 contact-grid" style="gap:40px">
+      <div>
+        <h3 class="heading heading--sm mb-16" style="font-size:24px">Envie sua mensagem</h3>
+        <div class="form-group"><label class="form-label">Nome completo</label><input type="text" class="form-input" placeholder="Nome completo"></div>
+        <div class="form-group"><label class="form-label">Telefone / WhatsApp</label><input type="tel" class="form-input" placeholder="(00) 00000-0000"></div>
+        <div class="form-group"><label class="form-label">E-mail</label><input type="email" class="form-input" placeholder="seu@email.com"></div>
+        <div class="form-group"><label class="form-label">Município / Estado do imóvel</label><input type="text" class="form-input" placeholder="Ex: Ponta Grossa / PR"></div>
+        <div class="form-group">
+          <label class="form-label">Perfil</label>
+          <select class="form-select">
+            <option value="">Selecione</option>
+            <option>Proprietário rural / Família</option>
+            <option>Investidor / Fundo</option>
+            <option>Instituição financeira</option>
+            <option>Município / Ente público</option>
+            <option>Advogado / Profissional técnico</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Descreva a situação</label><textarea class="form-textarea" rows="4" placeholder="Descreva brevemente — perguntamos o que faltar."></textarea></div>
+        <button class="btn btn--primary" type="button">Enviar — retornamos em até 24h</button>
+      </div>
+      <div>
+        <h3 class="heading heading--sm mb-16" style="font-size:24px">Canais diretos</h3>
+        <a href="https://wa.me/5542999763857" target="_blank" class="contact-card contact-card--green"><span class="contact-card__icon">💬</span><div><div class="contact-card__title">WhatsApp</div><div class="contact-card__detail">+55 42 99976-3857</div></div></a>
+        <div class="contact-card"><span class="contact-card__icon">📧</span><div><div class="contact-card__title">E-mail</div><div class="contact-card__detail">contato@venturictj.com</div></div></div>
+        <div class="contact-card"><span class="contact-card__icon">📸</span><div><div class="contact-card__title">Instagram</div><div class="contact-card__detail">@venturictj</div></div></div>
+        <div class="contact-card"><span class="contact-card__icon">🌐</span><div><div class="contact-card__title">Site</div><div class="contact-card__detail">venturictj.com</div></div></div>
+        <div class="contact-card"><span class="contact-card__icon">📍</span><div><div class="contact-card__title">Sede</div><div class="contact-card__detail">Ponta Grossa — PR</div><div class="contact-card__extra">Atendimento 100% remoto • Todo o Brasil</div></div></div>
+      </div>
+    </div>
+  </div></section>
+</div>
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px">
+          <span style="color:var(--gold); font-size:24px; font-family:var(--serif); font-weight:700">V</span>
+          <div><div style="color:white; font-size:13px; font-weight:700; letter-spacing:2px">VENTURI</div><div style="color:var(--gray-400); font-size:8.5px; letter-spacing:1px">CONSULTORIA TÉCNICA & JURÍDICA</div></div>
+        </div>
+        <p style="font-size:13.5px; color:var(--gray-400); line-height:1.6">Inteligência técnica e segurança jurídica para propriedades rurais em todo o Brasil.</p>
+      </div>
+      <div>
+        <div class="footer__heading">NAVEGAÇÃO</div>
+        <button class="footer__link" onclick="goTo('home')">Home</button>
+        <button class="footer__link" onclick="goTo('solucoes')">Soluções</button>
+        <button class="footer__link" onclick="goTo('resultados')">Resultados</button>
+        <button class="footer__link" onclick="goTo('sobre')">Sobre</button>
+        <button class="footer__link" onclick="goTo('perguntas')">Perguntas</button>
+        <button class="footer__link" onclick="goTo('contato')">Contato</button>
+      </div>
+      <div>
+        <div class="footer__heading">CONTATO</div>
+        <div class="footer__info">WhatsApp: +55 42 99976-3857<br>contato@venturictj.com<br>@venturictj<br>Ponta Grossa — PR</div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 Venturi Consultoria Técnica & Jurídica LTDA. Todos os direitos reservados.</div>
+  </div>
+</footer>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5542999763857" target="_blank" class="wa-float">💬</a>
+<script>
+// ─── NAVIGATION ───
+const pages = ['home','solucoes','resultados','sobre','perguntas','contato'];
+function goTo(page) {
+  pages.forEach(p => {
+    document.getElementById('page-' + p).classList.add('hidden');
+  });
+  document.getElementById('page-' + page).classList.remove('hidden');
 
-    <a href="https://wa.me/5542999413730" class="fixed bottom-10 right-10 bg-gold text-black p-5 rounded-full shadow-2xl hover:scale-110 transition-transform z-50">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
+  document.querySelectorAll('.nav__link').forEach((link, i) => {
+    link.classList.toggle('nav__link--active', pages[i] === page);
+  });
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+// ─── FAQ ───
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains('faq-item--open');
+  document.querySelectorAll('.faq-item--open').forEach(el => el.classList.remove('faq-item--open'));
+  if (!wasOpen) item.classList.add('faq-item--open');
+}
+// ─── SMOOTH SCROLL FIX ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href === '#') { e.preventDefault(); return; }
+  });
+});
+</script>
 </body>
 </html>
