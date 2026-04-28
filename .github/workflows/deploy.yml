@@ -1,4 +1,4 @@
-name: Deploy static site to GitHub Pages
+name: Deploy Venturi Next.js site to GitHub Pages
 
 on:
   push:
@@ -19,16 +19,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js site
+        run: npm run build
+
+      - name: Copy CNAME
+        run: cp CNAME out/ 2>/dev/null || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Copy static files
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp CNAME _site/ 2>/dev/null || true
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./out
 
   deploy:
     environment:
