@@ -158,7 +158,7 @@ export function Footer() {
       {/* Legal Info Bar */}
       <div className="border-t border-white/5">
         <div className="section-wrap py-5">
-          <p className="text-[11px] text-white/40 leading-relaxed text-center sm:text-left">
+          <p className="text-[11px] text-white/40 leading-relaxed text-center">
             <span className="text-white/60 font-medium">{company.fullName}</span>
             <span className="hidden sm:inline"> · </span>
             <br className="sm:hidden" />
