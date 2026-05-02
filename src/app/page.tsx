@@ -5,9 +5,9 @@ import { siteData } from '@/content/siteData';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'VENTURI CTJ | Consultoria para Imóveis Rurais',
+  title: 'Regularização e Defesa de Imóveis Rurais — Venturi CTJ',
   description:
-    'Regularizamos, defendemos e destravamos propriedades rurais em todo o Brasil. Análise gratuita.',
+    'Consultoria técnico-jurídica para imóveis rurais: regularização, sobreposição com UC, embargos, due diligence e dívida rural. Análise gratuita em 2h.',
 };
 
 export default function HomePage() {
@@ -194,6 +194,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-[11px] text-white/30 mt-8 max-w-3xl mx-auto leading-relaxed px-6">
+            Dados acumulados do portfólio Venturi entre 2024 e 2026, baseados em casos efetivamente concluídos. Disponíveis para verificação mediante NDA.
+          </p>
         </section>
 
         {/* ============ SOLUÇÕES PREVIEW ============ */}
@@ -209,17 +212,54 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
-                { icon: '🏛️', title: 'Sobreposição com UC' },
-                { icon: '⚖️', title: 'Embargos e Multas' },
-                { icon: '💰', title: 'Dívidas Rurais' },
-                { icon: '🌱', title: 'Créditos de Carbono' },
+                {
+                  title: 'Sobreposição com UC',
+                  description:
+                    'Sua propriedade está dentro ou no entorno de Unidade de Conservação? Mapeamos direitos adquiridos e destravamos a operação.',
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Embargos e Multas',
+                  description:
+                    'Auto de infração do ICMBio, IBAMA ou IAT? Defendemos, contestamos e regularizamos sua propriedade.',
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Dívidas Rurais',
+                  description:
+                    'Renegociamos dívida rural, juros abusivos e impedimos leilão da fazenda — com estratégia jurídica, técnica e patrimonial.',
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Créditos de Carbono',
+                  description:
+                    'Avaliamos elegibilidade, estruturamos projetos e capturamos receita ambiental do seu ativo florestal regularizado.',
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                  ),
+                },
               ].map((solution, idx) => (
                 <div
                   key={idx}
                   className="reveal premium-card bg-white/5 border border-venturi-gold/20 p-6 rounded-xl hover:border-venturi-gold/50 hover:bg-white/10 transition duration-300"
                 >
-                  <div className="text-5xl mb-4">{solution.icon}</div>
-                  <h3 className="text-lg font-bold text-white">{solution.title}</h3>
+                  <div className="text-venturi-gold mb-4">{solution.icon}</div>
+                  <h3 className="text-lg font-bold text-white mb-2">{solution.title}</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">{solution.description}</p>
                 </div>
               ))}
             </div>
