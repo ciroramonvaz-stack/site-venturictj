@@ -139,7 +139,9 @@ export function Footer() {
               <div>
                 <p className="text-white/30 text-xs uppercase tracking-wider mb-1">Localização</p>
                 <p className="text-sm text-white/60">
-                  {company.address}
+                  {company.street}<br />
+                  {company.neighborhood} — {company.city}/{company.stateCode}<br />
+                  CEP {company.zipCode}
                 </p>
               </div>
               <div>
@@ -150,6 +152,21 @@ export function Footer() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Legal Info Bar */}
+      <div className="border-t border-white/5">
+        <div className="section-wrap py-5">
+          <p className="text-[11px] text-white/40 leading-relaxed text-center sm:text-left">
+            <span className="text-white/60 font-medium">{company.fullName}</span>
+            <span className="hidden sm:inline"> · </span>
+            <br className="sm:hidden" />
+            CNPJ {company.cnpj}
+            <span className="hidden sm:inline"> · </span>
+            <br className="sm:hidden" />
+            {company.street}, {company.neighborhood} — {company.city}/{company.stateCode} · CEP {company.zipCode}
+          </p>
         </div>
       </div>
 
