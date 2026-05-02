@@ -70,12 +70,75 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: company.name,
-    address: company.address,
-    telephone: company.whatsapp,
+    '@type': 'LegalService',
+    '@id': company.site + '/#org',
+    name: company.fullName,
+    legalName: company.fullName,
+    alternateName: company.name,
+    description: company.description,
     url: company.site,
-    email: company.email
+    logo: company.site + '/logo.png',
+    image: company.site + '/logo.png',
+    telephone: company.whatsapp,
+    email: company.email,
+    taxID: company.cnpj,
+    vatID: company.cnpj,
+    priceRange: '$$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.street,
+      addressLocality: company.city,
+      addressRegion: company.stateCode,
+      postalCode: company.zipCode,
+      addressCountry: company.country,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -25.0916,
+      longitude: -50.1668,
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'Brasil' },
+      { '@type': 'State', name: 'Paraná' },
+    ],
+    knowsAbout: [
+      'Direito agrário',
+      'Direito ambiental rural',
+      'Regularização fundiária',
+      'Cadastro Ambiental Rural',
+      'Georreferenciamento SIGEF',
+      'Due diligence rural',
+      'Embargos ambientais',
+      'Sobreposição com Unidades de Conservação',
+    ],
+    sameAs: [
+      'https://instagram.com/venturictj',
+    ],
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Eduardo Gabriel Ferreira de Andrade',
+        jobTitle: 'Diretor Jurídico',
+        identifier: 'OAB/PR 58.941',
+      },
+      {
+        '@type': 'Person',
+        name: 'Geliandra Lopes Alves Pereira',
+        jobTitle: 'Especialista em Direito Ambiental',
+        identifier: 'OAB/PR 115.178',
+      },
+      {
+        '@type': 'Person',
+        name: 'José Alaertes Silveira',
+        jobTitle: 'Diretor Empresarial',
+        identifier: 'OAB/PR 60.934',
+      },
+      {
+        '@type': 'Person',
+        name: 'Ciro Ramon Vaz',
+        jobTitle: 'Fundador & Operações',
+      },
+    ],
   };
 
   return (

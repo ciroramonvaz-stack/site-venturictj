@@ -335,10 +335,10 @@ export default function HomePage() {
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-12 mb-12">
               {[
-                { name: 'Ciro Ramon Vaz', role: 'Fundador & Operações', image: '/ciro.jpg.jpeg' },
-                { name: 'Eduardo Gabriel', role: 'Diretor Jurídico', image: '/eduardo.jpg.jpeg' },
-                { name: 'Geliandra Lopes', role: 'Direito Ambiental', image: '/geliandra.jpg.jpeg' },
-                { name: 'José Alaertes', role: 'Diretor Empresarial', image: '/jose.jpg.jpeg' },
+                { name: 'Ciro Ramon Vaz', role: 'Fundador & Operações', credential: 'Bacharel em Direito', image: '/ciro.jpg.jpeg' },
+                { name: 'Eduardo Gabriel', role: 'Diretor Jurídico', credential: 'OAB/PR 58.941', image: '/eduardo.jpg.jpeg' },
+                { name: 'Geliandra Lopes', role: 'Direito Ambiental', credential: 'OAB/PR 115.178', image: '/geliandra.jpg.jpeg' },
+                { name: 'José Alaertes', role: 'Diretor Empresarial', credential: 'OAB/PR 60.934', image: '/jose.jpg.jpeg' },
               ].map((member, idx) => (
                 <div key={idx} className="reveal flex flex-col items-center">
                   <div className="w-24 h-24 rounded-full border-2 border-venturi-gold/50 overflow-hidden mb-4">
@@ -351,7 +351,8 @@ export default function HomePage() {
                     />
                   </div>
                   <p className="font-bold text-white text-center">{member.name}</p>
-                  <p className="text-xs text-venturi-gold">{member.role}</p>
+                  <p className="text-xs text-venturi-gold mb-0.5">{member.role}</p>
+                  <p className="text-[10px] text-white/50 tracking-wider">{member.credential}</p>
                 </div>
               ))}
             </div>
