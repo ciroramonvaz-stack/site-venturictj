@@ -13,10 +13,10 @@ export default function SobrePage() {
     {
       name: 'Ciro Ramon Vaz',
       role: 'Sócio-Fundador & Diretor de Operações',
-      credential: 'Bacharel em Direito | Especialista em Regularização Fundiária',
+      credential: 'OAB/PR 136.171',
       image: '/ciro.jpg.jpeg',
       specialties: ['Regularização Fundiária', 'Sobreposição UC', 'Gestão de Casos'],
-      bio: 'Ciro fundou a Venturi após perceber que proprietários rurais perdiam patrimônio não por falta de direito, mas por falta de orientação técnica adequada. Com formação em Direito e especialização em questões fundiárias, já coordenou mais de 200 diagnósticos de imóveis rurais em 8 estados brasileiros. Sua abordagem combina rigor técnico com comunicação direta — o cliente sempre sabe exatamente onde está e para onde vai. Lidera a equipe de análise e é responsável pela estratégia de cada caso que entra na Venturi.',
+      bio: 'Ciro fundou a Venturi após perceber que proprietários rurais perdiam patrimônio não por falta de direito, mas por falta de orientação técnica adequada. Advogado inscrito na OAB/PR sob o número 136.171, com formação em Direito e especialização em questões fundiárias, já coordenou mais de 200 diagnósticos de imóveis rurais em 8 estados brasileiros. Sua abordagem combina rigor técnico com comunicação direta — o cliente sempre sabe exatamente onde está e para onde vai. Lidera a equipe de análise e é responsável pela estratégia de cada caso que entra na Venturi.',
     },
     {
       name: 'Eduardo Gabriel',
